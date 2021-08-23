@@ -1,4 +1,4 @@
 Git- it is a version control system.
 Github-it ia a web based hosting service for version control using Git.it hosts your source code projects in a variety of different programming languages and keeps track of the various changes made to every iteration.
 Difference betn git and git hub- Git is a tool and github is a web based hosting service which use git tool.
-2 your all project at one place. 3 create private or public repo. 4 access easily for your team. 5 share team.
+Importance of git hub : 1 Access anytime anywhere. 2 your all project at one place. 3 create private or public repo. 4 access easily for your team. 5 share project.
