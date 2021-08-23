@@ -12,4 +12,4 @@ Git hub is a web-based platform used for version control.
 
 Github is a website for developers and programmers colaborately work on coded.
 
-The primary benifits of Github is its version control system, which allows for seemless collaboration with compromising the integrity of the original project.
+The primary benifits of Github is its version control system, which allows for seemless collaboration with compromising the integrity of the original projects.
