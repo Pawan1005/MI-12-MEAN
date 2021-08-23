@@ -1,6 +1,6 @@
 INTRODUCTION OF GIT: Git is vastly used for software development for version control where we can control our source code. It is free and open source of distributed version control system. It enhances speed, data integrity and also support non-linear workflows i.e., we can work together as a team. Git is widely used to update source code or we can make changes to our source code of the Linux Kernel from anywhere. Git working directory has a full-accessed repository with complete history and full version tracking capabilities i.e., we can track any files through our branch_name. However, before using git we have to know about git commands and make sure whether git is installed or not. So, here are some basic commands of Git:
 
-BASIC COMMANDS OF GIT:
+BASIC COMMANDS OF GIT :
 
 FETCHING GIT COMMANDS: $ git // It is used to fetch git commands
 
