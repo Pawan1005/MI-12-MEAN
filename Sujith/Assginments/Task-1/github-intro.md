@@ -1,0 +1,1 @@
+GitHub is a web-based interface that uses Git, the open source version control software that allow multiple people make separate changes to the project at same time. With GitHub, developers can build code and track changes.
