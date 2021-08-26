@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>que3</title>
+    </head>
+    <body>
+        <h1 style="font-size: 50px; color: #00e6ac" >HTML</h1>
+        <h2 style="color: #b30000;">Introduction</h2>
+        <p><b>HTML</b> is a standard markup language for Web Pages.</p>
+        <hr>
+        <h2>HTML Editor</h2>
+        <h3>Notepad or TextEdit.</h3>
+        <p>Web pages can be created and modified by using professional HTML editors.<br>
+            However, for learning HTML we recommend a simple text editor like Notepad (PC) or TextEdit (Mac).</p>
+    </body>
+</html>
