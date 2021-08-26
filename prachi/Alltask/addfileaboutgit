@@ -1,0 +1,35 @@
+What is Git ?
+Git is the most commonly used version control system .
+git tracks the changes you make to files, so you have a
+record of what has been done,and you can revert to specific
+versions should you ever neet to. git also makes collaboration
+easier, allowing changes by multiple people to all be merged into one source.
+
+What is Github ?
+Github is a Git repository hosting service, but it adds many of its own features.
+while Git is a command line tool,Github provides a webbased graphical interface.
+it also provides acces control and several collaboration features, such as a wikis 
+and basic task management tools for every project. you will create your own hello 
+world repository and learn Github's pull request workflow ,a  popular way to create 
+and review code.
+
+GitHub commands :
+git confit 
+git init 
+git clone
+git add
+git commit
+git diff
+git reset 
+git status
+git rm 
+git log
+git show
+git tag
+git branch
+git checkout
+git merge
+git remote
+git push 
+git pull
+git stash

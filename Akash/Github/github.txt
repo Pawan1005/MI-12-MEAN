@@ -1,0 +1,1 @@
+GitHub is basically a huge repository collection that has a Web-based graphical interface. For beginners, who are still confused about what a repository means, you can think of it as a large coding community that has numerous contributors all over the world. These contributors work together on various projects on this platform known as GitHub.
