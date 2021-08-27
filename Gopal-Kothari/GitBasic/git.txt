@@ -1,0 +1,15 @@
+Github is a website and cloud-based service that helps developers to store and manage their code, as well as track and control changes to their code. Github allows you to work on code with anyone from anywhere. A repository is a location where all the files for a particular project are stored. Each project has its own repo, and you can access it with a unique URL.
+
+git config --global user.name "yourname" - to set Git configuration name on a global.
+git config --global user.email "youremail" - to set Git configuration email on a global.
+git config --list - list of git configuration present.
+git status - displays the state of the working branch and the staging area.
+git add - adds new or changed files in your working directory.
+git commit -m - captures a snapshot of the project's currently staged changes.
+git push origin - to upload local repository content to a remote repository.
+git pull - to fetch and download content from a remote repository.
+git branch - represents an independent line of development.
+git branch -d - delete branch.
+git branch --list - list of branch present. 
+git chechout - switch branch.
+git rm - to remove a file from a Git repository.
