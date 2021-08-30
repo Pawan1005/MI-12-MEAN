@@ -1,1 +1,0 @@
-Git is a code hosting platform for version control,it also has excellent support for branching merging and rewritting repository history
