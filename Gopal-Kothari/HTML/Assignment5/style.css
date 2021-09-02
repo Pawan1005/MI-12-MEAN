@@ -1,0 +1,36 @@
+.header {
+    text-align: left;
+    border: 1px solid black;
+    font-size: 50px;
+    width: 80%;
+}
+.main {
+    border: 1px solid black;
+    border-top: none;       
+    text-align: right;
+    background-color: hsl(41, 100%, 80%);
+    font-size: 30px;
+    width: 80%;
+}
+.aboutme {
+    text-align: left;
+    box-shadow: 3px 3px;
+    font-size: 18px;
+    background-color: hsl(35, 100%, 50%);
+    width: 98%;
+    height: 150px;
+}
+.moreaboutme {
+    text-align: left;
+    box-shadow: 3px 3px;
+    width: 98%;
+    height: 150px;
+    background-color: hsl(35, 100%, 50%);
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+}
+h1{
+    text-align: center;
+}
