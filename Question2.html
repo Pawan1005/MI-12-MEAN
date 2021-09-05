@@ -1,80 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <Title>Question 2</Title>
-        <style>
-            table
-            ,th
-            ,td{border: 1px solid black;
-                text-align: center;
-                border-collapse:inherit;
-                margin-left: auto; 
-                margin-right: auto;
-                text-align: center;
-                background-color: white;
-                padding: 10px;
-            } 
-            .bgcolor{
-                background-color:darkgray;
-
-            }
-        </style>
-    </head>
-    <body>
-        <table class="bgcolor"style="height:500px;width:750px; padding: 20px 20px gray;">
-            <caption><h2 style="color: blueviolet; text-align: center; background-color:aqua ; " > Jan's Spring Term Afternoon Schedule </h2></caption>
-            <tr>
-                <Th></Th>
-                <th>Monday</th>
-                <th>Tuesday</th>
-                <th>Wednesday</th>
-                <th >Thursday</th>
-                <th>Friday  </th>
-                
-            </tr>
-            <tr>
-               <td> 1.00 </td> 
-               <td rowspan="2"> office </td>
-               <td>  </td>
-               <td rowspan="2"> office</td>
-               <td rowspan="8"> office<br> hours <br>by <br>Appt </td>
-               <td rowspan="2"> office</td>
-            </tr>
-            <tr>
-                <td>1:30</td>
-                <td rowspan="2"> Dept<br> Meeting</td>
-                
-            </tr>
-           
-            <tr>
-                <style ="padding: 30px;"></style>
-                <td>2.00</td>
-                <td rowspan="3">MAT<br> 108 </td>
-                <td rowspan="3">MAT<br> 108 </td>
-                <td rowspan="3">MAT <br> 108 </td> 
-            </tr>
-            <tr>
-                <td>2:30</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>3.00</td>
-                <td rowspan="3">EC<br> Meeting </td>
-            </tr>
-            <tr>
-                <td>3.30</td>
-                <td rowspan="3"> CSC <br>205</td>
-                <td rowspan="3"> CSC 205</td>
-                <td rowspan="3"> CSC <br>205</td>
-            </tr>
-            <tr>
-                <td>4.00</td>
-                
-            </tr>
-            <tr>
-                <td>4.30</td>
-                <td></td>
-            </tr>
-        </table>       
+    <Head>
+        <Title>Question 2 Assignment 6</Title>
+        <link rel="stylesheet" type="text/css" href="cssnew.css">
+    </Head>
+    <body class="text"> 
+        <h1 class="border1"> MI-9 intern  HTML Assisment </h1> <div>
+        <hr>
+        <h2 class="border1"> <i>Personal Details <i> </h2></div>    
+         <form>
+             <label name="First name" > <b>First name :</b></label>
+             <input type="text" value="First name"></input><br>
+             <label name="Last name" > <b>Last name :</b> </label>
+             <input type="text" value="Last Name"></input><br>
+             <label name="Gender"><b>Gender:</b></label>
+             <input type="radio" name="g1">male
+             <input type="radio" name="g1" >female
+             <input type="radio" name="g1"> other   
+             <br>
+             <label name="Age"> <b>Age : </b></label>
+             <input type="radio" name="r1"> less than 18
+             <input type="radio" name="r1" checked> 18-25
+             <input type="radio" name="r1"> 26-40 <br>   
+             <h2 class="border1"> <i>Academic Details <i> </h2></div>   
+             <label name="Skill set"><b>Skill set :</b> </label>    
+             <input type="checkbox" name="HTML">HTML
+             <input type="checkbox" name="Java Script">Java Script
+             <input type="checkbox" name="Java ">Java
+             <input type="checkbox" name="Oracle">Oracle
+             <h2 class="border1"> <i>Highest Qualification <i> </h2></div>   
+             <select id="qualification"name="qualification">   
+                 <option value="Diploma in Computer Science">Diploma in Computer Science</option>
+                 <option value="Science Graduate<"> Science Graduate</option>
+                 <option value="Bachelor in Engg."  >Bachelor in Engg.</option>
+                 <option value="Masters in Computer Science">Masters in Computer Science</option>
+                 <option value="Masters in Engg. ">Masters in Engg. </option>
+                 <option value="Other"> Other</option>
+                </select>
+                <br>
+                <h2 class="border1"> <i>University <i> </h2></div>   
+                <input list="University" name="University">
+                <datalist id="University">
+                    <option value=" Mumbai University">
+                    <option value="Pune University">
+                    <option value="Chennai University">
+                    <option value=" Nagpur University">
+                    <option value=" Badoda University">   
+            </datalist> 
+            <input type="submit">
+            <h2 class="border1"> <i>Area of Expertise <i> </h2></div>   
+                <select id="area" multiple>
+                <option value="Software">Software</option>
+                <option value="Training">Training</option>
+                <option value="Networking"> Networking</option>
+                <option value="Management"> Management</option>
+                <option value="Marketing"> Marketing</option>
+                </select>
+        </div>
     </body>
 </html>
