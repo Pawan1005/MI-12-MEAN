@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Forms</title>
+        <link rel="stylesheet" href="formCss.css">
+    </head>
+    <body>
+        <main class="imp">
+            <h1 class="heading">MI-9 Intern HTML Assessment</h1>
+            <br/>
+            <hr/>
+            <form>
+                <p class="sub-heading">Personal Details</p>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname" placeholder="First Name"><br/><br/>
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" placeholder="Last Name"><br/><br/>
+                <label for="gender">Gender:</label>
+                <input type="radio" id="male" name="gender">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender">
+                <label for="other">Other</label><br/><br/>
+                <label for="age">Age:</label>
+                <input type="radio" id="lt18" name="age">
+                <label for="lt18">less than 18</label>
+                <input type="radio" id="gt18" name="age" checked>
+                <label for="gt18">18-25</label>
+                <input type="radio" id="gt25" name="age">
+                <label for="gt25">26-40</label><br/><br/>
+                <p class="sub-heading">Academic Details</p>
+                <label for="skills">Skill Set:</label>
+                <input type="checkbox" id="html" name="skills">
+                <label for="html">HTML</label>
+                <input type="checkbox" id="js" name="skills">
+                <label for="js">Java Script</label>
+                <input type="checkbox" id="java" name="skills">
+                <label for="java">Java</label>
+                <input type="checkbox" id="oracle" name="skills">
+                <label for="oracle">Oracle</label><br/><br/>
+                <input type="submit" value="Submit" class="button">
+            </form>
+        </main>
+    </body>
+</html>
