@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+  <html>
+       <head>
+        <title>Form1</title>
+         <style type="text/css">
+        .FIRST{
+               background-color: skyblue;
+               padding-right: 19px;    
+               margin-top: 18px;
+               margin-bottom: 40px;
+               width: 100%;
+               text-align: right;
+               border-radius: 0px 28px;
+              }
+         </style>
+        </head>
+        <body>
+        <form>
+         <div class=FIRST>
+         <h2 >MI-12 Intern HTML Assesment</h2>
+        </div>
+         <hr>
+        <div class=FIRST>
+         <h3>Personal Details</h3>
+        </div>
+         <lable>First Name:&nbsp;&nbsp;</lable><input type="text" placeholder="First Name"><br>
+         <br>
+         <lable>Last Name:&nbsp;&nbsp;</lable><input type="text" placeholder="Last Name">
+         <br> <br>
+         <label>Birth Date:&nbsp;&nbsp;&nbsp;</label><input type="date">
+         <br><br>
+         <label>Gender:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+         <input type="radio" id="Male" name="Gender" value="Male">
+            <label>Male</label>
+            <input type="radio" id="Female" name="Gender" value="Female">
+            <label>Female</label>
+            <input type="radio" id="Other" name="Gender" value="Other">
+            <label>Other</label> 
+            <br><br>
+            <label>Age:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="radio" id="age" name="Age" value="Less than 18">
+            <label> Less than 18</label>
+            <input type="radio"id="age" name="Age" value="18-25" checked>
+            <label>18-25</label>
+            <input type="radio" id="age" name="Age" value="26-40">
+            <label>26-40</label> 
+            <br><br>
+            <div class="FIRST">
+              <h3>Academic Details</h3>
+            </div> 
+         <fieldset>
+                <legend>Academic Details</legend>
+                <label><b>Skill Set:&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                <input type="checkbox" name="Skill" id="HTML" value="HTML">
+                <label>HTML</label>
+                <input type="checkbox" name="Skill" id="Js" value="Js">
+                <label>Java Script</label>
+                <input type="checkbox" name="Skill" id="Java" value="Java">
+                <label>Java</label>
+                <input type="checkbox" name="Skill" id="Oracle" value="Oracle">
+                <label >Oracle</label>
+                <br><br>
+                <label><b>Highest Qalification:</b></label>
+                <select name="Qualification" id="Qualification">
+                    <option>Diploma in Computer Science</option>
+                    <option>Science Graduate</option>
+                    <option>Bachelor in Engg.</option>
+                    <option>Masters in Computer Science</option>
+                    <option>Masters in Engg.</option>
+                    <option>Other</option>
+                </select>
+                <br><br>
+                <label><b>University:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+                </label>
+                <input list="University" name="University" id="University">
+                <datalist>
+                     <option value="Mumbai University">
+                     <option value="Pune University">
+                     <option value="Chennai University">
+                     <option value="Nagpur University">
+                     <option value="Baroda University">
+                </datalist>        
+                <br><br>
+                <label><b>Areas of Expertise:&nbsp;&nbsp;&nbsp; </b></label>
+                <select name="Expertise" id="Expertise" multiple>
+                    <option>Software</option>
+                    <option>Training</option>
+                    <option>Networking</option>
+                    <option>Management</option>
+                    <option>Marketing</option>
+                </select> You can select multiple things.
+            </fieldset>
+            <fieldset>
+                    <legend>Resume</legend>
+                    <label><b>Upload Resume:&nbsp;</b></label>
+                    <input type="file" id="resume" name="resume">
+                    <br><br>
+                    <label><b>Comments: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+            </fieldset>
+                <br>
+                <center>                
+                    <input type="submit" value="Submit" class="submit">  
+                </center>
+         </form>
+        </body>
+</html>
