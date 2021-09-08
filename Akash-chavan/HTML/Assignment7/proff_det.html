@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment7 Job portal</title>
+        <link rel="stylesheet" href="css.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section class="header">
+            <nav>
+                <a href="home.html"><img  src="logo.png" alt="logo image"></a>
+                <div class="nav-link">
+                    <ul>
+                        <li><a href="home.html">HOME</a></li>
+                        <li><a href="recruiters.html">Recruiters</a></li>
+                        <li><a href="companies.html">Companies</a></li>
+                        <li><a href="services.html">Services</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>   
+        <form>
+            <fieldset class="logfield">
+                <div>
+                    <header>
+                        <h2>Professional Details</h2>
+                    </header>
+                </div>
+                <div>
+                    <label for="Skill"><b>Skill Set:</b></label>
+                    <input type="checkbox" id="html" name="Skill" value="html">
+                    <label for="Skill">HTML</label>
+                    <input type="checkbox" id="javascript" name="Skill" value="javascript">
+                    <label for="Skill">Java Script</label>
+                    <input type="checkbox" id="java" name="Skill" value="java">
+                    <label for="Skill">Java</label>
+                </div>
+                <div>
+                    <label for="qualify"><b>Professional Qualification:</b></label>
+                    <select name="qualify" id="qualify">
+                        <option value="SSC">SSC</option>
+                        <option value="HHC">Science Graduate</option>
+                        <option value="BE">Bachelor in Engg</option>
+                        <option value="MTECH">Masters in Technology</option>
+                        <option value="ME">Masters in Engg</option>
+                        <option value="other">Others</option>
+                    </select>
+                </div>
+                <div><br><br>
+                    <label for="inst"><b>University:</b></label>
+                    <input list="insts" name="inst" id="inst">
+                    <datalist id="insts">
+                        <option value="Mumbai University">
+                        <option value="Pune University">
+                        <option value="Chennai University">
+                        <option value="Nagpur University">
+                        <option value="Badoda University">
+                    </datalist>
+                </div>
+                <div>
+                    <label for="expert"><b>Areas of Expertise:</b></label>
+                    <select name="expert" id="expert" multiple size="3">
+                        <option value="Training">Training</option>
+                        <option value="Networking">Networking</option>
+                        <option value="Management">Management</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Marketing">Analytical and Problem Solving</option>
+                        <option value="Marketing">Data Analytics</option>
+                    </select>    
+                    You can select multiple fields
+                </div>
+                <div class="submit">
+                    <button type="button" onclick="alert('Form submitted successfully!')">Submit</button>
+                </div> 
+            </fieldset>     
+        </form>
+    </body>
+</html>
