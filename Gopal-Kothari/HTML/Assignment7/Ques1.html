@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ques 1</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="nav-bar">
+            <img class="logo" src="img/logo.png">
+            <a href="#"><b>JOBS</b></a>
+            <a href="#"><b>RECRUITERS</b></a>
+            <a href="#"><b>COMPANIES</b></a>
+            <a href="#"><b>TOOLS</b></a>
+            <a href="#"><b>SERVICES</b></a>
+            <a href="#"><b>MORE</b></a>
+            <a href="#" onclick="openlogin()"><b>LOGIN</b></a>
+        </nav>
+        <div id="side_bar" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="login">
+                <h1>Login 
+                    <span><a style="text-decoration: none; font-size: 20px; margin-left: 130px" href="file:///home/gopal/mean/MI-12-MEAN/Gopal-Kothari/HTML/Assignment7/register.html">Register now</a></span>
+                </h1>
+                <br><br>
+                <label><b>Email ID / Username</b></label><br>
+                <input type="text"><br><br>
+                <label><b>Password</b></label><br>
+                <input type="password" ><br>
+                <h5>Forget Password?</h5><br><br>
+                <button>login</button><br><br><br>
+                <label>Use OTP to Login</label><br><br>
+                <hr><br>
+                <table>
+                    <tr>
+                        <th><a href="#" class="fa fa-google"></a></th>
+                        <th><a href="#">Sign in with Google</a></th>
+                    </tr>
+                    <tr>
+                        <th><a href="#" class="fa fa-facebook"></a></th>
+                        <th><a href="#">Sign in with Facebook</a></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main_body">
+                <h1>Find A Job at India's No.1 Job Site</h1>
+                <input type="text" placeholder="Skill">
+                <input type="text" placeholder="location">
+                <button>Search</button>
+            </div>
+        </div>
+        <footer>
+            <center>
+                <label>Follow Us</label><br>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+            </center>
+        </footer>
+        <script>
+            function openlogin() {
+              document.getElementById("side_bar").style.width = "30%";
+              document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            }
+            function closeNav() {
+              document.getElementById("side_bar").style.width = "0";
+              document.body.style.backgroundColor = "white";
+            }
+        </script>
+    </body>
+</html>

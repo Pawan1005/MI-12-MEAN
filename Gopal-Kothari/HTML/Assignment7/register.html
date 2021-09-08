@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Register</title>
+    </head>
+    <body>
+        <h2>MI-9 Intern HTML Assesment</h2><br>
+        <hr>
+        <h3><i>Personal Details</i></h3>
+        <form>
+            <label><b>First Name : </b></label>
+            <input type="text" placeholder="First Name"><br><br>
+            <label><b>Last Name :</b></label>
+            <input type="text" placeholder="Last Name"><br><br>
+            <label><b>Gender :</b></label>
+            <input type="radio" name="gender">
+            <label>Male</label>
+            <input type="radio" name="gender">
+            <label>Female</label>
+            <input type="radio" name="gender">
+            <label>Other</label><br><br>
+            <label><b>Age :</b></label>
+            <input type="radio" name="age">
+            <label>Less than 18</label>
+            <input type="radio" name="age" checked>
+            <label>18-25</label>
+            <input type="radio" name="age">
+            <label>26-40</label><br><br>
+            <h3><i>Professional Details</i></h3>
+            <fieldset>
+                <legend>Academic Details</legend>
+                <label><b>Skill Set :</b></label>
+                <input type="checkbox" name="skillset">
+                <label>HTML</label>
+                <input type="checkbox" name="skillset">
+                <label>Java Script</label>
+                <input type="checkbox" name="skillset">
+                <label>Java</label>
+                <input type="checkbox" name="skillset">
+                <label>Oracle</label><br><br>
+                <label><b>Highest Qualification :</b></label>
+                <select>
+                    <option>Diploma in Computer Science</option>
+                    <option>Science Graduate</option>
+                    <option>Bachelor in Engg.</option>
+                    <option>Masters in Computer Science</option>
+                    <option>Masters in Engg.</option>
+                    <option>Other</option>
+                </select><br><br>
+                <label><b>Univertsity :</b></label>
+                <input type="text"><br><br>
+                <label><b>Areas of Expertise :</b></label>
+                <select>
+                    <option>Software</option>
+                    <option>Training</option>
+                    <option>Networking</option>
+                    <option>Management</option>
+                    <option>Marketing</option>
+                </select><br><br>
+            </fieldset>
+            <fieldset>
+                <legend>Resume</legend>
+                <label>Uploading Resume :</label>
+                <input type="file" name="resume"><br><br>
+                <label><b>Comments :</b></label>
+                <textarea rows="7" cols="56"></textarea>
+            </fieldset><br>
+            <center>
+                <button type="button" onclick="alert('Your Form Submitted')">Submit</button>
+            </center>
+        </form>
+    </body>
+</html>
