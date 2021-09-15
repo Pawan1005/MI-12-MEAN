@@ -1,127 +1,131 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>registortion page</title>
-        <style type="text/css">
-        .FIRST{
+<head>
+    <title>registortion page</title>
+    <style type="text/css">
+        .FIRST {
             background-color: white;
-            padding-right: 19px;    
+            padding-right: 19px;
             margin-top: 18px;
             margin-bottom: 40px;
             width: 100%;
             text-align: right;
             border-radius: 0px 28px;
-           }
-        </style>
-    </head>
-    <body style="background-color:lightblue;" >
-        <center>
+        }
+    </style>
+</head>
+<body style="background-color:lightblue;">
+    <center>
         <h1 style="color: black;font-family: 'Times New Roman', Times, serif;"><b>Registration Form </b></h1>
-        </center>
-        <div class="FIRST">
-            <h3>Personal Details</h3>
-          </div> 
-        <fieldset>
-            <legend>Personal Details</legend>
-        <lable><b>First Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></lable><input type="text" placeholder="First Name"><br>
-         <br>
-         <lable><b>Last Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></lable><input type="text" placeholder="Last Name">
-         <br> <br>
-         <lable><b>EMAIL:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</lable><input type="text" placeholder="abc@gmail.com">
-         <br><br>
-         <lable><b>Contact No:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></lable><input type="text">
-         <br><br>
-         <label><b>Birth Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label><input type="date">
-         <br><br>
-         <label><b>Gender:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
-         <input type="radio" id="Male" name="Gender" value="Male">
-            <label>Male</label>
-            <input type="radio" id="Female" name="Gender" value="Female">
-            <label>Female</label>
-            <input type="radio" id="Other" name="Gender" value="Other">
-            <label>Other</label> 
-            <br><br>
-            <label><b>Current City:&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
-            <input type="text" placeholder="city">
-            <br><br>
-            <label><b>Marital Status:&nbsp;</b></label>
-            <input type="radio" id="Marital Status:" name="Marital Status:" value="Married">
-            <label> Married</label>
-            <input type="radio"id="Marital Status:" name="Marital Status:" value="Unmarried">
-            <label>Unmarried</label> 
-            <br><br>
-            </fieldset>
-            </div>
-            <div class="FIRST">
-              <h3>Academic Details</h3>
-            </div> 
-         <fieldset>
-                <label><b>Highest Qalification:</b></label>
-                <select name="Qualification" id="Qualification">
-                    <option>Diploma in Computer Science</option>
-                    <option>Science Graduate</option>
-                    <option>Bachelor in Engg.</option>
-                    <option>Masters in Computer Science</option>
-                    <option>Masters in Engg.</option>
-                    <option>Other</option>
-                </select>
-                <br><br>
-                <label><b>University:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
-                </label>
-                <input list="University" name="University" id="University">
-                <datalist>
-                     <option value="Mumbai University">
-                     <option value="Pune University">
-                     <option value="Chennai University">
-                     <option value="Nagpur University">
-                     <option value="Baroda University">
-                </datalist>        
-                <br><br>
-                <label><b>Areas of Expertise:&nbsp;&nbsp;&nbsp; </b></label>
-                <select name="Expertise" id="Expertise" multiple>
-                    <option>Software</option>
-                    <option>Training</option>
-                    <option>Networking</option>
-                    <option>Management</option>
-                    <option>Marketing</option>
-                </select> You can select multiple things.
-                <br><br>
-                <lable><b>Year Of Passing:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><input type="text"></lable>
-                <br><br>
-                <label><b>Total Experience(in years):</b>&nbsp;&nbsp;<input type="text"></label>
-         <br><br>
-            </fieldset>
-            <div class="FIRST">
-                <h3>Skill Set</h3>
-            </div>
-            <fieldset>
-            <legend>Skill Set</legend>
-            <label><b>Skill Set:&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
-            <input type="checkbox" name="Skill" id="HTML" value="HTML">
-            <label>HTML</label>
-            <input type="checkbox" name="Skill" id="Js" value="Js">
-            <label>Java Script</label>
-            <input type="checkbox" name="Skill" id="Java" value="Java">
-            <label>Java</label>
-            <input type="checkbox" name="Skill" id="Oracle" value="Oracle">
-            <label >Oracle</label>
-            <br><br>
-            <label><b>Certification:&nbsp;</b><input type="text">
-            </fieldset>
-            <div class="FIRST">
-                <h3>Documentation</h3>
-              </div> 
-            <fieldset>
-                    <legend>Resume</legend>
-                    <label><b>Upload Resume(with photo):&nbsp;</b></label>
-                    <input type="file" id="resume" name="resume">
-                    <br><br>
-                    <label><b>Comments: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
-                    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
-            </fieldset>
-            <br><br>
-            <center>                
-                <input type="button" value="Submit" class="submit">
-            </center>
-            </body>
+    </center>
+    <div class="FIRST">
+        <h3>Personal Details</h3>
+    </div>
+    <fieldset>
+        <legend>Personal Details</legend>
+        <lable><b>First Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></lable><input type="text"
+            placeholder="First Name"><br>
+        <br>
+        <lable><b>Last Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></lable><input type="text"
+            placeholder="Last Name">
+        <br> <br>
+        <lable><b>EMAIL:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </lable><input type="text" placeholder="abc@gmail.com">
+        <br><br>
+        <lable><b>Contact No:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></lable><input type="text">
+        <br><br>
+        <label><b>Birth Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label><input
+            type="date">
+        <br><br>
+        <label><b>Gender:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+        <input type="radio" id="Male" name="Gender" value="Male">
+        <label>Male</label>
+        <input type="radio" id="Female" name="Gender" value="Female">
+        <label>Female</label>
+        <input type="radio" id="Other" name="Gender" value="Other">
+        <label>Other</label>
+        <br><br>
+        <label><b>Current City:&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+        <input type="text" placeholder="city">
+        <br><br>
+        <label><b>Marital Status:&nbsp;</b></label>
+        <input type="radio" id="Marital Status:" name="Marital Status:" value="Married">
+        <label> Married</label>
+        <input type="radio" id="Marital Status:" name="Marital Status:" value="Unmarried">
+        <label>Unmarried</label>
+        <br><br>
+    </fieldset>
+    </div>
+    <div class="FIRST">
+        <h3>Academic Details</h3>
+    </div>
+    <fieldset>
+        <label><b>Highest Qalification:</b></label>
+        <select name="Qualification" id="Qualification">
+            <option>Diploma in Computer Science</option>
+            <option>Science Graduate</option>
+            <option>Bachelor in Engg.</option>
+            <option>Masters in Computer Science</option>
+            <option>Masters in Engg.</option>
+            <option>Other</option>
+        </select>
+        <br><br>
+        <label><b>University:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+        </label>
+        <input list="University" name="University" id="University">
+        <datalist>
+            <option value="Mumbai University">
+            <option value="Pune University">
+            <option value="Chennai University">
+            <option value="Nagpur University">
+            <option value="Baroda University">
+        </datalist>
+        <br><br>
+        <label><b>Areas of Expertise:&nbsp;&nbsp;&nbsp; </b></label>
+        <select name="Expertise" id="Expertise" multiple>
+            <option>Software</option>
+            <option>Training</option>
+            <option>Networking</option>
+            <option>Management</option>
+            <option>Marketing</option>
+        </select> You can select multiple things.
+        <br><br>
+        <lable><b>Year Of Passing:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><input type="text"></lable>
+        <br><br>
+        <label><b>Total Experience(in years):</b>&nbsp;&nbsp;<input type="text"></label>
+        <br><br>
+    </fieldset>
+    <div class="FIRST">
+        <h3>Skill Set</h3>
+    </div>
+    <fieldset>
+        <legend>Skill Set</legend>
+        <label><b>Skill Set:&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+        <input type="checkbox" name="Skill" id="HTML" value="HTML">
+        <label>HTML</label>
+        <input type="checkbox" name="Skill" id="Js" value="Js">
+        <label>Java Script</label>
+        <input type="checkbox" name="Skill" id="Java" value="Java">
+        <label>Java</label>
+        <input type="checkbox" name="Skill" id="Oracle" value="Oracle">
+        <label>Oracle</label>
+        <br><br>
+        <label><b>Certification:&nbsp;</b><input type="text">
+    </fieldset>
+    <div class="FIRST">
+        <h3>Documentation</h3>
+    </div>
+    <fieldset>
+        <legend>Resume</legend>
+        <label><b>Upload Resume(with photo):&nbsp;</b></label>
+        <input type="file" id="resume" name="resume">
+        <br><br>
+        <label><b>Comments: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+        <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+    </fieldset>
+    <br><br>
+    <center>
+        <input type="button" value="Submit" class="submit">
+    </center>
+</body>
 </html>
