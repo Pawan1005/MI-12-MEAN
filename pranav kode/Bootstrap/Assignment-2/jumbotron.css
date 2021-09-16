@@ -2,12 +2,10 @@
     margin: 0%;
     padding: 0%;
 }
-
 .first{
     text-align: center;
     color: rgb(255, 255, 255);
     background-image: url(diamond.jpeg);        
-
 }
 .first h1{
     font-size: 50px;    
@@ -27,5 +25,4 @@
 .box2{
     background-image: url(board.jpg);
     padding-right: 5px;
-    
 }
