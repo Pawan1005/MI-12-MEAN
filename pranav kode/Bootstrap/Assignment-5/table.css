@@ -1,0 +1,16 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+thead{
+    background-color: rgb(235, 235, 235);
+}
+table,tr,th{
+    text-align: center;
+}
+.pg{
+    align-items: center;
+}
+.breadcrumb{
+    background-color: transparent;
+}
