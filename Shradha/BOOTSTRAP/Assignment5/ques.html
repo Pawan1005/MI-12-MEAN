@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bootstrap 5</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <style type="text/css">
+            .page a:active{
+                color: black;
+            }
+            .page a:visited{
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-light mt-4">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Employee</a></li>
+                    <li class="breadcrumb-item page"><a href="#">Employee Details</a></li>
+                </ol>
+            </nav>
+            <div class="table">
+                <h3>List of Employees <span class="badge badge-info">New</span></h3>
+                <table class="table table-striped table-secondary table-hover">
+                    <thead class="bg-dark text-light">
+                        <tr>
+                            <th>Sr. No.</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Mobile Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Rachel</td>
+                            <td>Lal</td>
+                            <td>576548743</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Rita</td>
+                            <td>Raj-Pal</td>
+                            <td>278931291</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Shweta</td>
+                            <td>Singh</td>
+                            <td>986348273</td>
+                        </tr>
+                    </tbody>
+                </table>    
+            </div>
+            <div class="container">
+                <ul class="pagination float-right mt-3 mr-n3"> 
+                    <li class="page-item link"><a class="page-link" href="#">PREVIOUS</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link" href="#">6</a></li>
+                    <li class="page-item"><a class="page-link" href="#">NEXT</a></li>
+                </ul>
+            </div>
+        </div>        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>
