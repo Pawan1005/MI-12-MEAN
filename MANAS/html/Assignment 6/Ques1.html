@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Assignment6 Que1</title>
+        <link rel="stylesheet" href="css.css">
+        <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 10px;
+        }
+            </style>
+    </head>
+    <body>
+        <header>
+        <h2>MI-12 Intern HTML Assesment</h2>
+        <hr>
+        </header> 
+        <header>
+        <h3>Personal Details</h3>
+        </header>
+        <div class="container">
+            <form action="datacollect.html" method="GET">
+                <div class="a">
+                    <label for="firstname">First Name:-</label>
+                    <input type="text" name="firstname" id="firstname" placeholder="First Name"><br><br>
+                    <label for="lastname">Last Name:-</label>
+                    <input type="text" name="lastname" id="lastname" placeholder="Last Name"><br><br>
+                    <label for="gender">Gender:-</label>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="other" value="other">
+                    <label for="radio">Other</label><br><br>
+                    <label for="age">Age:-</label>
+                    <input type="radio" name="age" id="less than 18" value="less than 18">
+                    <label for="less than 18">less than 18</label>
+                    <input type="radio" name="age" id="18-25" value="18-25" checked>
+                    <label for="18-25">18-25</label>    
+                    <input type="radio" name="age" id="26-40" value="26-40">
+                    <label for="26-40">26-40</label>
+                </div>
+                <h3>Professional Details</h3>
+                <fieldset>
+                    <legend>Academic Details</legend>
+                    <div><label for="skillset">Skill Set:-</label>
+                    <input type="checkbox" name="html" id="html" value="html">
+                    <label for="html">HTML</label>
+                    <input type="checkbox" name="javascript" id="javascript" value="javascript">
+                    <label for="javascript">Java Script</label>
+                    <input type="checkbox" name="Java" id="java" value="java">
+                    <label for="java">Java</label>
+                    <input type="checkbox" name="oracle" id="oracle" value="oracle">
+                    <label for="oracle">Oracle</label><br><br>
+                    <label for="qualification">Highest Qualification:- </label>
+                    <select name="qualification" id="qualification">
+                        <option value="diploma in computer science">Diploma in Computer Science</option>
+                        <option value="Science Graduate">Science Graduate</option>
+                        <option value="Bachelor in Engg.">Bachelor in Engg.</option>
+                        <option value="Master in Computer science">Master in Computer Science</option>
+                        <option value="Master in Engg.">Master in Engg.</option>
+                        <option value="other">Other</option>
+                    </select><br><br>
+                    <label for="university">University:-</label>
+                    <input type="text" list="university" />
+                    <datalist id="university">
+                        <option>Mumbai University</option>
+                        <option>Pune University</option>
+                        <option>Nagpur University</option>
+                        <option>Badoda University</option>
+                    </datalist><br><br>
+                    <label for="area-of-expertise">Area of Expertise</label>
+                    <select name="area-of-expertise" id="area-of-expertise" multiple>
+                        <option value="software">Software</option>
+                        <option value="training">Training</option>
+                        <option value="networking">Networking</option>
+                        <option value="management">Management</option>
+                        <option value="marketing">Marketing</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>Resume</legend>
+                    <label for="resume">Upload Resume:-</label>
+                    <input type="file" name="resume" id="resume"><br><br>
+                    <label for="comments">Comments:-</label>
+                    <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+                </fieldset>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>

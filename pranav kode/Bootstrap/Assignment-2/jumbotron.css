@@ -1,0 +1,28 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.first{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-image: url(diamond.jpeg);        
+}
+.first h1{
+    font-size: 50px;    
+}
+.box{
+    height: 500px;
+}
+.box1{
+    background-color: rgb(236, 233, 233);
+}
+.box1 p{
+    margin-top: 200px;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.box2{
+    background-image: url(board.jpg);
+    padding-right: 5px;
+}

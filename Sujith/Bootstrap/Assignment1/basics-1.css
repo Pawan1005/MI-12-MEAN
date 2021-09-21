@@ -1,0 +1,85 @@
+body {
+    box-sizing: border-box;
+}
+.inside{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-right: 15px;
+}
+.inside:hover {
+    color: white;
+    text-decoration: underline;
+}
+.out {
+    color: #2b70cf;
+    float: right;
+    font-weight: 550;
+    font-family: Arial,Helvetica,sans-serif;
+    text-decoration: none;
+    margin-left: 120px;
+}
+.out:hover {
+    text-decoration: underline;
+    color: rgb(92, 101, 226);
+}
+.content {
+    margin-left: 15px;
+}
+.ins {
+    color: rgb(97, 97, 97);
+}
+.bor {
+    border-radius: 15px;
+    box-shadow: 0px 1px 2px 1px rgb(194, 194, 194);
+    padding: 10px;
+    vertical-align: middle;
+}
+.announce:hover .ins {
+    color: blue;
+}
+.reuse {
+    float: right;
+    margin: 17px 17px;
+}
+.dot:hover {
+    float: right;
+    height: 60px;
+    width: 60px;
+    background-color: #bbb;
+    border-radius: 50%;
+}
+.last {
+    border-radius: 10px;
+}
+.icon {
+    float: left;
+    height: 45px;
+    width: 45px;
+    margin: 25px 16px;
+    background-color: #566e7a;
+    border-radius: 50%;
+}
+.NMm5M {
+    margin: 12px 11px;
+}
+.sh1 a{
+    font-weight: bold;
+    color: rgb(97, 96, 96);
+    text-decoration: none;
+}
+.sh2 {
+    font-weight: normal;
+    color: rgb(75, 71, 71);
+}
+.menu1, .menu {
+    display: inline-block;
+}
+.menu {
+    font-size: 35px;
+    float: right;
+    margin: 15px 35px;
+}
+
+.cnt:hover {
+    background-color: rgb(169, 211, 202) !important;
+}

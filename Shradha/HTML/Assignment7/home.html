@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HOME</title>
+        <link rel="Stylesheet" href="job_portal.css">
+    </head>
+    <body>
+        <header>
+            <h1>Recruitment Portal</h1>
+            <img src="job.jpeg" class="img">
+        </header>
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="login.html">New User/Sign Up</a></li><br>
+                    <li><a href="personal_det.html">Personal & Academic Details</a></li><br>
+                    <li><a href="proff_det.html">Professional Details</a></li>
+                </ul>
+            </nav>
+        </section> 
+        <form action="personal_det.html" method="POST">
+            <fieldset>
+                <div>
+                    <header>
+                        <h3>Login</h3>
+                    </header>
+                </div>
+                <div>
+                    <label for="username"><b>User Name:</b></label>
+                    <input type="text" id="fname" name="fname" placeholder="User name"><br>
+                    <label for="Password"><b>Password:</b></label>
+                    <input type="text" id="Password" name="Password" placeholder="Password"><br>
+                </div>
+                <div>
+                    <a href="personal_det.html" input type="submit" value="Sign In" class="submit"><button>SignIn</button></a>
+                </div>
+            </fieldset>
+        </form>   
+    </body>
+</html>

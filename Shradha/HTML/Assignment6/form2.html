@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FORM CONT</title>
+        <link rel="Stylesheet" href="form2.css">
+    </head>
+    <body class="font">
+        <form>
+            <div class="h2">
+                <h2>Professional Details</h2>
+            </div>
+            <fieldset>
+                <legend>Academic Details</legend>
+                <div>
+                    <label for="Skill"><b>Skill Set:</b></label>
+                    <input type="checkbox" id="html" name="Skill" value="html">
+                    <label for="Skill">HTML</label>
+                    <input type="checkbox" id="javascript" name="Skill" value="javascript">
+                    <label for="Skill">Java Script</label>
+                    <input type="checkbox" id="java" name="Skill" value="java">
+                    <label for="Skill">Java</label>
+                    <input type="checkbox" id="oracle" name="Skill" value="oracle">
+                    <label for="Skill">Oracle</label><br><br>
+                </div>
+                <div>
+                    <label for="qualify"><b>Highest Qualification:</b></label>
+                    <select name="qualify" id="qualify">
+                        <option value="DCS">Diploma in Computer Science</option>
+                        <option value="SG">Science Graduate</option>
+                        <option value="BE">Bachelor in Engg</option>
+                        <option value="MTECH">Masters in Computer Science</option>
+                        <option value="ME">Masters in Engg</option>
+                        <option value="other">Others</option>
+                    </select>
+                </div>
+                <div><br><br>
+                    <label for="inst"><b>University:</b></label>
+                    <input list="insts" name="inst" id="inst">
+                    <datalist id="insts">
+                        <option value="Mumbai University">
+                        <option value="Pune University">
+                        <option value="Chennai University">
+                        <option value="Nagpur University">
+                        <option value="Badoda University">
+                    </datalist>
+                </div>
+                <div>
+                    <label for="expert"><b>Areas of Expertise:</b></label>
+                    <select name="expert" id="expert" multiple size="4">
+                        <option value="Training">Training</option>
+                        <option value="Networking">Networking</option>
+                        <option value="Management">Management</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Marketing">Analytical and Problem Solving</option>
+                        <option value="Marketing">Data Analytics</option>
+                    </select>    
+                    You can select multiple fields
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Resume</legend>
+                <div>
+                    <label for="files"><b>Upload Resume:</b></label>
+                    <input type="file" id="files" name="files"><br><br>
+                </div>
+                <div>
+                    <label for="text"><b>Comments:</b></label>
+                    <textarea name="Comments" id="text" cols="30" rows="10"></textarea><br>
+                </div>
+            </fieldset><br>
+            <div>
+                <input type="submit" value="Submit" class="submit">
+            </div>>
+        </form>
+    </body>
+</html>

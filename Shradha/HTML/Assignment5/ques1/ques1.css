@@ -1,0 +1,126 @@
+.name{
+    padding: 10px ;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: x-large;
+    margin-left: 4px;
+    color: rgb(158, 40, 64);
+    background-color: rgb(245, 195, 228);
+}
+.p{
+    background-color: cornsilk;
+    text-align:end;
+    margin-right: 6px;
+}
+.intro{
+    background-color: rgb(228, 214, 241);
+    text-align: justify;
+    margin: 4px;
+}
+.list{
+    background-color: rgb(228, 214, 241);
+    padding: 24px;
+    text-align: left;
+    list-style: square;
+    color: rgb(21, 151, 21);
+}
+a:link, a:visited{
+    text-align: center;
+    color: rgb(36, 18, 119);
+}
+.content{
+    text-align: justify;
+    background-color: rgb(243, 222, 196);
+}
+.h2{
+    text-align: center;
+}
+.contact{
+    margin-top: 6px;
+    background-color: rgb(238, 177, 177);
+}
+.header{
+    font-size: x-large;
+    text-align: center;
+    background-color: rgb(236, 115, 115);
+}
+.p1{
+    text-align: left;
+    margin-left: 2px;
+    font-size: medium;
+}
+.table, th, td {
+    width: 25%;
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: cornsilk;
+}
+.hobby{
+    width: 100%;
+    background-image: url("hobby1.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.h1{
+    padding: 6px;
+    text-align: right;
+    margin-right: 12px;
+    margin-top: 12px;
+}
+.ol{
+    list-style: square ;
+    text-align: left;
+}
+.image{
+    align-self: flex-end;
+    width: 30%;
+    height: 10%;
+}
+.h3{
+    margin-left: 25%;
+    text-align:left;
+    margin-top: 20%;
+}
+div.gallery{
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: px;
+}
+div.gallery:hover {
+    border: 1px solid rgb(12, 11, 11);
+}
+div.gallery img {
+    width: 100%;
+    height: 100%;
+}
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+* {
+    box-sizing: border-box;
+}
+@media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+}
+}
+@media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.nav{
+    margin-top: 200%;
+}
