@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bootstrap 6</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+    <body>      
+        <div class="container-fluid mt-2">
+            <div class="bg-info text-dark text-center p-3">
+                <h1>Recruitment Portal</h1>
+            </div>
+            <nav class="navbar navbar-dark bg-dark">
+                <a href="#colla" class="btn btn-success" data-toggle="collapse" data-target="#colla">
+                    <span class="navbar-toggler-icon"></span>
+                </a>
+                <div id="colla" class="collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"> 
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="signup.html">New User / Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="details.html">Personal & Academic Details</a>
+                        </li>       
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Logout</a>
+                        </li>   
+                    </ul>
+                </div>
+            </nav>
+        </div>  
+        <div class="container mt-3" style="background-image: url(image.png); background-size: cover;">
+            <form>
+                <div class="bg-secondary p-2">
+                <h2>Login</h2>
+                </div>
+                <div class="form-group row mt-4">
+                    <label for="uname" class="col-sm-2 col-form-label">User Name:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="uname" placeholder="User Name" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="pass" class="col-sm-2 col-form-label">Password:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="pass" placeholder="Password" required>
+                    </div>    
+                </div>
+                <div class="form-group row form-check">
+                    <label class="col-sm-2 col-form-label">
+                        <input type="checkbox" class="form-check-input" name="checkbox">  Stay Login
+                    </label>
+                </div>
+                <div class="mt-5">
+                    <button class="btn btn-success p-3 mt-4" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>
