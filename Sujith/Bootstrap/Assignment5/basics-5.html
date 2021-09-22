@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bootstrap Assignment- 3</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+            .th-bg {
+                background-color: rgb(212, 212, 212);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container mt-5">
+            <nav class="row d-inline">
+                <a href="#" class="text-decoration-none">Home</a>/
+                <a href="#" class="text-decoration-none">Employee</a>/
+                <a href="#" class="text-decoration-none text-muted">Employee Details</a>
+            </nav>
+            <main class="row mt-5">
+                <table class="table caption-top table-borderless">
+                    <caption class="h3">List of users &nbsp;<span class="badge bg-primary">New</span></caption>
+                    <thead class="th-bg">
+                        <tr>
+                            <td scope="col">SrNo</td>
+                            <td scope="col">First Name</td>
+                            <td scope="col">Last Name</td>
+                            <td scope="col">Mobile</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-bottom">
+                            <td scope="row">1</td>
+                            <td>Mikhil</td>
+                            <td>Raut</td>
+                            <td>2343242</td>
+                        </tr>
+                        <tr class="border-bottom">
+                            <td scope="row">2</td>
+                            <td>Ananya</td>
+                            <td>Sharma</td>
+                            <td>2343242</td>
+                        </tr>
+                        <tr class="table-borderless">
+                            <td scope="row">3</td>
+                            <td>Swapnil</td>
+                            <td>Patel</td>
+                            <td>234324</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-end">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </main>
+        </div>
+    </body>
+</html>
