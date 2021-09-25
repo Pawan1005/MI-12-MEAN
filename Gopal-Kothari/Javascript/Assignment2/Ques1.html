@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques1</title>
+    </head>
+    <body>
+        <center>
+            <label>Enter 1 value:</label>
+            <input type="number" id="a" /><br><br>
+            <label>Enter 2 value:</label>
+            <input type="number" id="b" /><br><br>
+            <label>Enter 3 value:</label>
+            <input type="number" id="c" /><br><br>
+            <label>Enter 4 value:</label>
+            <input type="number" id="d" /><br><br>
+            <label>Enter 5 value:</label>
+            <input type="number" id="e" /><br><br>
+            <button onclick="submit()">Submit</button>
+            <p id="demo"></p>
+        </center>
+        <script type="text/javascript">
+            // second largest number
+            function submit() {
+                var a = document.getElementById('a').value;
+                var b = document.getElementById('b').value;
+                var c = document.getElementById('c').value;
+                var d = document.getElementById('d').value;
+                var e = document.getElementById('e').value;
+                var arr = [a,b,c,d,e];
+                var max = Math.max.apply(null,arr); // get the max of the array
+                arr.splice(arr.indexOf(max),1);  // remove max from the array
+                var maximum = Math.max.apply(null,arr); // get the 2nd max
+                document.getElementById('demo').innerHTML="Second Largest number : "+maximum;
+            }
+        </script>
+    </body>
+</html>
