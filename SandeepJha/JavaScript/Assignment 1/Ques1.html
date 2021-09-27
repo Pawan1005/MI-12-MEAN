@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            .h1 {
+                text-align: center;
+            }
+            #h1 {
+                background-color: grey;
+                color: blue;
+                text-align: center;
+            }
+
+            #h3 {
+                text-align: center;
+                border: 2px solid yellow;
+                background-color: teal;
+            }
+
+            #h4 {
+                background-color: grey;
+                text-align: center;
+                color: blue;
+            }
+
+            #h5 {
+                text-align: center;
+                border: 2px solid yellow;
+                background-color: teal;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="h1">Swap Two Numbers</h1>
+        x: <input type="text" name="" id="First" placeholder="First number">
+        y: <input type="text" name="" id="Second" placeholder="Second number">
+        <button class="btn btn-success" onclick="method1()">Method1</button>
+        <button class="btn btn-primary" onclick="method2()">Method2</button>
+        <h4 id="h1"></h4>
+        <h4 id='h3'></h4>
+        <h4 id="h4"></h4>
+        <h4 id='h5'></h4>
+        <script>
+            function method1() {
+                x = parseInt(document.getElementById('First').value);
+                y = parseInt(document.getElementById('Second').value);
+                document.getElementById('h1').innerHTML = "Method1 : with Temporary file";
+                // document.getElementById('h2').innerHTML ="before swapping x is" + x + "before swapping y is" + y;
+                temp = x;
+                x = y;
+                y = temp;
+                document.getElementById('h3').innerHTML = "After swapping x is" + x + "<br>After swapping y is" + y;
+            }
+            function method2() {
+                x = parseInt(document.getElementById('First').value);
+                y = parseInt(document.getElementById('Second').value);
+                document.getElementById('h4').innerHTML = "Method 2 : without using Temporary file";
+                x = x + y;
+                y = x - y;
+                x = x - y;
+                document.getElementById('h5').innerHTML = "After swapping x is" + x + "<br>After swapping y is" + y;
+            }
+        </script>
+    </body>
+</html>
