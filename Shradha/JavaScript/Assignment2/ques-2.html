@@ -48,15 +48,14 @@
         <script>
             function percent(){
                 var a, b, c, d, e, total, percentage ;
-                a = Number(document.getElementById("sub1").value) ;
-                b = Number(document.getElementById("sub2").value) ;
-                c = Number(document.getElementById("sub3").value) ;
-                d = Number(document.getElementById("sub4").value) ;
-                e = Number(document.getElementById("sub5").value) ;               
+                a = parseInt(document.getElementById("sub1").value) ;
+                b = parseInt(document.getElementById("sub2").value) ;
+                c = parseInt(document.getElementById("sub3").value) ;
+                d = parseInt(document.getElementById("sub4").value) ;
+                e = parseInt(document.getElementById("sub5").value) ;               
                 total = a + b + c + d + e;
                 document.getElementById("pid").innerText = " Total Marks secured is: " + total ;
-                percentage = (total/500) * 100 ;
-                console.log(percentage)
+                percentage = total / 5 ;
                 if(percentage <= 100 && percentage >=75){
                     document.getElementById("pid1").innerHTML = "Grade is: A" ;
                 }
