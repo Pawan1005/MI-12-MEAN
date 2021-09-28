@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JScript Assignment 1</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script>
+            function tmpvar(){
+                var a , b , z;
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                z = a ;
+                a = b ;
+                b = z ;   
+                document.getElementById("pid").innerHTML = "<b>Method 1: With Temporary Variable</b><br> After Swapping (Method 1) - Value of A = " + a + " and Value of B = " + b ;
+            }
+            function swap(){
+                var a , b ;
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                b = a - b ;
+                a = a - b ;
+                b = a + b ;                 
+                document.getElementById("pid1").innerHTML = "<b>Method 2: Without Temporary Variable</b><br> After Swapping (Method 2) - Value of A = " + a + " and Value of B = " + b ;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <h1 class="text-center">Swap two numbers</h1>
+            <div class="m-4">
+                <label><b>A :</b></label> 
+                <input id="num1" type="text" style="width: 150px;">
+                <label class="ml-4"><b>B :</b></label>
+                <input id="num2" type="text" style="width: 150px;">
+                <br><br>
+                <button id="btn1" onclick="tmpvar()" class="btn btn-success p-1 ml-lg-3" style="width: 150px;" type="button">Method 1</button><br>
+                <p id="pid" class="mt-4 p-2"></p>
+                <button id="btn2" onclick="swap()" class="btn btn-success p-1 ml-lg-3" style="width: 150px;" type="button">Method 2</button>
+                <p id="pid1" class="mt-4 p-2"></p>
+            </div>
+        </form>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>
