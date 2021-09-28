@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Assignment 3</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div>
+            <h4 class="m-1">Ques 4: Rectangle/Square Pattern</h4>
+        </div>
+        <div class="row m-4">
+            <label class="col-sm-2"><b>Enter number of rows:</b></label>
+            <div class="col-sm-10">
+                <input type="number" id="num1" placeholder="Enter no. of rows">
+            </div>
+        </div>
+        <div class="row m-4">
+            <label class="col-sm-2"><b>Enter number of Columns:</b></label>
+            <div class="col-sm-10">
+                <input type="number" id="num2" placeholder="Enter no. of columns">
+            </div>
+        </div>
+        <button onclick="pattern()" class="btn btn-success p-1 ml-lg-5" style="width: 150px;" type="button">Click Me !!!</button>
+        <p class="m-3" id="para"></b></p>
+        <script>            
+            function pattern()
+            {
+                var nofrows, nofcolumns, text ;
+                nofrows = document.getElementById("num1").value;
+                nofcolumns = document.getElementById("num2").value;
+                text = "";
+                for(i=0; i<nofrows; i++)
+               {
+                   for(j=0; j<nofcolumns; j++)
+                   {
+                       text += "*" ;
+                   }
+                   text += "<br>" ;
+               }
+               document.getElementById("para").innerHTML = text ;
+            }
+        </script>
+        <hr>
+        <div>
+            <h4 class="m-1">Ques 5: Factorial of a Number</h4>
+        </div>
+        <div class="row m-4">
+            <label class="col-sm-2"><b>Enter the number:</b></label>
+            <div class="col-sm-10">
+                <input type="number" id="fact" placeholder="Enter number" required>
+                <button id="factno" onclick="Factorial()" class="btn btn-success p-1 ml-lg-2" style="width: 150px;" type="button">Click Me !!!</button>
+            </div>
+        </div>
+        <p class="m-3 p-2" id="para1"></b></p>
+        <script>
+            function Factorial()
+            {
+                var factnum, factor;
+                debugger ;
+                factnum = document.getElementById("fact").value ;
+                if (factnum < 0)
+                {
+                    document.getElementById("para1").innerHTML = "<b>Result : </b>The factorial for negative interger doesn't exist";
+                }
+                else if (factnum == 0) 
+                {
+                    document.getElementById("para1").innerHTML = "<b>Result : </b>The factorial of " + factnum + " is one" ;
+                }
+                else
+                {
+                    factor = 1 ;
+                    for (i=1; i<=factnum; i++)
+                    {
+                        factor *= i ;
+                        document.getElementById("para1").innerHTML = "<b>Result : </b>The factorial of "+ factnum + " is " + factor ;
+                    }
+                }
+            }
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>
