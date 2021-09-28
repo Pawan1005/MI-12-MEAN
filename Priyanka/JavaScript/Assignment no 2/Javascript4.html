@@ -1,0 +1,54 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>java script Assignment 2 Question 2</title>    
+     </head>
+     <body>
+        <h1 style="text-align: center;">Finding Grade of Student </h1>
+        Sub1 :  <input id="num1"type="text"><br><br>
+        Sub2 :  <input id="num2"type="text"><br><br>
+        Sub3 :  <input id="num3"type="text"><br><br>
+        Sub4 :  <input id="num4"type="text"><br><br>
+        Sub5 :  <input id="num5"type="text"><br><br>
+        <button type="button" onclick="Calculate()"> Cilck to find Grade </button>
+        <p id="pid"></p>
+        <p id="pid1"></p>
+        <script type="text/javascript">
+        "use strict"
+         var A,B, C,D,E,Total,Percentage;
+         document.getElementById("pid").innerHTML= "<b> Your Final Grade</b><br> ";
+         function Calculate()
+            {
+                A=parseInt(document.getElementById("num1").value);
+                B=parseInt(document.getElementById("num2").value);
+                C=parseInt(document.getElementById("num3").value);
+                D=parseInt(document.getElementById("num4").value);
+                E=parseInt(document.getElementById("num5").value);
+                Total=A+B+C+D+E;
+                Percentage=(Total/500)*100;
+                document.getElementById("pid1").innerHTML = "Your Total marks "+Total+" out of 500  <br> Your Percentage is  "+Percentage+"% <br> ";
+                if(Percentage>=75 && Percentage<=100){
+                document.getElementById("pid1").innerText += "  Excellent !! Your grade is A";
+               }
+             else if(Percentage>=60 && Percentage<75)
+                { 
+                    document.getElementById("pid1").innerHTML += "  Very Good !! Your grade is B";
+                }
+             else if(Percentage>=40 && Percentage<60)
+                { 
+                    document.getElementById("pid1").innerHTML += "  Good !! Your grade is C";
+                }
+             else if(Percentage>=30 && Percentage<40)
+                { 
+                    document.getElementById("pid1").innerHTML += "  Your grade is D";
+                }
+             else if(Percentage<30)
+                {
+                 document.getElementById("pid1").innerHTML += "  Your grade is F Better luck next time";
+                }
+            }  
+    </script>
+    </body>
+</html>

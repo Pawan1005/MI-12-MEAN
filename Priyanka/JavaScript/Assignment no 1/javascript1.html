@@ -1,0 +1,41 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>java script</title>    
+     </head>
+     <body>
+         <h1 style="text-align: center;">Swap Two Numbers</h1>
+         A :  <input id="num1"type="text">
+         B :  <input id="num2"type="text">
+        <button type="button" onclick="Method1()"> Method1 </button>
+        <button type="button1" onclick="Method2()" >Method2 </button>
+        <p id="pid"></p>
+        <p id="pid1"></p>
+        <script type="text/javascript">
+        "use strict"
+         var A,B,temp;
+         document.getElementById("pid").innerHTML= "<b>Method1:With Temporary Variable</b><br> ";
+         function Method1()
+            {
+                A=parseInt(document.getElementById("num1").value);
+                B=parseInt(document.getElementById("num2").value);
+                temp = A;
+                A = B;
+                B = temp;
+                document.getElementById("pid").innerHTML += "After Swapping(Method1) - A : " + A +" B: " + B;
+            }
+         document.getElementById("pid1").innerHTML= "<b>Method2:Without Temporary Variable</b><br>";
+         function Method2()
+           {
+                A=parseInt(document.getElementById("num1").value);
+                B=parseInt(document.getElementById("num2").value);
+                A=A+B;
+                B=A-B;
+                A=A-B;
+                document.getElementById("pid1").innerHTML += "After Swapping(Method2) - A : " + A +" B: " + B;
+            }
+    </script>
+    </body>
+</html>
