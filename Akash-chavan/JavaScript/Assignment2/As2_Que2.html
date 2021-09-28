@@ -16,6 +16,10 @@
         <label>Enter Science marks:</label>
         <input type="number" id="e" /><br><br>
         <button onclick="submit()">Submit</button><br><br>
+        Total Marks: 
+        <span id="total"></span><br>
+        Percentage: 
+        <span id="per"></span><br>
         Result :
         <span id="demo"></span>
         <script>
@@ -26,15 +30,18 @@
                 var c = document.getElementById('c').value;
                 var d = document.getElementById('d').value;
                 var e = document.getElementById('e').value;
-                var total = ((a - 0) + (b - 0) + (c - 0) + (d - 0) + (e - 0))*100/500;
-                if(total <= 100 && total>=75){
+                var total = ((a - 0) + (b - 0) + (c - 0) + (d - 0) + (e - 0));
+                var per = total*100/500;
+                document.getElementById('total').innerHTML =  total;
+                document.getElementById('per').innerHTML =  per;
+                if(per <= 100 && per>=75){
                     document.getElementById('demo').innerHTML = "A Grade";
-                }else if(total <= 74 && total >= 60 ){
+                }else if(per <= 74 && per >= 60 ){
                     document.getElementById('demo').innerHTML = "B Grade";
                 }
-                else if(total <= 59 && total >= 40){
+                else if(per <= 59 && per >= 40){
                     document.getElementById('demo').innerHTML = "C Grade";
-                }else if(total <=39 && total >= 30){
+                }else if(per <=39 && per >= 30){
                     document.getElementById('demo').innerHTML = "D Grade";
                 }else{
                     document.getElementById('demo').innerHTML = "F Grade";
