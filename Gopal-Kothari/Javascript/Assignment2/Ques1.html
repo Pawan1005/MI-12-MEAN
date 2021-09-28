@@ -27,11 +27,50 @@
                 var c = document.getElementById('c').value;
                 var d = document.getElementById('d').value;
                 var e = document.getElementById('e').value;
-                var arr = [a,b,c,d,e];
-                var max = Math.max.apply(null,arr); // get the max of the array
-                arr.splice(arr.indexOf(max),1);  // remove max from the array
-                var maximum = Math.max.apply(null,arr); // get the 2nd max
-                document.getElementById('demo').innerHTML="Second Largest number : "+maximum;
+                var temp = Math.max(a,b,c,d,e);
+                if(temp==a && b>=c && b>=d && b>=e){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + b;
+                }else if(temp==a && c>=b && c>=d && c>=e){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + c;
+                }else if(temp==a && d>=b && d>=c && d>=e){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + d;
+                }else if(temp==a && e>=b && e>=c && e>=d){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + e;
+                }else if(temp==b && c>=a && c>=d && c>=e){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + c;
+                }else if(temp==b && d>=a && d>=c && d>=e){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + d;
+                }else if(temp==b && e>=a && e>=d && e>=e){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + e;
+                }else if(temp==b && a>=c && a>=d && a>=e){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + a;
+                }else if(temp==c && d>=a && d>=b && d>=e){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + d;
+                }else if(temp==c && e>=a && e>=b && e>=d){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + e;
+                }else if(temp==c && a>=b && a>=d && a>=e){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + a;
+                }else if(temp==c && b>=a && b>=d && b>=e){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + b;
+                }else if(temp==d && e>=a && e>=b && e>=c){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + e;
+                }else if(temp==d && a>=b && a>=c && a>=e){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + a;
+                }else if(temp==d && b>=a && b>=c && b>=e){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + b;
+                }else if(temp==d && c>=a && c>=b && c>=e){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + c;
+                }else if(temp==e && a>=b && a>=c && a>=d){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + a;
+                }else if(temp==e && b>=a && b>=c && b>=d){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + b;
+                }else if(temp==e && c>=a && c>=b && c>=d){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + c;
+                }else if(temp==e && d>=a && d>=b && d>=c){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + d;
+                }else{
+                    document.getElementById('demo').innerHTML = "Please insert 5 number";
+                }
             }
         </script>
     </body>

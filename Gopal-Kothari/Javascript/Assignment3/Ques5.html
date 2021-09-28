@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques5</title>
+    </head>
+    <body>
+        <center>
+            <h2>Factorial Number</h2><br>
+            <hr><br>
+            <label>Enter number:</label>
+            <input type="number" id="a" /><br><br>
+            <button onclick="submit()">Submit</button>
+            <p id="demo"></p>
+        </center>
+        <script type="text/javascript">
+            // Factorial number
+            function submit() {
+                var a = document.getElementById('a').value;
+                var temp = "1";
+                for (var i=1; i<=a; i++){
+                    temp = temp*i;
+                }
+                document.getElementById("demo").innerHTML = a + " factorial number is " + temp;
+            }
+        </script>
+    </body>
+</html>

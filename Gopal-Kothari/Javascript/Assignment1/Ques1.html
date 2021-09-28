@@ -15,7 +15,7 @@
             <button onclick="method1()">Method 1</button>
             <button onclick="method2()">Method 2</button>
             <h2>Method 1 : With Temporary variable</h2>
-            <label>After swaping method2 : </label>
+            <label>After swaping method1 : </label>
             <label id="demo1"></label>
             <h2>Method 2 : Without Temporary variable</h2>
             <label>After swaping method2 : </label>
@@ -33,10 +33,13 @@
             }
             //without Temporary variable
             function method2(){
+                var temp;
                 var x = document.getElementById('x').value;
                 var y = document.getElementById('y').value;
-                [x,y] = [y,x];
-                document.getElementById('demo2').innerHTML = "<b> x = "+ x + "<b>, y = " +y;
+                temp= (x*1)+(y*1);
+                x=temp-x;
+                y=temp-y;
+                document.getElementById('demo2').innerHTML = "<b> x = "+ x + "<b>, y = " + y;
             }
         </script>
     </body>
