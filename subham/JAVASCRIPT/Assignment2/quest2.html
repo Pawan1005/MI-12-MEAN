@@ -10,6 +10,7 @@
     </head>
     <body>
         <div class="container">
+            <h1 id="pid3"></h1>
             <h1 id="pid2"></h1>
             <h1 id="pid"></h1>
         </div>
@@ -20,6 +21,7 @@
             var his=Number(prompt("Enter the history mark?"))
             var geo=Number(prompt("Enter the geogrphy mark?"))
             var total=(eng+math+sci+his+geo);
+            document.getElementById('pid3').innerHTML="Your total mark is :"+total;
             //here the formula set
             var data=total/500*100
             console.log(data)
