@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+        <style>
+            * {
+                margin: 20px;
+                padding-left: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="jumbotron"
+            style="background-color: grey; height: 600px; width: 1000px; padding-left: 200px; text-align: justify">
+            <h3>Factorial of a number:</h3>
+            <label for="number">Type Number
+                <input type="number" id="num">
+            </label>
+            <br>
+            <br>
+            <div>
+                <button class="btn btn-success" onclick="fact()">Check</button>
+                <p id="h5"></p>
+            </div>
+        </div>
+        <script>
+            function fact() {
+                var s, i, a;
+                s = 1;
+                a = parseInt(document.getElementById("num").value);
+                if (a) {
+                    for (i = 1; i <= a; i++) {
+                        s *= i;
+                        document.getElementById('h5').innerHTML = "The factorial of a given number" + a + " is " + s;
+                    }
+                }
+                else {
+                    document.getElementById('h5').innerHTML = "Please enter a number"
+                }
+            }
+        </script>
+    </body>
+</html>
