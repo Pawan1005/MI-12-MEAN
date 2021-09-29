@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques4</title>
+        <script>
+            function upper(){
+                var a = document.getElementById('a').value;
+                var upp = a.toUpperCase();
+                return upp;
+            }
+            function lower(){
+                var a = document.getElementById('a').value;
+                var low = a.toLowerCase();
+                return low;
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h2>Check the string in uppercase or lowercase</h2><br>
+            <hr><br>
+            <label>Enter a character:</label>
+            <input type="text" id="a" /><br><br>
+            <button onclick="submit()">Submit</button>
+            <p id="demo"></p>
+        </center>
+        <script type="text/javascript">
+            // check uppercase and lowercase
+            function submit() {
+                var a = document.getElementById('a').value;
+                var n = lower();
+                if( a == n){
+                    return document.getElementById("demo").innerHTML = upper();
+                }
+                else{
+                    return document.getElementById("demo").innerHTML = lower();
+                }
+                
+            }
+        </script>
+    </body>
+</html>

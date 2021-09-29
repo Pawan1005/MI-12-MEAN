@@ -1,1 +1,0 @@
-My self Manas Ranjan Sahoo,belongs from odisha,I did my graduation  in Phy hons from FM Univesity in 2019 and i did my 12th in 2016 from CHSE Board,odisha and also did my matriculatioon in 2014 from BSE odisha.I have four member in my family and i am the eldest son.My hobbies are playing cricket ,watching tv,listining music.
