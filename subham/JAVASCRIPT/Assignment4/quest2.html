@@ -9,26 +9,21 @@
         <title>Quest2</title>
     </head>
     <body>
-        <div class="container bg-primary my-5 text-light">
-            <h1 class="text-center"><u>programme for prime number</u></h1>
-            <h3 id="id1"></h3>
+        <div class="container bg-primary mt-5 text-light"> 
+            <h1 class="text-center"><u>For check automorphic number or not</u></h1>
+            <h3 id="ids1"></h3>
             <h3 id="ids"></h3>
         </div>
         <script>
-            var num=Number(prompt('Enter your number?'));
-            document.getElementById("id1").innerHTML="Your number is "+num;
-            var prime=false;
-            var data=Math.floor(Math.sqrt(num));
-            for(let i=2;i<data+1;i++){
-                if(num % i==0){
-                    prime=true;
-                    break;
-                }
-            }
-            if(prime==true){
-                document.getElementById('ids').innerHTML="this is not prime number";
+            var num,data,str;
+            num=Number(prompt("Enter a number between 0 to 9 !"));
+            data=num**2;
+            str=data.toString();
+            document.getElementById("ids1").innerHTML=num +" You have put that value";
+            if(str[1]==num){
+                document.getElementById("ids").innerHTML="This is Automarphic number";
             }else{
-                document.getElementById('ids').innerHTML="this is a prime number";
+                document.getElementById("ids").innerHTML="This is not Automarphic number";
             }
         </script>
         <!-- Optional JavaScript; choose one of the two! -->
