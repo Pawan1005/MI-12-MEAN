@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques4</title>
+    </head>
+    <body>
+        <center>
+            <h2>Rectangle or Square pattern</h2><br>
+            <hr><br>
+            <label>Enter row number:</label>
+            <input type="number" id="a" /><br><br>
+            <label>Enter column number:</label>
+            <input type="number" id="b" /><br><br>
+            <button onclick="submit()">Submit</button>
+            <p id="demo"></p>
+        </center>
+        <script type="text/javascript">
+            // rectangle or square pattern
+            function submit() {
+                var a = document.getElementById('a').value;
+                var b = document.getElementById('b').value;
+                var temp = "";
+                for (var i=0; i<a; i++){
+                    for (var j=1; j<b; j++){
+                        temp += '*';
+                    }
+                    temp += '*<br>';
+                }
+                document.getElementById("demo").innerHTML = temp;
+            }
+        </script>
+    </body>
+</html>

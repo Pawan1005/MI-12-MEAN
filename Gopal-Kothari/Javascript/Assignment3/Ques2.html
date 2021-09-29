@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques2</title>
+    </head>
+    <body>
+        <center>
+            <h2>Prime Number</h2><br>
+            <hr><br>
+            <label>Enter number:</label>
+            <input type="number" id="a" /><br><br>
+            <button onclick="submit()">Submit</button>
+            <p id="demo"></p>
+        </center>
+        <script type="text/javascript">
+            // Prime number or not
+            function submit() {
+                var temp = true;
+                var a = document.getElementById('a').value;
+                if(a <= 1){
+                    document.getElementById("demo").innerHTML = a + ' is not a prime number';
+                }else{
+                    for(var i=2; i<a; i++){
+                        if(a % i == 0){
+                            temp = false;
+                            break;
+                        }
+                    }
+                    if(temp){
+                        document.getElementById("demo").innerHTML = a + ' is a prime number';
+                    }else{
+                        document.getElementById("demo").innerHTML = a + ' is not a prime number';
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
