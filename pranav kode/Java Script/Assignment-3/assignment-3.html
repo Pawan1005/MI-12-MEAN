@@ -73,6 +73,7 @@
           }
         }
         function prime() {
+          var pr = 0;
           var p = parseInt(document.getElementById("prime").value)
           if (p==1) {
             document.getElementById("primeresult").innerHTML=p+" is neither prime nor composite" ;
@@ -80,17 +81,26 @@
           else if (p==2) {
             document.getElementById("primeresult").innerHTML=p+" is prime number"; 
           }
-          else if(p>2)
+          else if(p>2){
             for(var i=2; i< p; i++)
              {
                if(p%i==0){
-                document.getElementById("primeresult").innerHTML=p+" is not prime number";
+                 pr = 1;
+                // document.getElementById("primeresult").innerHTML=p+" is not prime number";
                 break;
                }
                else{
-                document.getElementById("primeresult").innerHTML=p+" is prime number";
+                 pr = 0;
+                // document.getElementById("primeresult").innerHTML=p+" is prime number";
                }
              }
+             if (pr == 1) {
+              document.getElementById("primeresult").innerHTML=p+" is not prime number";
+             }
+             else{
+              document.getElementById("primeresult").innerHTML=p+" is prime number";
+             }
+          }
         }
         function oddev() {
           o = parseInt(document.getElementById("oddev").value);
