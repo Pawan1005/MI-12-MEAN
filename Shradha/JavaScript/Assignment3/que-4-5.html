@@ -6,6 +6,46 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>JavaScript Assignment 3</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script>            
+            function pattern()
+            {
+                var nofrows, nofcolumns, text ;
+                nofrows = document.getElementById("num1").value;
+                nofcolumns = document.getElementById("num2").value;
+                text = "";
+                for(i=0; i<nofrows; i++)
+               {
+                   for(j=0; j<nofcolumns; j++)
+                   {
+                       text += "*" ;
+                   }
+                   text += "<br>" ;
+               }
+               document.getElementById("para").innerHTML = text ;
+            }
+            function Factorial()
+            {
+                var factnum, factor;
+                factnum = document.getElementById("fact").value ;
+                if (factnum < 0)
+                {
+                    document.getElementById("para1").innerHTML = "<b>Result : </b>The factorial for negative interger doesn't exist";
+                }
+                else if (factnum == 0) 
+                {
+                    document.getElementById("para1").innerHTML = "<b>Result : </b>The factorial of " + factnum + " is one" ;
+                }
+                else
+                {
+                    factor = 1 ;
+                    for (i=1; i<=factnum; i++)
+                    {
+                        factor *= i ;
+                    }
+                    document.getElementById("para1").innerHTML = "<b>Result : </b>The factorial of "+ factnum + " is " + factor ;
+                }
+            }
+        </script>
     </head>
     <body>
         <div>
@@ -25,24 +65,6 @@
         </div>
         <button onclick="pattern()" class="btn btn-success p-1 ml-lg-5" style="width: 150px;" type="button">Click Me !!!</button>
         <p class="m-3" id="para"></b></p>
-        <script>            
-            function pattern()
-            {
-                var nofrows, nofcolumns, text ;
-                nofrows = document.getElementById("num1").value;
-                nofcolumns = document.getElementById("num2").value;
-                text = "";
-                for(i=0; i<nofrows; i++)
-               {
-                   for(j=0; j<nofcolumns; j++)
-                   {
-                       text += "*" ;
-                   }
-                   text += "<br>" ;
-               }
-               document.getElementById("para").innerHTML = text ;
-            }
-        </script>
         <hr>
         <div>
             <h4 class="m-1">Ques 5: Factorial of a Number</h4>
@@ -55,31 +77,6 @@
             </div>
         </div>
         <p class="m-3 p-2" id="para1"></b></p>
-        <script>
-            function Factorial()
-            {
-                var factnum, factor;
-                debugger ;
-                factnum = document.getElementById("fact").value ;
-                if (factnum < 0)
-                {
-                    document.getElementById("para1").innerHTML = "<b>Result : </b>The factorial for negative interger doesn't exist";
-                }
-                else if (factnum == 0) 
-                {
-                    document.getElementById("para1").innerHTML = "<b>Result : </b>The factorial of " + factnum + " is one" ;
-                }
-                else
-                {
-                    factor = 1 ;
-                    for (i=1; i<=factnum; i++)
-                    {
-                        factor *= i ;
-                        document.getElementById("para1").innerHTML = "<b>Result : </b>The factorial of "+ factnum + " is " + factor ;
-                    }
-                }
-            }
-        </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
