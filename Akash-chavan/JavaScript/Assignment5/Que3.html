@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>triangle</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"/>
+    <script></script>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h3 class="h text-info">triangle with given row</h3>
+      <input type="text" name="a" id="first" placeholder="Enter no. of rows" />
+      <button class="btn bg-success" onclick="triangle()">click</button><br /><br />
+      <p class="para text-info" id="num"></p>
+    </div>
+    <!-- triangle of numbers with given input rows -->
+    <script>
+      function triangle() {
+        var n, i, j;
+        n = parseInt(document.getElementById("first").value);
+        for (i = 0; i <= n; i++) {
+          for (j = 1; j <= i; j++) {
+            document.getElementById("num").innerHTML += j + " ";
+          }
+          document.getElementById("num").innerHTML += "1";
+          document.getElementById("num").innerHTML += "</br>";
+        }
+      }
+    </script>
+  </body>
+</html>
