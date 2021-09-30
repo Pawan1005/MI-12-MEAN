@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Assignment 3</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script>
+            function Year()
+            {
+                var y, leap;
+                y = document.getElementById("year").value;
+                leap = y % 4 ;
+                if (leap)
+                {
+                    document.getElementById("pid").innerHTML = + y + " is not a Leap Year."
+                }
+                else
+                {
+                    document.getElementById("pid").innerHTML = + y + " is a Leap Year."
+                }
+            }
+            function primenum()
+            {
+                var p, prime = false ;
+                p = document.getElementById("num").value ;
+                for (i=2; i<p; i++)
+                {
+                    if(p % i == 0)
+                    {
+                        prime = true ;
+                        break ;
+                    }
+                }
+                if(prime)
+                {
+                    document.getElementById("pid1").innerHTML = + p + " is not a prime number";
+                }
+                else
+                {
+                    document.getElementById("pid1").innerHTML = + p + " is a prime number";
+                }
+            }
+            function evenodd()
+            {
+                var x, num = true ;
+                x = document.getElementById("num1").value ;
+                for (i=0; i<=x; i++)
+                {
+                    if (x % 2 == 1)
+                    {
+                        num = false ;
+                        break; 
+                    }
+                }
+                if(num)
+                {
+                    document.getElementById("pid2").innerHTML ="<b>Result: </b>" + x + " is an even number";
+                }
+                else
+                {
+                    document.getElementById("pid2").innerHTML = "<b>Result: </b>" + x + " is an odd number";
+                }
+            }
+            function evenodd1()
+            {
+                var x, num = true ;
+                x = document.getElementById("num2").value ;
+                for (i=0; i<=x; i++)
+                {
+                    if (x % 2 == 1) 
+                    {
+                        num = false ;
+                        break; 
+                    }
+                }
+                if(num)
+                {
+                    document.getElementById("para2").innerHTML = "<b>Result: </b>" + x + " is an even number";
+                }
+                else
+                {
+                    document.getElementById("para2").innerHTML = "<b>Result: </b>" + x + " is an odd number";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h4 class="m-3">Ques 1: Leap year</h4>
+        </div>
+        <div class="row m-4">
+            <label class="col-sm-2"><b>Enter the Year:</b></label>
+            <div class="col-sm-10">
+                <input type="number" id="year" placeholder="Enter year" required>
+                <button id="yr" onclick="Year()" class="btn btn-success p-1 ml-lg-2" style="width: 150px;" type="button">Click Me !!!</button>
+            </div>
+        </div>
+        <p class="m-3 p-2" id="pid"></b></p>
+        
+        <hr>
+        <div>
+            <h4 class="m-3">Ques 2: Prime Number</h4>
+        </div>
+        <div class="row m-4">
+            <label class="col-sm-2"><b>Enter the Number:</b></label>
+            <div class="col-sm-10">
+                <input type="number" id="num" placeholder="Enter number" required>
+                <button id="prime" onclick="primenum()" class="btn btn-success p-1 ml-lg-2" style="width: 150px;" type="button">Click Me !!!</button>
+            </div>
+        </div>
+        <p class="m-3 p-2" id="pid1"></b></p>
+        <hr>
+        <div>
+            <h4 class="m-3">Ques 3: Even or Odd Number</h4>
+        </div>
+        <div class="row m-4">
+            <label class="col-sm-2"><b>Enter the Number:</b></label>
+            <div class="col-sm-10">
+                <input type="number" id="num1" placeholder="Enter number" required>
+                <button id="evenoddnum" onclick="evenodd()" class="btn btn-success p-1 ml-lg-2" style="width: 150px;" type="button">Click Me !!!</button>
+            </div>
+            <p class="ml-1 p-2" id="pid2"></b></p>
+        </div>
+        <div class="row m-4">
+            <label class="col-sm-2"><b>Enter the Number:</b></label>
+            <div class="col-sm-10">
+                <input class="mt-2" type="number" id="num2" placeholder="Enter number" required>                
+                <button id="evenoddnum" onclick="evenodd1()" class="btn btn-success p-1 ml-lg-2" style="width: 150px;" type="button">Click Me !!!</button>
+            </div>
+            <p class="ml-1 p-2" id="para2"></b></p>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>
