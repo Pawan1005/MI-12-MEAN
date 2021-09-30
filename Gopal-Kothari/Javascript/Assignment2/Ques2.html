@@ -16,6 +16,7 @@
         <label>Enter Science marks:</label>
         <input type="number" id="e" /><br><br>
         <button onclick="submit()">Submit</button><br><br>
+        <p id="demo1"></p>
         Result :
         <span id="demo"></span>
         <script>
@@ -26,7 +27,9 @@
                 var c = document.getElementById('c').value;
                 var d = document.getElementById('d').value;
                 var e = document.getElementById('e').value;
-                var total = ((a - 0) + (b - 0) + (c - 0) + (d - 0) + (e - 0))*100/500;
+                var mar = ((a - 0) + (b - 0) + (c - 0) + (d - 0) + (e - 0));
+                var total = mar*100/500;
+                document.getElementById("demo1").innerHTML = "Total Marks = " +mar + ", Percentage is " +total;
                 if(total <= 100 && total>=75){
                     document.getElementById('demo').innerHTML = "A Grade";
                 }else if(total <= 74 && total >= 60 ){
