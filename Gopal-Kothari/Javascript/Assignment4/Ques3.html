@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques3</title>
+    </head>
+    <body>
+        <center>
+            <h2>Check Krishnamurthy Number</h2><br>
+            <hr><br>
+            <label>Enter number:</label>
+            <input type="number" id="a" /><br><br>
+            <button onclick="submit()">Submit</button>
+            <p id="demo"></p>
+        </center>
+        <script type="text/javascript">
+            // Krishnamurthy Number or not
+            function submit() {
+                var a = document.getElementById('a').value;
+                var temp = a, s=0, b=1, r;
+                while(temp>0){ 
+                    r = temp%10;
+                    for(var i=1; i<=r; i++){
+                        b = b*i;
+                    }
+                    s +=b;
+                    temp = parseInt(temp/10);
+                    b=1;
+                }
+                if(s == a){
+                    document.getElementById('demo').innerHTML = a + ' is a Krishnamurthy Number';
+                }else{
+                    document.getElementById('demo').innerHTML = a + ' is not a Krishnamurthy Number';
+                }
+            }
+        </script>
+    </body>
+</html>

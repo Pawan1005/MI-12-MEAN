@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ques2</title>
+    </head>
+    <body>
+        <label>Enter English marks:</label>
+        <input type="number" id="a" /><br><br>
+        <label>Enter Hindi marks:</label>
+        <input type="number" id="b" /><br><br>
+        <label>Enter Marathi marks:</label>
+        <input type="number" id="c" /><br><br>
+        <label>Enter Maths marks:</label>
+        <input type="number" id="d" /><br><br>
+        <label>Enter Science marks:</label>
+        <input type="number" id="e" /><br><br>
+        <button onclick="submit()">Submit</button><br><br>
+        <p id="demo1"></p>
+        Result :
+        <span id="demo"></span>
+        <script>
+            //Find grade
+            function submit() {
+                var a = document.getElementById('a').value;
+                var b = document.getElementById('b').value;
+                var c = document.getElementById('c').value;
+                var d = document.getElementById('d').value;
+                var e = document.getElementById('e').value;
+                var mar = ((a - 0) + (b - 0) + (c - 0) + (d - 0) + (e - 0));
+                var total = mar*100/500;
+                document.getElementById("demo1").innerHTML = "Total Marks = " +mar + ", Percentage is " +total;
+                if(total <= 100 && total>=75){
+                    document.getElementById('demo').innerHTML = "A Grade";
+                }else if(total <= 74 && total >= 60 ){
+                    document.getElementById('demo').innerHTML = "B Grade";
+                }
+                else if(total <= 59 && total >= 40){
+                    document.getElementById('demo').innerHTML = "C Grade";
+                }else if(total <=39 && total >= 30){
+                    document.getElementById('demo').innerHTML = "D Grade";
+                }else{
+                    document.getElementById('demo').innerHTML = "F Grade";
+                }
+            }
+        </script>
+    </body>
+</html> 

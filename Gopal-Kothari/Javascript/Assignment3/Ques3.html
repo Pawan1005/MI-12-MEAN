@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques3</title>
+    </head>
+    <body>
+        <center>
+            <h2>Even or Odd Number</h2><br>
+            <hr><br>
+            <label>Enter number:</label>
+            <input type="number" id="a" /><br><br>
+            <button onclick="submit()">Submit</button>
+            <p id="demo"></p>
+        </center>
+        <script type="text/javascript">
+            // Even or Odd Number
+            function submit() {
+                var temp;
+                var a = document.getElementById('a').value;
+                temp = a%2;
+                if(temp == 0){
+                    document.getElementById("demo").innerHTML = a + " is a even number"
+                }else{
+                    document.getElementById("demo").innerHTML = a + " is a odd number"
+                }
+            }
+        </script>
+    </body>
+</html>

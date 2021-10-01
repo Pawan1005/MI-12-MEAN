@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques1</title>
+    </head>
+    <body>
+        <center>
+            <label>Enter 1 value:</label>
+            <input type="number" id="a" /><br><br>
+            <label>Enter 2 value:</label>
+            <input type="number" id="b" /><br><br>
+            <label>Enter 3 value:</label>
+            <input type="number" id="c" /><br><br>
+            <label>Enter 4 value:</label>
+            <input type="number" id="d" /><br><br>
+            <label>Enter 5 value:</label>
+            <input type="number" id="e" /><br><br>
+            <button onclick="submit()">Submit</button>
+            <p id="demo"></p>
+        </center>
+        <script type="text/javascript">
+            // second largest number
+            function submit() {
+                var a = document.getElementById('a').value;
+                var b = document.getElementById('b').value;
+                var c = document.getElementById('c').value;
+                var d = document.getElementById('d').value;
+                var e = document.getElementById('e').value;
+                var temp = Math.max(a,b,c,d,e);
+                if(temp==a && b>=c && b>=d && b>=e || temp==c && b>=a && b>=d && b>=e || temp==d && b>=a && b>=c && b>=e || temp==e && b>=a && b>=c && b>=d){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + b;
+                }else if(temp==a && c>=b && c>=d && c>=e || temp==b && c>=a && c>=d && c>=e || temp==d && c>=a && c>=b && c>=e || temp==e && c>=a && c>=b && c>=d){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + c;
+                }else if(temp==a && d>=b && d>=c && d>=e || temp==e && d>=a && d>=b && d>=c || temp==b && d>=a && d>=c && d>=e || temp==c && d>=a && d>=b && d>=e){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + d;
+                }else if(temp==a && e>=b && e>=c && e>=d || temp==d && e>=a && e>=b && e>=c || temp==b && e>=a && e>=d && e>=e || temp==c && e>=a && e>=b && e>=d){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + e;
+                }else if(temp==b && a>=c && a>=d && a>=e || temp==d && a>=b && a>=c && a>=e || temp==c && a>=b && a>=d && a>=e || temp==e && a>=b && a>=c && a>=d){
+                    document.getElementById('demo').innerHTML = "Second Largest number : " + a;
+                }else{
+                    document.getElementById('demo').innerHTML = "Please insert 5 number";
+                }
+            }
+        </script>
+    </body>
+</html>
