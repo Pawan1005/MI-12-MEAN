@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques2</title>
+    </head>
+    <body>
+        <center>
+            <h2>Dispaly array</h2><br>
+        </center>
+        <hr><br>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <script type="text/javascript">
+            // Display array
+            var temp = [], a;
+                for (var i = 0; i < 100; i++) {
+                    a = prompt("Enter a name : ");
+                    if (a == "X" || a == "x" || a == null) {
+                        break;
+                    }
+                    temp.push(a);
+                }
+                document.getElementById("demo").innerHTML = "Name enter : " + temp.join(" ~ ");
+                temp.sort();
+                document.getElementById("demo1").innerHTML = "Names (Asc) : " + temp.join(", ");
+                temp.reverse();
+                document.getElementById("demo2").innerHTML = "Names (Desc) : " + temp.join(", ");
+        </script>
+    </body>
+</html>

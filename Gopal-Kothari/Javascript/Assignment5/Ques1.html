@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques1</title>
+    </head>
+    <body>
+        <center>
+            <h2>Sum of Even and Product of Odd digits</h2><br>
+            <hr><br>
+            <label>Enter 6 digit number:</label>
+            <input type="text" id="a" /><br><br>
+            <button onclick="submit()">Submit</button>
+            <p id="demo"></p>
+            <p id="demo1"></p>
+        </center>
+        <script type="text/javascript">
+            // Sum of Even and Product of Odd digits
+            function submit() {
+                var temp,r, sum=0, pro=1;
+                var a = document.getElementById('a').value;
+                temp = a.length;
+                if(temp<7){
+                    while(a>0){
+                        r=a%10;
+                        if(r%2==0){
+                            sum += r;
+                        }
+                        else{
+                            pro *= r;
+                        }
+                        a = parseInt(a/10);
+                        document.getElementById("demo").innerHTML = "Sum of " + a + " is " + sum; 
+                        document.getElementById("demo1").innerHTML = "Product of " + a + " is " + pro;
+                    }
+                }
+                else{
+                    document.getElementById("demo").innerHTML = "Please enter 6 digit number";
+                }
+            }
+        </script>
+    </body>
+</html>

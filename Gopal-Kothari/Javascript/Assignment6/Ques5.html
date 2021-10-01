@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques4</title>
+    </head>
+    <body>
+        <center>
+            <h2>Dispaly array</h2><br>
+        </center>
+        <hr><br>
+        <p id="demo"></p>
+        <p>Foctorial number :<span id="demo1"></span></p>
+        <p id="demo2"></p>
+        <script type="text/javascript">
+            // Display array
+            var temp = [],arr =[],a;
+            for(var i=0; i<100; i++){
+                a = prompt("Enter number");
+                if(a == "X" || a == "x" || a == null){
+                    break;
+                }
+                temp.push(parseInt(a));
+                document.getElementById('demo').innerHTML = "Enter number : " +temp ;
+                arr.push(fact(temp[i]));
+                document.getElementById("demo1").innerHTML += " " + fact(temp[i]);
+            }
+            // factorial function
+            function fact(num) {
+                if (num == 0) return 1;
+                return num * fact(num - 1);
+            }
+            arr.sort(function(a,b) {return b-a});
+            document.getElementById('demo2').innerHTML = "Descending order : " +arr;
+        </script>
+    </body>
+</html>

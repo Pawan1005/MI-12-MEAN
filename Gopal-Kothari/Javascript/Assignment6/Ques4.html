@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques4</title>
+    </head>
+    <body>
+        <center>
+            <h2>Dispaly array</h2><br>
+        </center>
+        <hr><br>
+        <p id="demo"></p>
+        <script type="text/javascript">
+            // Display array
+            var temp = [], a,sum=0, fact=1;
+            for(var i=0; i<100; i++){
+                a = prompt("Enter number");
+                if(a == "X" || a == "x" || a == null){
+                    break;
+                }
+                temp.push(parseInt(a));
+                sum += temp[i];
+            }
+            for (var j=1; j<=sum; j++){
+                fact = fact*j;
+            }
+            document.getElementById('demo').innerHTML = "Sum is " + sum + " Factorial is " +fact;
+        </script>
+    </body>
+</html>

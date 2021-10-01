@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques3</title>
+    </head>
+    <body>
+        <center>
+            <h2>Dispaly array</h2><br>
+        </center>
+        <hr><br>
+        <p id="demo"></p>
+        <script type="text/javascript">
+            // Display array
+            var temp = [], a, sum=0;
+            for( var i = 0; i<100 ; i++){
+                a = prompt("Enter number : ")
+                if(a == "X" || a == "x" || a == null){
+                    break;
+                }
+                temp.push(parseInt(a));
+                sum += temp[i];
+            }
+            document.getElementById("demo").innerHTML = "Sum : " +sum;
+        </script>
+    </body>
+</html>
