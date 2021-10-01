@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Ques-1</title>
+
+    <!-- Custom js -->
+    <script>
+
+      // Question-1
+      function ques1() {
+        var names = [];
+        var sr = 1;
+        for (let i = 0; i < 5; i++) {
+          names[i] = prompt("Enter Name:");
+
+        }
+        for (let i = 0; i < 5; i++) {
+          document.getElementById("ques1result").innerHTML += ("Name " + sr + ": " + names[i] + "<br>");
+          sr = sr + 1;
+        }
+      }
+      //End Question 1
+
+      // Question-2
+      function ques2() {
+        var names = [];
+        var temp = "start";
+        var sr = 1;
+        var i = 0;
+        while (true) {
+          temp = prompt("Enter Name:");
+          if (temp == "X" || temp == "x" || temp == null) break; {
+            names.push(temp);
+          }
+        }
+        document.getElementById("ques21result").innerHTML = "<b>Original array</b> : " + names + "&nbsp";
+        document.getElementById("ques22result").innerHTML = "<b>Join Method</b> : " + names.join("~") + "&nbsp";
+        var uppercased = names.map(name => name.toUpperCase());
+        document.getElementById("ques23result").innerHTML = "<b>Des:</b> : " + uppercased.sort() + "&nbsp";
+        document.getElementById("ques24result").innerHTML = "<b>Asc:</b> : " + uppercased.reverse() + "&nbsp";
+      }
+      //End Question 2
+
+      // Question-3
+      function ques3() {
+        var num = [];
+        var temp;
+        var sum = 0;
+        while (true) {
+          temp = prompt("Enter Number:");
+          if (temp == "X" || temp == "x" || temp == null) break; {
+            num.push(parseInt(temp));
+          }
+        }
+        var l = num.length;
+        for (let i = 0; i < l; i++) {
+          sum = sum + num[i];
+
+        }
+        document.getElementById("ques31result").innerHTML = "<b>numbers added: : </b> : " + num;
+        document.getElementById("ques32result").innerHTML = "<b>Total : </b> : " + sum;
+      }
+      //End Question 3
+
+      // Question-4
+      function ques4() {
+        var num = [];
+        var temp;
+        var fact = 1;
+        var sum = 0;
+        var newarr = [];
+        while (true) {
+          temp = prompt("Enter Number:");
+          if (temp == "X" || temp == "x" || temp == null) break; {
+            num.push(parseInt(temp));
+          }
+        }
+        var l = num.length;
+        for (let i = 0; i < l; i++) {
+          if (num[i] != 0) {
+            fact = 1;
+            for (let j = num[i]; j > 0; j--) {
+              fact = fact * j;
+            }
+            sum = sum + fact
+          }
+          else {
+            sum = sum + 1;
+          }
+
+        }
+        document.getElementById("ques41result").innerHTML = "<b>numbers added: : </b> : " + num;
+        document.getElementById("ques42result").innerHTML = "<b>Total : </b> : " + sum;
+      }
+      //End Question 4
+
+      // Question-5
+      function ques5() {
+        var num = [];
+        var temp;
+        var fact = 1;
+        var sum = [];
+        while (true) {
+          temp = prompt("Enter Number:");
+          if (temp == "X" || temp == "x" || temp == null) break; {
+            num.push(parseInt(temp));
+          }
+        }
+        var l = num.length;
+        for (let i = 0; i < l; i++) {
+          if (num[i] != 0) {
+            fact = 1;
+            for (let j = num[i]; j > 0; j--) {
+              fact = fact * j;
+            }
+            sum.push(fact);
+          }
+          else {
+            sum.push("1");
+          }      
+        }
+        document.getElementById("ques51result").innerHTML = "<b>numbers added: : </b> : " + num;
+        document.getElementById("ques52result").innerHTML = "<b>factorials: : </b> : " + sum;
+        newarr = sum.sort(function (a, b) {
+          return a - b;
+        });
+        document.getElementById("ques53result").innerHTML = "<b>factorials (asce): : </b> : " + newarr;
+      }
+      //End Question 5
+
+    </script>
+  </head>
+
+  <body>
+    <h1 class="text-center">Assignment-6</h1>
+    <div class="container">
+
+      <div class="row">
+
+        <!-- Ques - 1 -->
+        <div class="col-4 border mx-quto">
+          <h3>Simple Array </h3>
+          <h5>Enter 5 names - </h5>
+          <button class="btn-success" onclick="ques1()">Start</button>
+          <p id="ques1result"></p>
+        </div>
+
+        <!-- Ques - 2 -->
+        <div class="col-4 border mx-quto">
+          <h3>Asc, Desc, Join - </h3>
+          <h5>Enter names:</h5>
+          <button class="btn-success" onclick="ques2()">Start</button>
+          <p id="ques21result"></p>
+          <p id="ques22result"></p>
+          <p id="ques23result"></p>
+          <p id="ques24result"></p>
+        </div>
+
+        <!-- Ques - 3 -->
+        <div class="col-4 border mx-quto">
+          <h3>Enter numbers to add - </h3>
+          <button class="btn-success" onclick="ques3()">Start</button>
+          <p id="ques31result"></p>
+          <p id="ques32result"></p>
+        </div>
+
+        <!-- Ques - 4 -->
+        <div class="col-4 border mx-quto">
+          <h3>Adding all Factorials - </h3>
+          <button class="btn-success" onclick="ques4()">Start</button>
+          <p id="ques41result"></p>
+          <p id="ques42result"></p>
+        </div>
+
+        <!-- Ques - 5 -->
+        <div class="col-4 border mx-quto">
+          <h3>Enter numbers for Factorial order - </h3>
+          <button class="btn-success" onclick="ques5()">Start</button>
+          <p id="ques51result"></p>
+          <p id="ques52result"></p>
+          <p id="ques53result"></p>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
