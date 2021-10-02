@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JScript Assignment 5</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script>
+            function evenodd()
+            {
+                var num, rem, len, sum=0, product = 1 ;
+                num = parseInt(document.getElementById("num1").value) ;
+                len = num.toString().length ;
+                if (len < 7) 
+                while(num != 0)
+                {
+                    rem = num % 10 ;
+                    if (rem % 2 == 0)
+                    {
+                        sum += rem ;
+                    } 
+                    else
+                    {
+                        product *= rem ;
+                    }
+                    num =parseInt(num / 10 ) ;
+                    document.getElementById("pid").innerHTML = "Sum of " + len + " digit's number is " + sum ;
+                    document.getElementById("pid1").innerHTML = "Product of " + len + " digit's odd number is " + product ;
+                }
+                else
+                {
+                    document.getElementById("pid2").innerHTML = "Please enter six digit number. " ;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <h2 class="text-center bg-dark text-white mt-1 p-3">Finding Sum of Even and Product of Odd Numbers</h2>
+            <div class="m-4">
+                <label><b>Enter 6-digit numbers:</b></label> 
+                <input id="num1" type="text" style="width: 150px;">
+                <br><br>
+                <button id="btn1" onclick="evenodd()" class="btn btn-success p-1 mt-1 lg-3 p-2" style="width: 150px;" type="button">Result!!!</button><br>
+                <p id="pid" class="mt-4 p-2"></p>
+                <p id="pid1" class="mt-4 p-2"></p>
+                <p id="pid2" class="mt-4 p-2"></p>
+            </div>
+        </form>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

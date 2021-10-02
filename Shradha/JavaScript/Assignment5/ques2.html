@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JScript Assignment 5</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script>
+           function Floydtri()
+            {
+                var n, i, j, count = 1 ;
+                n = parseInt(document.getElementById("floyd").value) ;
+                tmp = n ;
+                for(i=1; i<=n; i++)
+                {
+                    for(j=1; j<=i; j++, count++)
+                    {
+                        document.getElementById("pid").innerHTML += count + " "  ;
+                    }
+                    document.getElementById("pid").innerHTML += "<br> "  ;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 class="text-center bg-dark text-white p-2">Pattern of Floyd's Triangle</h1>
+        <div>
+            <label for="number" class="ml-2">Enter number of rows: </label>
+            <input type="text" id="floyd" placeholder="enter no. of rows" class="p-2 m-2 mt-2">
+            <button id="btn1" onclick="Floydtri()" class="btn btn-success p-1 ml-2  p-3 mt-1" style="width: 200px;" type="button">Floyd Triangle O/P</button><br>
+        </div>
+        <p id="pid" class="m-4 p-2"></p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

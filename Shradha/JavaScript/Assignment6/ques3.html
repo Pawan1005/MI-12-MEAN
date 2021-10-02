@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JScript Assignment 6</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script>
+            function numnull() 
+            {
+                var num = [] ;
+                var temp ;
+                var sum = 0 ;
+                while (true) 
+                {
+                    temp = prompt("Enter Number:") ;
+                    if (temp == "X" || temp == "x" || temp == null) break ; 
+                    {
+                        num.push(parseInt(temp)) ;
+                    }
+                }
+                var l = num.length ;
+                for (let i = 0; i < l; i++) 
+            {
+                sum = sum + num[i];
+
+            }
+                document.getElementById("pid").innerHTML = "<b>Numbers entered in an array: : </b> : " + num ;
+                document.getElementById("pid1").innerHTML = "<b>Sum of Numbers of array : </b> : " + sum ;
+            }
+        </script>
+    </head> 
+    <body>
+        <form>
+            <h2 class="text-center bg-dark text-white mt-1 p-3">Creating Array with Null Value </h2>
+            <div class="m-4">
+                <div class="m-5">
+                    <button id="array1" onclick="numnull()" class="btn btn-success p-1 ml-lg-2" 
+                    style="width: 150px;" type="button">Click Me !!!</button>
+                    <p class="m-3 p-2" id="pid"></b></p>
+                    <p class="m-3 p-2" id="pid1"></b></p>
+                </div>
+            </div>
+        </form>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

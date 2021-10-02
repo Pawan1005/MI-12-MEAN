@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JScript Assignment 6</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script>
+            function ascdes() 
+            {
+                var names = [];
+                var temp = "names";
+                var cnt = 1;
+                var i = 0;
+                while (true) 
+                {
+                    temp = prompt("Enter Name:");
+                    if (temp == "X" || temp == "x" || temp == null) break;
+                    {
+                        names.push(temp);
+                    }
+                }
+                document.getElementById("pid1").innerHTML = "<b>Actual array</b> : " + names + "";
+                document.getElementById("pid2").innerHTML = "<b>After Join Method</b> : " + names.join("~") + "";
+                var uppercase = names.map(name => name.toUpperCase());
+                document.getElementById("pid4").innerHTML = "<b>Asc Array:</b> : " + uppercase.reverse() + "";
+                document.getElementById("pid3").innerHTML = "<b>Des Array:</b> : " + uppercase.sort() + "";
+            }
+        </script>
+    </head> 
+    <body>
+        <form>
+            <h2 class="text-center bg-dark text-white mt-1 p-3">Creating Array with Asc and Desc order with join method </h2>
+            <div class="m-4">
+                <div class="m-5">
+                    <button id="arr" onclick="ascdes()" class="btn btn-success p-1 ml-lg-2" style="width: 150px;" type="button">Click Me !!!</button>
+                    <p class="m-3 p-2" id="pid1"></b></p>
+                    <p class="m-3 p-2" id="pid2"></b></p>
+                    <p class="m-3 p-2" id="pid3"></b></p>
+                    <p class="m-3 p-2" id="pid4"></b></p>
+                </div>
+            </div>
+        </form>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

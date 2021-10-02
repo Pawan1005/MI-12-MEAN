@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>javaScript Assignmnet 4</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script>
+            function vowel()
+            {
+                var alpha, tmp ;
+                alpha = document.getElementById("vowelalpha").value ;
+                tmp = alpha ;
+                switch (alpha)
+                {
+                    case 'a' :
+                    case 'A' :
+                    case 'e' :
+                    case 'E' :
+                    case 'i' :
+                    case 'I' :
+                    case 'o' :
+                    case 'O' :
+                    case 'u' :
+                    case 'U' :
+                    document.getElementById("pid").innerHTML = alpha + " is a vowel" ;
+                    break;
+                    default:
+                    document.getElementById("pid").innerHTML = alpha + " is a consonant" ;
+                }
+            }
+         </script>
+    </head>
+    <body>
+        <div>
+            <h4 class="m-1 bg-dark text-white p-3">Ques 4: Find Vowel or Consonant ?</h4>
+        </div>
+        <div class="row m-4 ml-n2">
+            <label class="col-sm-2"><b>Enter an alphabet:</b></label>
+            <div class="col-sm-10">
+                <input type="text" id="vowelalpha" placeholder="Enter an alphabet" required>
+                <button id="vow" onclick="vowel()" class="btn btn-success p-1 ml-lg-2" style="width: 150px;" type="button">Click Me !!!</button>
+            </div>
+        </div>
+        <p class="m-3 p-1" id="pid"></b></p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>
