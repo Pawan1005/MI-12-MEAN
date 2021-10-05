@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Given number is automorphic  or not</title>
+  
+    
+   
+
+    <script type="text/javascript">
+    function automorphic()
+    {
+        var n,m;
+        n=parseInt(document.getElementById("First").value);
+        m=n*n;
+
+        
+        if(n%10!=m%10)
+        {
+           
+            window.alert(n+"is not an automorphic number");
+
+            n=n/10;
+            m=m/10;
+        }
+        else
+        {
+            
+            window.alert(n+"is an automorphic number");
+        }
+    }
+
+    </script>
+    </head> 
+    <body>
+        <div id="num"></div>
+        <div id="num1"></div>
+        <h1>Check the number is Automorphic or not</h1>
+        Enter the Number :<input type="text" id="First"/>
+        <hr color="cyan">
+        <button onclick="automorphic()"> CHECK </button> 
+    </body>    
+
+</html>
