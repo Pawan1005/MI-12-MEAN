@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Krishnamurthy number or not</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script>
+            function krishnamurthy()
+            {
+                var kmnum, tmp, factnum, sum = 0, rem ;
+                kmnum = Number(document.getElementById("num").value) ;
+                tmp = kmnum ;
+                while(tmp != 0)
+                {
+                    rem = tmp % 10 ;
+                    sum += fact (rem) ;
+                    tmp = parseInt(tmp / 10) ;
+                }
+                if (sum == kmnum)
+                {
+                    document.getElementById("pid").innerHTML = kmnum + " is a Krishnamurthy number." ;
+                }
+                else
+                {
+                    document.getElementById("pid").innerHTML = kmnum + " is not a Krishnamurthy number." ;
+                }
+            }
+            function fact(n)
+            {
+                if (n == 1)
+                return 1 ;
+                    return n * fact(n-1) ;
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h4 class="m-1 bg-dark text-white p-3">Ques 3: Find Krishnamurthy Number</h4>
+        </div>
+        <div class="row m-4 ml-n2">
+            <label class="col-sm-2"><b>Enter number:</b></label>
+            <div class="col-sm-10">
+                <input type="number" id="num" placeholder="Enter a number" required>
+                <button id="kmn" onclick="krishnamurthy()" class="btn btn-success p-1 ml-lg-2" style="width: 150px;" type="button">Click Me !!!</button>
+            </div>
+        </div>
+        <p class="m-3 p-1" id="pid"></b></p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

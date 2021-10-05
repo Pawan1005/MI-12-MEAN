@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARMSTRONG NUMBER</title>
+    <script>
+        function Armstrong(){
+            var flag,number,remainder,addition=0;
+            number = Number(document.getElementById("N").value);
+
+            flag=number;
+            while(number > 0)
+            {
+                remainder = number%10;
+                addition = addition + remainder*remainder*remainder;
+                number = parseInt(number/10);
+            }
+            if(addition == flag)
+            {
+                window.alert("This number is Armstrong");
+            }
+            else{
+                window.alert("This number is not Armstrong");
+            }
+        }
+    </script>    
+</head>
+<body>
+    <br>
+    <h1>Check the number is Armstrong or not</h1>
+    Enter the Number :<input type="text"  id="N"/>
+    <hr color="cyan">
+    <br>
+    <button onclick="Armstrong()"> CHECK </button>
+</body>
+</html>

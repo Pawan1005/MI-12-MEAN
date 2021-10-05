@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>javaScript Assignmnet 4</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script>
+            function convertCase(upper)
+            {
+                var text = document.getElementById("case1").value ;
+                if (text == "upper") 
+                {
+                    document.getElementById("para").innerHTML = text.toLowerCase()
+                }
+                else
+                {
+                    document.getElementById("para").innerHTML = text.toUpperCase()
+                }
+            }
+            function convertCase1(lower)
+            {
+                var text = document.getElementById("case2").value ;
+                if (text == "lower") 
+                {
+                    document.getElementById("para1").innerHTML = text.toUpperCase()
+                }
+                else
+                {
+                    document.getElementById("para1").innerHTML = text.toLowerCase()
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h4 class="m-1 bg-dark text-white p-3">Ques 5: Converting string from Uppercase to Lowercase or 
+                vice-versa</h4>
+        </div>
+        <div class="row m-4 ml-n1">
+            <label class="col-sm-2"><b>Query :</b></label>
+            <div class="col-sm-10">
+                <input type="text" id="case1" required>
+                <button onclick="convertCase('upper')" class="btn btn-success p-1 ml-lg-2" 
+                style="width: 150px;" type="button">UpperCase Button</button>
+            </div>
+        </div>
+        <p class="ml-4 p-1" id="para"></b></p>
+        <br>
+        <div class="row m-4 ml-n1">
+            <label class="col-sm-2"><b>Query :</b></label>
+            <div class="col-sm-10">
+                <input type="text" id="case2" required>
+                <button onclick="convertCase1('lower')" class="btn btn-success p-1 ml-lg-2" 
+                style="width: 150px;" type="button">LowerCase Button</button>
+            </div>
+        </div>
+        <p class="ml-4 p-1" id="para1"></b></p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>
