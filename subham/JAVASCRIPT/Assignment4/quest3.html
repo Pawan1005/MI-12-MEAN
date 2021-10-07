@@ -6,28 +6,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-        <title>quest1</title>
+        <title>Quest3</title>
     </head>
     <body>
-        <div class="container my-5">
-            <h1 id="pid1"></h1>
-            <h1 id="pid"></h1>
+        <div class="container bg-primary text-light my-5">
+            <h1 class="text-center"><u>Check Krishnamurty number or not</u></h1>
+            <h3 id="ids"></h3>
+            <h3 id="ids1"></h3>
         </div>
         <script>
-            var a=parseInt(prompt("enter your 1st number?"))
-            var b=parseInt(prompt("enter your 2st number?"))
-            var c=parseInt(prompt("enter your 3st number?"))
-            var d=parseInt(prompt("enter your 4st number?"))
-            var e=parseInt(prompt("enter your 5st number?"))
-            function getdata(){
-                var arr=[a,b,c,d,e];
-                document.getElementById('pid1').innerHTML="Your number are :"+a+" "+b+" "+c+" "+d+" "+e
-                var max=Math.max.apply(null,arr);
-                arr.splice(arr.indexOf(max), 1);
-                var maximum=Math.max.apply(null,arr);
-                document.getElementById('pid').innerHTML="The second highest number is "+maximum;
+            function fectorial(num){
+              if(num==0||num==1){
+                return 1
+              }
+              else{
+                return num*fectorial(num-1)
+              }
             }
-            getdata();
+            var num=prompt("Enter your number?");
+            var data=0;
+            for(let i=0;i<num.length;i++){
+             data=data+fectorial(num[i]);
+            }
+            document.getElementById('ids').innerHTML=num+" You have entered!";
+            if(num == data){
+                document.getElementById('ids1').innerHTML="Congrats!<br>This number is a krishnamurthy number";
+            }else{
+                document.getElementById('ids1').innerHTML="SORRY!<br>This number is not a krishnamurthy number";
+            }
         </script>
         <!-- Optional JavaScript; choose one of the two! -->
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -41,3 +47,4 @@
         -->
     </body>
 </html>
+

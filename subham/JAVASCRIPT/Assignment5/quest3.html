@@ -6,28 +6,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-        <title>quest1</title>
+        <title>Quest3</title>
+        <style>
+            body{
+                width:700px;
+                background-color:dodgerblue;
+            }
+        </style>
     </head>
     <body>
-        <div class="container my-5">
-            <h1 id="pid1"></h1>
-            <h1 id="pid"></h1>
+        <div class="container">
+            <h1 class="text-center"><u>According our question No.3 requirement</u></h1>
         </div>
         <script>
-            var a=parseInt(prompt("enter your 1st number?"))
-            var b=parseInt(prompt("enter your 2st number?"))
-            var c=parseInt(prompt("enter your 3st number?"))
-            var d=parseInt(prompt("enter your 4st number?"))
-            var e=parseInt(prompt("enter your 5st number?"))
-            function getdata(){
-                var arr=[a,b,c,d,e];
-                document.getElementById('pid1').innerHTML="Your number are :"+a+" "+b+" "+c+" "+d+" "+e
-                var max=Math.max.apply(null,arr);
-                arr.splice(arr.indexOf(max), 1);
-                var maximum=Math.max.apply(null,arr);
-                document.getElementById('pid').innerHTML="The second highest number is "+maximum;
+            for(let i=0;i<=5;i++){
+                for(let j=1;j<=i;j++){
+                    document.write(j+' ')
+                }
+                document.write('  1  ')
+                document.write('<br>')
             }
-            getdata();
         </script>
         <!-- Optional JavaScript; choose one of the two! -->
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

@@ -6,28 +6,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-        <title>quest1</title>
+        <title>Quest4</title>
     </head>
     <body>
-        <div class="container my-5">
-            <h1 id="pid1"></h1>
-            <h1 id="pid"></h1>
-        </div>
+        <nav class="navbar navbar-dark bg-dark">
+            <h1 class="text-light">Javascript programme sum of fectorial Quest-4</h1>
+        </nav>
+        <h3 id="ids"></h3>
+        <h3 id="ids1"></h3>
         <script>
-            var a=parseInt(prompt("enter your 1st number?"))
-            var b=parseInt(prompt("enter your 2st number?"))
-            var c=parseInt(prompt("enter your 3st number?"))
-            var d=parseInt(prompt("enter your 4st number?"))
-            var e=parseInt(prompt("enter your 5st number?"))
-            function getdata(){
-                var arr=[a,b,c,d,e];
-                document.getElementById('pid1').innerHTML="Your number are :"+a+" "+b+" "+c+" "+d+" "+e
-                var max=Math.max.apply(null,arr);
-                arr.splice(arr.indexOf(max), 1);
-                var maximum=Math.max.apply(null,arr);
-                document.getElementById('pid').innerHTML="The second highest number is "+maximum;
+            function factorial(num){
+                if(num == 0 || num == 1){
+                    return 1;
+                }else{
+                    return num*factorial(num-1)
+                }
             }
-            getdata();
+            var data=[]; //arrays are created
+            var result=0
+            for(let i=0;i<=data.length;i++){
+                data[i]=prompt("enter The number and 'X'  and  'cancel' for stop");
+                if(data[i] == "x" || data[i] == "cancel"){
+                    break;
+                }else{
+                result=result+Number(factorial(data[i]))
+                }
+            };
+            data.pop();
+            document.getElementById('ids').innerHTML="Array elements are : "+data;
+            document.getElementById('ids1').innerHTML="Factorial with sum : "+result;
         </script>
         <!-- Optional JavaScript; choose one of the two! -->
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->

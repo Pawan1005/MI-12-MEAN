@@ -6,28 +6,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-        <title>quest1</title>
+        <title>Quest2</title>
     </head>
     <body>
-        <div class="container my-5">
-            <h1 id="pid1"></h1>
-            <h1 id="pid"></h1>
+        <div class="container bg-primary mt-5 text-light"> 
+            <h1 class="text-center"><u>For check automorphic number or not</u></h1>
+            <h3 id="ids1"></h3>
+            <h3 id="ids"></h3>
         </div>
         <script>
-            var a=parseInt(prompt("enter your 1st number?"))
-            var b=parseInt(prompt("enter your 2st number?"))
-            var c=parseInt(prompt("enter your 3st number?"))
-            var d=parseInt(prompt("enter your 4st number?"))
-            var e=parseInt(prompt("enter your 5st number?"))
-            function getdata(){
-                var arr=[a,b,c,d,e];
-                document.getElementById('pid1').innerHTML="Your number are :"+a+" "+b+" "+c+" "+d+" "+e
-                var max=Math.max.apply(null,arr);
-                arr.splice(arr.indexOf(max), 1);
-                var maximum=Math.max.apply(null,arr);
-                document.getElementById('pid').innerHTML="The second highest number is "+maximum;
+            var num,data,str;
+            num=Number(prompt("Enter a number between 0 to 9 !"));
+            data=num**2;
+            str=data.toString();
+            document.getElementById("ids1").innerHTML=num +" You have put that value";
+            if(str[1]==num){
+                document.getElementById("ids").innerHTML="This is Automarphic number";
+            }else{
+                document.getElementById("ids").innerHTML="This is not Automarphic number";
             }
-            getdata();
         </script>
         <!-- Optional JavaScript; choose one of the two! -->
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
