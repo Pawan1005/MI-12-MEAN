@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques1</title>
+    </head>
+    <body>
+        <center>
+            <h2>Loacl date</h2><br>
+            <hr><br>
+            <p>Date : <span id="demo"></span></p>
+            <p>Time : <span id="demo1"></span></p>
+        </center>
+        <script type="text/javascript">
+            // Loacl date
+            var a = new Date();
+            var h = a.getHours();
+            var m = a.getMinutes();
+            var t = h >= 12 ? "pm" : "am"; 
+            alert(a.toDateString() + ", " + h + " : " + m + " " +t);
+            document.getElementById("demo").innerHTML = a.toDateString();
+            document.getElementById("demo1").innerHTML = h + " : " + m + " " +t;
+        </script>
+    </body>
+</html>

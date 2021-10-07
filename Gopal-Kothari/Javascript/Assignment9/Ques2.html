@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques2</title>
+    </head>
+    <body>
+        <center>
+            <h2>Prime Palindrome Number</h2><br>
+            <hr><br>
+            <label>Enter number:</label>
+            <input type="number" id="a" /><br><br>
+            <button onclick="submit()">Submit</button>
+            <p id="demo"></p>
+        </center>
+        <script type="text/javascript">
+            // Prime Palindrome Number
+            function submit() {
+                var a = document.getElementById('a').value;
+                var temp = a,r,sum=0,p=true;
+                if(a<=1){
+                    document.getElementById("demo").innerHTML = temp+ " is not prime Palindrome Number";
+                }
+                else{
+                    for( var i=2; i<a ; i++){
+                        if( a%i == 0){
+                            p = false;
+                            break;
+                        }
+                    }
+                    while(a>0){
+                        r = a%10; 
+                        sum = (sum*10) + r;
+                        a = parseInt(a/10);
+                    }
+                    if(p && sum == temp ){
+                        document.getElementById("demo").innerHTML = temp+ " is prime Palindrome Number";
+                    }else{
+                        document.getElementById("demo").innerHTML = temp+ " is not prime Palindrome Number";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

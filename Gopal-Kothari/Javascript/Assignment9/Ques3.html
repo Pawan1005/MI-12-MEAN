@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques3</title>
+    </head>
+    <body>
+        <center>
+            <h2>Prime Palindrome Number</h2><br>
+            <hr><br>
+            <label>Enter numbe 1r:</label>
+            <input type="number" id="a" /><br><br>
+            <label>Enter number 2:</label>
+            <input type="number" id="b" /><br><br>
+            <label>Enter number 3:</label>
+            <input type="number" id="c" /><br><br>
+            <label>Enter number 4:</label>
+            <input type="number" id="d" /><br><br>
+            <label>Enter number 5:</label>
+            <input type="number" id="e" /><br><br>
+            <button onclick="submit()">Submit</button>
+            <p id="demo"></p>
+        </center>
+        <script type="text/javascript">
+            // Prime Palindrome Number
+            function submit() {
+                var a = document.getElementById('a').value;
+                var b = document.getElementById('b').value;
+                var c = document.getElementById('c').value;
+                var d = document.getElementById('d').value;
+                var e = document.getElementById('e').value;
+                var arr = [a,b,c,d,e];
+                for(var j=0; j<5; j++){
+                    str(arr[j]);
+                }
+                function str(d){
+                    var temp = d,r,sum=0, p=true;
+                    if(d<=1){
+                        document.getElementById("demo").innerHTML += +temp+ " is not prime Palindrome Number<br><br>";
+                    }
+                    else{
+                        for( var i=2; i<d ; i++){
+                            if( d%i == 0){
+                                p = false;
+                                break;
+                            }
+                        }
+                        while(d>0){
+                            r = d%10; 
+                            sum = (sum*10) + r;
+                            d = parseInt(d/10);
+                        }
+                        if(p && sum == temp ){
+                            document.getElementById("demo").innerHTML += +temp+ " is prime Palindrome Number<br><br>";
+                        }else{
+                            document.getElementById("demo").innerHTML += +temp+ " is not prime Palindrome Number<br><br>";
+                        }
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques7</title>
+    </head>
+    <body>
+        <center>
+            <h2>check whether a given value is alpha numeric or not</h2><br>
+            <hr><br>
+            <label>Enter alpha numeric value:</label>
+            <input type="text" id="a" /><br><br>
+            <button onclick="submit()">Submit</button>
+            <p id="demo"></p>
+        </center>
+        <script type="text/javascript">
+            // check whether a given value is alpha numeric or not
+            function submit() {
+                var a = document.getElementById('a').value;
+                var p = /^[a-z | A-Z]+[0-9]/;
+                var r = p.test(a);
+                if (r){
+                    document.getElementById('demo').innerHTML = a+ " is alpha numeric";
+                }else{
+                    document.getElementById('demo').innerHTML = a+ " Please enter alpha numeric value";
+                }
+            }
+        </script>
+    </body>
+</html>

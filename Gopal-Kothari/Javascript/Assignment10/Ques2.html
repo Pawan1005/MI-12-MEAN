@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques1</title>
+    </head>
+    <body>
+        <center>
+            <h2>To check a credit card number</h2><br>
+            <hr><br>
+            <label>Enter card number:</label>
+            <input type="number" id="a" /><br><br>
+            <button onclick="submit()">Submit</button>
+            <p id="demo"></p>
+        </center>
+        <script type="text/javascript">
+            // To check a credit card number
+            function submit() {
+                var a = document.getElementById('a').value;
+                var p = /[0-9]\d{15}$/;
+                var r = p.test(a);
+                if (r){
+                    document.getElementById('demo').innerHTML = a+ " is a credit card number";
+                }else{
+                    document.getElementById('demo').innerHTML = a+ " is not a credit card number.";
+                }
+            }
+        </script>
+    </body>
+</html>
