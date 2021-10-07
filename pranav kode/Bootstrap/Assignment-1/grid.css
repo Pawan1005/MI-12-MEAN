@@ -1,0 +1,29 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.head1{
+    height: 250px;
+    background: url(image1.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    margin-top: 50px;
+    padding: 10px;
+}
+.upcoming{
+    height: 200px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    padding: 10px;
+}
+.upcoming h6{
+    text-align: right;        
+}
+.box{
+    height: 80px;
+    background-color: aliceblue;
+    padding: 10px;
+}
+.margin{
+    margin: 20px;
+}

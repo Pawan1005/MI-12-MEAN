@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="jumbotron">
+        <div>
+            <h3 class="h text-info">Check an alphate is vowel or not</p>
+            <input type="text" name="string" id="ip">
+            <button onclick="vowels()">Try it</button><br><br>
+            <div id="demo" class="demo text-info"></div>
+            <div id="demo1" class="demo text-danger"></div>
+            <script>
+                function vowels() {
+                    var str = document.getElementById("ip").value;
+                    var res = str.toUpperCase();
+                    //for definie vowels to perticular alphabates
+                    switch (res) {
+                        case 'A':
+                            document.getElementById("demo").innerHTML = res + " is a vowel";
+                            break;
+                        case 'E':
+                            document.getElementById("demo").innerHTML = res + " is a vowel";
+                            break;
+                        case 'I':
+                            document.getElementById("demo").innerHTML = res + " is a vowel";
+                            break;
+                        case 'O':
+                            document.getElementById("demo").innerHTML = res + " is a vowel";
+                            break;
+                        case 'U':
+                            document.getElementById("demo").innerHTML = res + " is a vowel";
+                            break;
+                        default:
+                            document.getElementById("demo1").innerHTML = "Sorry entered alphabate " + res + " is not vowel!!";
+                    }
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

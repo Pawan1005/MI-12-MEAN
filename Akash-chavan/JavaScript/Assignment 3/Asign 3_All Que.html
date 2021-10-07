@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .col-4 {
+            border: solid 2px black;
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!--Leap Year-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4">
+                <h3>find leap year</h3><br>
+                <input type="text" id="year"></input>
+                <button class="btn bg-success" onclick="check_leapyear()">Check</button><br><br>
+                <p id="lp" class="lp1 text-info"></p>
+                <script>
+                    function check_leapyear() {
+                        //define variables
+                        var year;
+
+                        //get the entered year from text box 
+                        year = document.getElementById("year").value;
+
+                        //three conditions to find out the leap year
+                        if ((year % 4==0) && (year % 100 != 0) || (year % 400 == 0)) {
+                            document.getElementById("lp").innerText = year + " is leap year";
+                        }
+                        else {
+                            document.getElementById("lp").innerText = year + " is not leap year";
+                        }
+                    }
+                </script>
+            </div>
+            <br><br>
+            <!--Prime Number-->
+            <div class="col-4">
+                <h3> Check Prime Number </h3><br>
+                Number: <input type="number" name="number" id="number" required>
+                <button class="btn bg-success" type="button" onclick="checkForPrime()"> Submit </button>
+                <div class="result1"><br>
+                    <p id="result" class="res text-info"> </p>
+                </div>
+                <script>
+                    function checkForPrime() {
+                        num = document.getElementById("number").value;
+                        // valid input checking
+                        var i;
+                        var show = true;
+                        if (num == 1) {
+                            show = false;
+                        } else {
+                            i = 2;
+                            while (i < num / 2) {
+                                if (num % i == 0) {
+                                    show = false;
+                                    break;
+                                }
+                                i++;
+                            }
+                        }
+                        if (show == true) {
+                            document.getElementById("result").innerHTML = "The number: " + num + " is a Prime Number";
+                        } else {
+                            document.getElementById("result").innerHTML = "The number: " + num + " is NOT a Prime Number";
+                        }
+                    }
+                </script>
+            </div><br><br>
+            <!--Even Odd Number-->
+            <div class="col-4">
+                <h3>find Odd or Even number!</h3>
+                Number: <input type="number" name="number" id="num" required>
+                <button class="btn bg-success" type="button" onclick="findOddEven()"> Submit </button>
+                <div class="result2"><br>
+                    <p id="io" class="re text-info"> </p>
+                </div>
+
+                <script>
+                    function findOddEven() {
+                        //get the input value
+                        var num = document.getElementById('num').value;
+
+                        //if the remainder is 0 , it is an even number
+                        if (num % 2 == 0) {
+                            document.getElementById('io').innerHTML = num + ' is an Even number';
+                        } else {
+                            document.getElementById('io').innerHTML = num + ' is an Odd number';
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+        <!--Star Pattern-->
+        <div class="row">
+            <div class="col-4">
+                No.of rows: <input type="num" id="rnum" required><br><br>
+                No.of columns: <input type="num" id="cnum" required>
+                <button class="btn bg-success" type="button" onclick="starPattern()">Star Pattern</button>
+                <div id='my-output' class="dstar text-info"></div>
+                <script>
+                    function starPattern() {
+                        var rnum = document.getElementById("rnum").value;
+                        var cnum = document.getElementById("cnum").value;
+                        var str = "*";
+                        for (var i = 0; i < rnum; i++) {
+
+                            for (var j = 0; j < cnum; j++) {
+                                //document.getElementById("star").innerHTML = str;
+                                document.getElementById('my-output').innerHTML += str;
+                            }
+                            document.getElementById('my-output').innerHTML += '<br/>';
+                        }
+                    }
+                </script>
+            </div>
+            <!--factorial of a Number-->
+            <div class="col-4">
+                <h3>Factorial of Number </h3>
+                <input type="num" id="fnum" required>
+                <button class="btn bg-success" type="button" onclick="factorial()">Factorial</button><br><br>
+                <p id="fac" class="f text-info"></p>
+                <script>
+                    function factorial(n) {
+                        var fnum = document.getElementById("fnum").value;
+                        var fact = 1;
+                        for (var i = fnum; i >= 1; i--) {
+                            fact = fact * i;
+                        }
+                        document.getElementById("fac").innerHTML = "factorial of " + fnum + " is " + fact;
+                    }
+                </script>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </body>
+</html>

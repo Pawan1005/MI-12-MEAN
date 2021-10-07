@@ -1,0 +1,22 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.head{
+    background-color: rgb(131, 191, 248);
+    padding-right: 20px;    
+    margin-top: 15px;
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: right;
+    border-radius: 0px 25px;
+}
+.name{
+    border: 2px solid gray;
+    border-radius: 7px;
+    padding: 5px;
+}
+.submit{
+    padding: 5px;
+    display: block;
+    margin: auto;    
+}
