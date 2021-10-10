@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>Registration</Title>
+        <link rel="stylesheet" type="text/css" href="cssnew.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+    </head>
+    <body> 
+        <header> Careershines jobs
+            <div class="container" style="text-align: right; padding-right: 10px;">
+               <button value="home" > <a href = "jobportal.html"><h5>Home</h5> </a></button>
+               <button value="login"> <a href = "login.html"><h5>Login</h5> </a></button>
+               <button value="Registration" > <a href="Registration.html"><h5>New Registration</h5> </a> </button>
+            </div>
+           </header> 
+           <h3 class="border1" > <i>Professional Details <i> </h3>
+        <form style="margin-left: 20px">         
+                <label name="Academic Details"><b>Academic Details :</b></label>
+                <br>
+                <label name="Skill set"><b>Skill set :</b> </label>    
+                <input class="form-check-inline"type="checkbox" name="HTML" >HTML 
+                <input class="form-check-inline"type="checkbox" name="Java Script" >Java Script
+                <input class="form-check-inline"type="checkbox" name="Java " >Java
+                <input class="form-check-inline" type="checkbox" name="Oracle">Oracle
+                <br>
+                <label> <b>Highest Qualification : </b> </label>   
+                <select class="custom-select-sm" id="qualification"name="qualification" >   
+                    <option value="Diploma in Computer Science">Diploma in Computer Science</option>
+                    <option value="Science Graduate<"> Science Graduate</option>
+                    <option value="Bachelor in Engg."  >Bachelor in Engg.</option>
+                    <option value="Masters in Computer Science">Masters in Computer Science</option>
+                    <option value="Masters in Engg. ">Masters in Engg. </option>
+                    <option value="Other"> Other</option>
+                </select><br>
+                <label> <b>Passout Year : </b> </label>   
+                <select class="custom-select-sm"id="passout"name="passout" >   
+                    <option value="2016">2016</option>
+                    <option value="2017"> 2017</option>
+                    <option value="2018" >2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020 ">2020 </option>
+                    <option value="Other"> Other</option>
+                </select>
+                <br>
+                <label> <b>University: </b> </label>  
+                <input class="list-group" list="University" name="University">
+                <datalist id="University">
+                        <option class="list-group-item-primary" value=" Mumbai University">Mumbai University
+                        <option class="list-group-item-primary" value="Pune University">Pune University
+                        <option class="list-group-item-primary"value="Chennai University"> Chennai University
+                        <option class="list-group-item-primary"value=" Nagpur University"> Nagpur University
+                        <option class="list-group-item-primary"value=" Badoda University">  Badoda University
+                        <option class="list-group-item-primary"value=" Other"> Other  
+                </datalist> 
+                <label><b>Upload resume :</b> </label>
+                <input class="form-control-file" type="file"> <br>
+                <label><b>More About Yourself : </b> </label>
+                <textarea cols="30"rows="2"> </textarea><br><br>
+                <a href="Registration.html"><button class="btn btn-outline-success" value="Back"style="margin-left:10% ;" >Back</a></button>
+            <button class="btn btn-success"name="Submit" style="margin-top: 10px; margin-left: 10%;" type="button" onclick="alert('you register to job portal sucessfully')"> Submit </button>
+          </form>
+          <footer>Created by Priyanka Deshmane</footer>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>   
+     </body>
+</html>
