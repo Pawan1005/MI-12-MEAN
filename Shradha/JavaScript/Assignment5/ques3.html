@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JScript Assignment 5</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script>
+            function triangle()
+            {
+                var n, i, j ;
+                n = parseInt(document.getElementById("tri").value) ;
+                tmp = n ;
+                for(i = 0; i <= n; i++) 
+                {
+                    for(j = 1; j <= i; j++)
+                    {
+                       document.getElementById("pid").innerHTML += j + " " ;
+                    }
+                    document.getElementById("pid").innerHTML += "1" ;
+                    document.getElementById("pid").innerHTML += "<br> " ;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <h1 class="text-center bg-dark text-white p-3">Print Triangle Pattern</h1>
+            <div>
+                <label for="number" class="ml-2">Enter number of rows: </label>
+                <input type="text" id="tri" placeholder="enter no. of rows" class="p-2 ml-3">
+            </div>
+            <div class="m-4">
+                <button id="btn1" onclick="triangle()" class="btn btn-success p-1 mt-1 lg-3 p-2" style="width: 150px;" type="button">Result!!!</button><br>
+                <p id="pid" class="mt-4 p-2"></p>
+            </div>
+        </form>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Assignment 4</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script>
+            function armstrong()
+            {
+                var num, tmp, sum = 0, rem ; //initialize sum to zero
+                num = parseInt(document.getElementById("num1").value) ;
+                tmp = num ;
+                while (tmp > 0)
+                {
+                    rem = tmp % 10 ; // it will give remainder
+                    sum += rem * rem * rem ;
+                    tmp = parseInt(tmp / 10) ; //it will give integer or will remove last digit of a number
+                }
+                if (sum == num)
+                {
+                    document.getElementById("pid").innerHTML = + num + " is an Armstrong number." ;
+                }
+                else
+                {
+                    document.getElementById("pid").innerHTML = "Please enter 3-digit number." ;
+                }
+            }
+        </script>
+        <script>
+             function armstrong_n()
+            {
+                var num, sum, arm, len, power ; 
+                num = document.getElementById("num2").value;
+                sum = 0 ;
+                check = num ;
+                arm = 0 ;
+                len = num.toString().length ;
+                power = 0 ;
+                while (num != 0)
+                {
+                    arm = num % 10 ;
+                    power = Math.pow(arm, len) ;
+                    sum += power ;
+                    num = parseInt(num / 10) ;
+                }
+                if (check == sum) 
+                {
+                    document.getElementById("pid1").innerHTML = check + " is an Armstrong number" + "<br>" ;
+                }
+                else
+                {
+                    document.getElementById("pid1").innerHTML = check + " is not an Armstrong number" + "<br>" ;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h4 class="m-1 bg-dark text-white p-3">Ques 1: Find Armstrong Number</h4>
+        </div>
+        <div class="row m-4 ml-n2">
+            <label class="col-sm-2"><b>Enter the 3-digit positive number:</b></label>
+            <div class="col-sm-10">
+                <input type="number" id="num1" placeholder="Enter 3-digit number" required>
+                <button id="arm" onclick="armstrong()" class="btn btn-success p-1 ml-lg-2" style="width: 150px;" type="button">Click Me !!!</button>
+            </div>
+        </div>
+        <p class="m-3 p-2" id="pid"></b></p>
+        <br>
+        <div>
+            <div class="row ml-n2">
+                <label class="col-sm-2"><b>Enter the n positive number:</b></label>
+                <div class="col-sm-10">
+                    <input type="number" id="num2" placeholder="Enter n positive number" required>
+                    <button id="arm1" onclick="armstrong_n()" class="btn btn-success p-1 ml-lg-2" style="width: 150px;" type="button">Click Me !!!</button>
+                </div>
+            </div>
+        </div>
+        <p class="m-3 p-2" id="pid1"></b></p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>
