@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques2</title>
+    </head>
+    <body>
+        <center>
+            <h2>to calculate the age</h2><br>
+            <hr><br>
+            <label>Enter date:</label>
+            <input type="date" id="a" /><br><br>
+            <button onclick="submit()">Submit</button>
+            <p>Age is  <span id="demo"></span></p>
+        </center>
+        <script type="text/javascript">
+            //to calculate the age
+            function submit(){
+                function getAge(dob) {
+                    var dif_date = Date.now() - dob.getTime();
+                    var age_date = new Date(dif_date);
+                    return Math.abs(age_date.getUTCFullYear() - 1970);
+                }
+                let date = document.getElementById("a").value;
+                alert("Age is  :   " + getAge(new Date(date)) + " year ");
+                let age = getAge(new Date(date));
+                document.getElementById("demo").innerHTML = age + " year ";
+            }        
+        </script>
+    </body>
+</html>

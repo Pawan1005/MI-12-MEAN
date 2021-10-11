@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques1</title>
+    </head>
+    <body>
+        <center>
+            <h2>To check a Email Id</h2><br>
+            <hr><br>
+            <label>Enter Email id:</label>
+            <input type="text" id="a" /><br><br>
+            <button onclick="submit()">Submit</button>
+            <p id="demo"></p>
+        </center>
+        <script type="text/javascript">
+            // To check a Email Id
+            function submit() {
+                var a = document.getElementById('a').value;
+                var p = /\S+@\S+\.\S/;
+                var r = p.test(a);
+                if (r){
+                    document.getElementById('demo').innerHTML = a+ " is a Email Id";
+                }else{
+                    document.getElementById('demo').innerHTML = a+ " is not a Email Id.";
+                }
+            }
+        </script>
+    </body>
+</html>

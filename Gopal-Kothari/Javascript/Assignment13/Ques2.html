@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques2</title>
+    </head>
+    <body>
+        <center>
+            <h2>To show the weekday in short</h2><br>
+            <hr><br>
+            <p>Date : <span id="demo"></span></p>
+            <p>Weekday in short format : <span id="demo1"></span></p>
+        </center>
+        <script type="text/javascript">
+            // To show the weekday in short
+            function getWeekday(d){
+                var days = ["SU","MO","TU","WE","TH","FR","SA"];
+                return days[d.getDay()];
+            }
+            var d = new Date();
+            alert("Weekday in short format : " + getWeekday(d));
+            document.getElementById("demo").innerHTML = d.toDateString();
+            document.getElementById("demo1").innerHTML = getWeekday(d);
+        </script>
+    </body>
+</html>

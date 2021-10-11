@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques4</title>
+    </head>
+    <body>
+        <center>
+            <h2>String Palindrome Number</h2><br>
+            <hr><br>
+            <label>Enter words:</label>
+            <input type="text" id="a" /><br><br>
+            <button onclick="submit()">Submit</button>
+            <p id="demo"></p>
+        </center>
+        <script type="text/javascript">
+            //string Palindrome Number
+            function submit() {
+                var a = document.getElementById('a').value;
+                var temp = a.length,r,sum=0;
+                for(var i=0; i<temp/2; i++){
+                    if(a[i] !== a[temp-1-i]){
+                        document.getElementById("demo").innerHTML = "it is not a string palindrome";
+                    }else{
+                        document.getElementById("demo").innerHTML = "it is a string palindrome";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

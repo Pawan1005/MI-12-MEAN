@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques1</title>
+    </head>
+    <body>
+        <center>
+            <h2>Palindrome Number</h2><br>
+            <hr><br>
+            <label>Enter number:</label>
+            <input type="number" id="a" /><br><br>
+            <button onclick="submit()">Submit</button>
+            <p id="demo"></p>
+        </center>
+        <script type="text/javascript">
+            // Palindrome Number
+            function submit() {
+                var a = document.getElementById('a').value;
+                var temp = a,r,sum=0;
+                while(a>0){
+                    r = a%10;
+                    sum = (sum*10) + r
+                    a = parseInt(a/10);
+                }
+                if(sum == temp){
+                    document.getElementById("demo").innerHTML = temp+ " is a Palindrome Number";
+                }else{
+                    document.getElementById("demo").innerHTML = temp+ " is not Palindrome Number";
+                }
+            }
+        </script>
+    </body>
+</html>

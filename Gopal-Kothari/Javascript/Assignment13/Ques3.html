@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques2</title>
+    </head>
+    <body>
+        <center>
+            <h2>To show the weekday in short</h2><br>
+            <hr><br>
+            <p>Date : <span id="demo"></span></p>
+            <p>Date 1 day ago : <span id="demo1"></span></p>
+            <p>Date 2 day ago : <span id="demo2"></span></p>
+            <p>Date 365 day ago : <span id="demo3"></span></p>
+        </center>
+        <script type="text/javascript">
+            // To show the weekday in short
+            function getDateago(date, day){
+                var d = new Date();
+                d.setDate(date.getDate() - day);
+                return d.toLocaleDateString();
+            }
+            var date = new Date();
+            alert("Date 1 day ago : " + getDateago(date,1));
+            alert("Date 2 day ago : " + getDateago(date,2));
+            alert("Date 365 day ago : " + getDateago(date,365));
+            document.getElementById("demo").innerHTML = date.toDateString();
+            document.getElementById("demo1").innerHTML = getDateago(date, 1);
+            document.getElementById("demo2").innerHTML = getDateago(date, 2);
+            document.getElementById("demo3").innerHTML = getDateago(date, 365);
+        </script>
+    </body>
+</html>

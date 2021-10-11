@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques1</title>
+    </head>
+    <body>
+        <center>
+            <h2>Dispaly array</h2><br>
+        </center>
+        <hr><br>
+        <label>Enter 1st name:</label>
+        <input type="text" id="a" /><br><br>
+        <label>Enter 2nd name:</label>
+        <input type="text" id="b" /><br><br>
+        <label>Enter 3rd name:</label>
+        <input type="text" id="c" /><br><br>
+        <label>Enter 4th name:</label>
+        <input type="text" id="d" /><br><br>
+        <label>Enter 5th name:</label>
+        <input type="text" id="e" /><br><br>
+        <button onclick="submit()">Submit</button>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <script type="text/javascript">
+            // Display array
+            function submit() {
+                var a = document.getElementById('a').value;
+                var b = document.getElementById('b').value;
+                var c = document.getElementById('c').value;
+                var d = document.getElementById('d').value;
+                var e = document.getElementById('e').value;
+                var temp = [a,b,c,d,e];
+                document.getElementById("demo").innerHTML = "Comman seperated list = " +temp;
+                document.getElementById("demo1").innerHTML = "Name 1 : " +temp[0]+ "<br>Name 2 : " +temp[1]+ "<br>Name 3 : " +temp[2]+ "<br>Name 4 : " +temp[3]+ "<br>Name 5 : " +temp[4];
+            }
+        </script>
+    </body>
+</html>

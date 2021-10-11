@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques4</title>
+    </head>
+    <body>
+        <center>
+            <h2>To check a Date</h2><br>
+            <hr><br>
+            <label>Enter Date:</label>
+            <input type="text" id="a" /><br><br>
+            <button onclick="submit()">Submit</button>
+            <p id="demo"></p>
+        </center>
+        <script type="text/javascript">
+            // To check a Date
+            function submit() {
+                var a = document.getElementById('a').value;
+                var p = /[\d\d]+[/\d\d]+[/\d\d\d\d]/;
+                var r = p.test(a);
+                if (r){
+                    document.getElementById('demo').innerHTML = a+ " is a date";
+                }else{
+                    document.getElementById('demo').innerHTML = a+ " Please enter valid date";
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques6</title>
+    </head>
+    <body>
+        <center>
+            <h2>count the number of words and whitespaces</h2><br>
+            <hr><br>
+            <label>Enter Sentence:</label>
+            <input type="text" id="a" /><br><br>
+            <button onclick="submit()">Submit</button>
+            <p id="demo"></p>
+            <p id="demo1"></p>
+        </center>
+        <script type="text/javascript">
+            // count the number of words and whitespaces
+            function submit() {
+                var a = [];
+                var i, count = 1, whitespace;
+                a = document.getElementById("a").value;
+                for (i = 0; i <= a.length - 1; i++) {
+                    letter = a.charAt(i);
+                    if (letter == " ") {
+                        count++;
+                    }
+                }
+                whitespace = count - 1;
+                document.getElementById("demo").innerHTML += "Total words : " + count;
+                document.getElementById("demo1").innerHTML += "Total Whitespace : " + whitespace;
+            }
+        </script>
+    </body>
+</html>

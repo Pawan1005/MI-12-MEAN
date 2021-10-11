@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques5</title>
+    </head>
+    <body>
+        <center>
+            <h2>count number of words in string</h2><br>
+            <hr><br>
+            <label>Enter sentence:</label>
+            <input type="text" id="a" /><br><br>
+            <button onclick="submit()">Submit</button>
+            <p id="demo"></p>
+        </center>
+        <script type="text/javascript">
+            // count number of words in string
+            function submit() {
+                var a = document.getElementById('a').value;
+                var p = /(^\s*)|(\s*$)/g;
+                var n = /\s{2,}/g;;
+                var r = a.replace(p, "").replace(n," ");
+                var l = r.match(/\s/g).length;
+                document.getElementById('demo').innerHTML = `Total word : ${l + 1} `;
+            }
+        </script>
+    </body>
+</html>

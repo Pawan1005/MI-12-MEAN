@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques8</title>
+    </head>
+    <body>
+        <center>
+            <h2>check a given value contains alpha, dash and underscore</h2><br>
+            <hr><br>
+            <label>Enter alpha,dash and usnderscore value:</label>
+            <input type="text" id="a" /><br><br>
+            <button onclick="submit()">Submit</button>
+            <p id="demo"></p>
+        </center>
+        <script type="text/javascript">
+            // check a given value contains alpha, dash and underscore
+            function submit() {
+                var a = document.getElementById('a').value;
+                var p = /^[a-z | A-Z]+\-+\_$/;
+                var r = p.test(a);
+                if (r){
+                    document.getElementById('demo').innerHTML = a+ " is alpha,dash and underscore";
+                }else{
+                    document.getElementById('demo').innerHTML = a+ " Please enter alpha,dash and underscore value";
+                }
+            }
+        </script>
+    </body>
+</html>
