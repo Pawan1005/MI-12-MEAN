@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Assignment 10</title>
+        <link rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script>
+            function alpha_dash()
+            {
+                let text = document.getElementById("txt").value ;
+                let RegExp = /^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9-_]+$/ ;
+                if (RegExp.test(text)) 
+                {
+                    document.getElementById("para").innerHTML = text + " is a String with alpha, dash and underscore." ;
+                    document.getElementById("para").style.visibility = "visible"  ;
+                    document.getElementById("para").style.color = "green" ;
+                }
+                else
+                {
+                    document.getElementById("para1").innerHTML = text + " is not a String with alpha, dash and underscore." ;
+                    document.getElementById("para1").style.visibility = "visible"  ;
+                    document.getElementById("para1").style.color = "red" ;                }
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <h2 class="text-center bg-dark text-white mt-1 p-3">String with Alphanumeric, dash and underscore</h2>
+            <div class="row m-3">
+                <label class="col-sm-2"><b>Enter the String :</b></label>
+                <div class="col-sm-10">
+                    <input type="text" id="txt" required>
+                </div>
+            </div>
+            <div class="m-4">
+                <div class="m-5">
+                    <button id="arr" onclick="alpha_dash()" class="btn btn-success p-1 ml-lg-2" style="width: 150px;" type="button">Click Me !!!</button>
+                </div>
+            </div>
+            <p class="m-3 p-2" id="para"></b></p>
+            <p class="m-3 p-2" id="para1"></b></p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

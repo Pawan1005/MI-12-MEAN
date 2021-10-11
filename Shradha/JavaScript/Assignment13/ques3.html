@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assignment 13</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script>
+        function Date_obj() {
+            let current_date = new Date();
+            let date = new Date();
+            let date1 = new Date();
+            date.setDate(date.getDate() - 1); // add a day
+            date1.setDate(date1.getDate() - 2);
+            window.alert("Current Date : " + current_date + "\r\n" + "One Day Ago's Date : " + date + "\r\n" + "Two day Ago's Date : " + date1);
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <h2 class="text-center bg-dark text-white mt-1 p-3">Displaying Date One Day and two Day before Current date</h2>
+        <div class="m-4">
+            <div class="m-5">
+                <button id="arr" onclick="Date_obj()" class="btn btn-success p-1 ml-lg-2" style="width: 150px;"
+                    type="button">Click Me !!!</button>
+            </div>
+        </div>
+        <p class="m-3 p-2" id="para"></b></p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

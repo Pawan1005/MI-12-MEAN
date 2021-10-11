@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Assignment 13</title>
+        <link rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script>
+            function Age_obj()
+            {
+                var current_date = new Date();
+                var birthDate = new Date(prompt("Enter Your BirthDate : "));
+                var age = current_date.getFullYear() - birthDate.getFullYear();
+                var mnth = current_date.getMonth() - birthDate.getMonth();
+                if (mnth < 0 || (mnth === 0 && current_date.getDate() < birthDate.getDate())) 
+                {
+                    age--;
+                }
+                window.alert("Birthdate entered : " + birthDate + "\r\nYour Age is : " + age) ;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <h2 class="text-center bg-dark text-white mt-1 p-3">Displaying Birth Date</h2>
+            <div class="m-4">
+                <div class="m-5">
+                    <button id="arr" onclick="Age_obj()" class="btn btn-success p-1 ml-lg-2" style="width: 150px;" type="button">Click Me !!!</button>
+                </div>
+            </div>
+            <p class="m-3 p-2" id="para"></b></p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>
