@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques2</title>
+    </head>
+    <body>
+        <center>
+            <h2>performs the a bubble sort.</h2><br>
+            <hr><br>
+            <p>Marks of student in array: <span id="demo"></span></p>
+            <p>***********Before Sorting*************<br><br><span id="demo1"></span></p>
+            <p>***********Sorting Array*************<br><br><span id="demo2"></span></p>
+            <p>*********** Array Sorting Array*************<br><br><span id="demo3"></span></p>
+        </center>
+        <script type="text/javascript">
+            // performs the a bubble sort.
+            var a = parseInt(prompt("how many student to enter the marks"));
+            var temp = [];
+            for(var i = 0; i <a; i++){
+                var b = parseInt(prompt("Enter Marks"));
+                temp.push(b);
+            }
+            document.getElementById("demo").innerHTML = temp;
+            for (var j=0; j<temp.length; j++){
+                document.getElementById("demo1").innerHTML += `Marks ${j+1} : ${temp[j]}<br><br>`;
+            }
+            for(var l=1; l<temp.length; l++){
+                for(var k=0; k<temp.length-1; k++){
+                    if(temp[k] >= temp[k+1]){
+                        var arr = temp[k];
+                        temp[k] = temp[k+1];
+                        temp[k+1] = arr;
+                    }
+                document.getElementById("demo2").innerHTML += "Sorting array : "+temp+"<br><br>";
+                }
+                document.getElementById("demo2").innerHTML += '<span style="color:blue">Sorting arrays : </span>' +temp+ "<br>";
+            }
+            for (var j=0; j<temp.length; j++){
+                document.getElementById("demo3").innerHTML += `Marks ${j+1} : ${temp[j]}<br><br>`;
+            }
+        </script>
+    </body>
+</html>
