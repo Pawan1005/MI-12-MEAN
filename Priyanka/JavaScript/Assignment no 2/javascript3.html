@@ -1,0 +1,53 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>java script Assignment 2 Question1</title>    
+     </head>
+     <body>
+         <h1 style="text-align: center;">Finding Second Largest Number from 5 Numbers</h1>
+         A :  <input id="num1"type="text"> <br><br>
+         B :  <input id="num2"type="text"> <br><br>
+         C :  <input id="num3"type="text"><br><br>
+         D :  <input id="num4"type="text"><br><br>
+         E :  <input id="num5"type="text"><br><br>
+         Cilck to find 2nd Largest No : <button type="button" onclick="largest()"> Find </button>
+         <p id="pid"></p>
+       <script type="text/javascript">
+        "use strict"
+         var A,B, C,D,E,large;
+         function largest()
+            {
+                A=parseInt(document.getElementById("num1").value);
+                B=parseInt(document.getElementById("num2").value);
+                C=parseInt(document.getElementById("num3").value);
+                D=parseInt(document.getElementById("num4").value);
+                E=parseInt(document.getElementById("num5").value);
+                large=Math.max(A,Math.max(B,Math.max(C,Math.max(D,E))));
+                document.getElementById("pid").innerHTML += "<b>Largest Number is <b>"+large+" <br>";
+
+                  if((large==A && B>=C && B>=D && B>=E) || (large==C && B>=A && B>=D && B>=E) || (large==D && B>=C && B>=A && B>=E) || (large==E && B>=C && B>=D && B>=A))
+                    { 
+                       document.getElementById("pid").innerHTML += "<b> Second Largest Number is <b>"+B; 
+                     }
+                  else if ((large==B && E>=C && E>=D && E>=A )|| (large==C && E>=A && E>=D && E>=B) || (large==D && E>=C && E>=A && E>=B) || (large==A && E>=B && E>=D && E>=C))   
+                    { 
+                       document.getElementById("pid").innerHTML += "<b> Second Largest Number is <b>"+E;
+                     } 
+                  else if(( large==C && D>=B && D>=A && D>=E)|| ( large==A && D>=B && D>=C && D>=E) || ( large==B && D>=C && D>=A && D>=E) || ( large==E && D>=B && D>=A && D>=C)) 
+                   { 
+                      document.getElementById("pid").innerHTML += "<b> Second Largest Number is <b>"+D;
+                   }
+                 else if((large==D && C>=A && C>=B && C>=E ) || (large==A && C>=D && C>=B && C>=E ) || (large==B && C>=A && C>=D && C>=E ) || (large==B && C>=A && C>=B && C>=E ))
+                    { 
+                       document.getElementById("pid").innerHTML += "<b> Second Largest Number is <b>"+C;
+                    }
+                 else if((large==D && A>=B && A>=C && A>=E ) || (large==B && A>=D && A>=C && A>=E ) || (large==C && A>=B && A>=D && A>=E ) || (large==E && A>=B && A>=C && A>=D )) 
+                   {
+                       document.getElementById("pid").innerHTML += "<b> Second Largest Number is <b>"+A;
+                   }
+            }  
+    </script>
+    </body>
+</html>

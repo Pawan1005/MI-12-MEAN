@@ -1,0 +1,72 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>java script Assignment 3 </title>    
+     </head>
+     <body>
+        <h1 style="text-align: center;">Check Leap year</h1>
+        Enter year :  <input id="num1"type="number"><br>
+        <button type="button" style="width:100px; height:40px"onclick="leap()"> <b>Submit </b> </button>
+        <p id="pid"></p>
+      <script type="text/javascript">
+        "use strict"
+         var num;
+         function leap()
+          {
+         num=parseInt(document.getElementById("num1").value);
+         if(num%4==0){
+         document.getElementById("pid").innerHTML= "<b>Year is Leap Year</b><br> ";
+         }else
+           document.getElementById("pid").innerHTML+= "<b>Year is not Leap Year</b><br> ";
+         }
+      </script>
+        <h1 style="text-align: center;">Check Even or odd Number</h1>
+        Enter Number :  <input id="num2"type="number"><br>
+        <button type="button" style="width:100px; height:40px"onclick="evenodd()"> <b>Submit </b> </button>
+        <br>
+        <p id="pid1"></p>
+      <script type="text/javascript">
+         "use strict"
+         var check;
+         function evenodd()
+          {
+         check=parseInt(document.getElementById("num2").value);
+         if(check%2==0){
+         document.getElementById("pid1").innerHTML= "<b>Number is even</b><br> ";
+         }else
+           document.getElementById("pid1").innerHTML+= "<b>Number is odd</b><br> ";
+         }
+      </script>
+            <h1 style="text-align: center;">Check Prime Number</h1>
+            Enter Number :  <input id="num3" type="number"><br>
+           <button type="button" style="width:100px; height:40px"onclick="checkprime()"> <b>Submit </b> </button>
+            <br>
+            <p id="pid2"></p>
+            <br>
+        <script type="text/javascript">
+            "use strict"
+             var check2,prime=0;
+         function checkprime()
+         {
+         check2=parseInt(document.getElementById("num3").value);
+            for(var i=2 ; i<check2 ; i++)
+            {
+            if(check2 % i == 0 )
+            {
+               prime=1;
+               break;
+            }
+            }
+         if(prime==1)
+         {
+            document.getElementById("pid2").innerHTML= "<b>Number is non prime</b><br> ";
+            }else
+            {
+            document.getElementById("pid2").innerHTML= "<b>Number is Prime</b><br> ";
+            }
+         }
+    </script>
+    </body>
+</html>

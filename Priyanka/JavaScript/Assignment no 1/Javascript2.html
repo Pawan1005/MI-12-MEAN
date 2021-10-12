@@ -1,0 +1,25 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>java script Assignment 1 Question 2</title>    
+     </head>
+     <body>
+        <h1 style="text-align: center;">Conversion of Celcius to Fahrenheit</h1>
+        Temp :  <input id="num1"type="text"> <sup>o</sup>C 
+        <button type="button" onclick="Convert()"> Convert </button>
+        <p id="pid"></p>
+     <script type="text/javascript">
+        "use strict"
+         var Celcius,fahren;
+         document.getElementById("pid").innerHTML= "<b>After Conversion</b><br> ";
+         function Convert()
+            {
+                Celcius=parseInt(document.getElementById("num1").value);
+                fahren=Celcius*(9/5)+32;
+                document.getElementById("pid").innerHTML += Celcius+"<sup>o</sup>C is equal to  : "+fahren+"<sup>o</sup>F";
+            }
+    </script>
+    </body>
+</html>

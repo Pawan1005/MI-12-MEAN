@@ -1,0 +1,31 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Java Script Star Pattern </title>    
+    </head>
+    <body>
+        <h1 style="text-align: center;">Star Pattern</h1>
+        Enter number of row :  <input id="num1"type="number"><br>
+        Enter number of column :  <input id="num2"type="number"><br>
+        <button type="button" style="width:100px; height:40px" onclick="pattern2()"> <b>Submit </b> </button>
+        <p id="pid"></p>
+      <script type="text/javascript">
+         var row=0 ,col=0;
+         function pattern2()
+         {
+          row=parseInt(document.getElementById("num1").value);
+          col=parseInt(document.getElementById("num2").value);
+          for (var i = 0; i <row; i++)
+            {
+                for(var j=0;j<col;j++)
+                {
+                document.getElementById("pid").innerHTML+= " * ";
+                }
+                document.getElementById("pid").innerHTML+= " <br> ";
+              }
+          }
+    </script>
+    </body>
+</html>

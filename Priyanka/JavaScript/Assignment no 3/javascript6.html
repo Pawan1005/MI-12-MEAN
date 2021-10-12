@@ -1,0 +1,33 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>java script Factorial </title>    
+    </head>
+    <body>
+        <h1 style="text-align: center;">Find Factorial</h1>
+        Enter number :  <input id="num1"type="number"><br>
+        <button type="button" style="width:100px; height:40px"onclick="Factorial()"> <b>Submit </b> </button>
+        <p id="pid"></p>
+    <script type="text/javascript">
+        "use strict"
+         var num ,fact=1;
+         function Factorial()
+          {
+         num=parseInt(document.getElementById("num1").value);
+         if(num<0)
+         {
+                document.getElementById("pid").innerHTML= "<b>Factorial of  negative number not possible<b>";
+         }else if(num>0)
+         { 
+            for (var i = 1; i <= num; i++) 
+            {
+                 fact=fact*i;
+            }
+              document.getElementById("pid").innerHTML= "<b>Factorial of number "+num+" is </b> "+fact;
+         }
+        }
+    </script>
+    </body>
+</html>
