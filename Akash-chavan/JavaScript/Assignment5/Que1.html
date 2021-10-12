@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Six digit Number</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"/>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h3 class="h text-info">Enter a number</h3>
+      <input class="ip" type="num" id="ip" />
+      <button class="btn bg-success" onclick="sum_product6()">click</button
+      ><br /><br />
+      <div class="div text-info" id="num"></div>
+      <div class="div text-info" id="num1"></div>
+    </div>
+    <!-- sum  -->
+    <script>
+      function sum_product6() {
+        var r,
+          n,
+          sum = 0,
+          product = 1;
+        n = parseInt(document.getElementById("ip").value);
+        n1 = n;
+        while (n > 0) {
+          r = n % 10;
+          if (r % 2 == 0) {
+            sum = sum + r;
+          } else {
+            product = product * r;
+          }
+          n = parseInt(n / 10);
+        }
+        document.getElementById("num").innerHTML =
+          "Sum of even digits : " + sum;
+        document.getElementById("num1").innerHTML =
+          "Product of odd digits : " + product;
+      }
+    </script>
+  </body>
+</html>
