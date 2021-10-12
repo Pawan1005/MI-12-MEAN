@@ -5,8 +5,8 @@ function myfun1() {
         names.push(prompt("Enter a name"));
     }
     document.getElementById('res1').innerHTML = names.toString();
-    for (let i = 1; i <= names.length; i++) {
-        document.getElementById('res2').innerHTML += `Name ${i}: ${names[i]}<br>`;
+    for (let i = 0; i < names.length; i++) {
+        document.getElementById('res2').innerHTML += `Name ${i+1}: ${names[i]}<br>`;
     }
 }
 // Program 2
