@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques3</title>
+        <script>
+            class emp{
+               constructor(){
+                   this.empno;
+                   this.name;
+                   this.add;
+                   this.city;
+                   this.salary;
+               }
+               show_init(){
+                    document.getElementById("demo").innerHTML += "<br>Emp No : " +this.empno+ "<br>";
+                    document.getElementById("demo").innerHTML += "Name : " +this.name+ "<br>";
+                    document.getElementById("demo").innerHTML += "Address : " +this.add+ "<br>";
+                    document.getElementById("demo").innerHTML += "City : " +this.city+ "<br>";
+                    document.getElementById("demo").innerHTML += "Salary : " +this.salary+ "<br>";
+                }
+               getData(emp,name,add,city,sly){
+                   this.empno = emp;
+                   this.name = name;
+                   this.add = add;
+                   this.city = city;
+                   this.salary = sly;
+               }
+               cal(){
+                   var sly,da,hra,pf;
+                   sly = parseInt(this.salary);
+                   da = (sly *30)/100;
+                   hra = (sly * 15)/100;
+                   pf = (sly * 12.5)/100;
+                   this.gross = sly + da + hra;
+                   this.net = this.gross - pf;
+               }
+               dispaly(){
+                    document.getElementById("demo").innerHTML += "<br>Emp No : " +this.empno+ "<br>";
+                    document.getElementById("demo").innerHTML += "Name : " +this.name+ "<br>";
+                    document.getElementById("demo").innerHTML += "Gross Salary : " +this.gross+ "<br>";
+                    document.getElementById("demo").innerHTML += "Net Salary : " +this.net+ "<br>";
+                    if (this.gross > 180000){
+                        document.getElementById("demo1").innerHTML = "Income Tax Payer"
+                    }else{
+                        document.getElementById("demo1").innerHTML = "Not an income Tax Payer"
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h2>Display Employee information</h2><br>
+            <hr><br>
+            <p><b>Employee 1 :- </b><span id="demo"></span></p>
+            <p id="demo1"></p>
+        </center>
+        <script type="text/javascript">
+            // Display Employee information
+            var e1 = new emp();
+            e1.getData(1,"Gopal","4.Ramnagr","Mumbai",120000);
+            e1.show_init();
+            e1.dispaly();
+        </script>
+    </body>
+</html>
