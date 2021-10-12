@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Assignment 13</title>
+        <link rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script>
+            function week_obj()
+            {
+                const d1 = new Date(2021,9,7) ; 
+                const d2 = ["SUN", "MON", "TUE", "WED", "THURS", "FRI", "SAT"] ;
+                window.alert("Date : " + d1 + "\r\nDay : " + d2[d1.getDay()]) ;                
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <h2 class="text-center bg-dark text-white mt-1 p-3">Displaying Date With Day</h2>
+            <div class="m-4">
+                <div class="m-5">
+                    <button id="arr" onclick="week_obj()" class="btn btn-success p-1 ml-lg-2" style="width: 150px;" type="button">Click Me !!!</button>
+                </div>
+            </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

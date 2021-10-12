@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Assignment 9</title>
+        <link rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script>
+            function phone_num()
+            {
+                let phone_no = document.getElementById("phone").value ;
+                let src = /\d/g ;
+                let RegExp = phone_no.match(src) ;
+                document.getElementById("para").innerHTML = "Regular Expression of Phone No. is : " + RegExp ;
+                let RegExp1 = document.getElementById("para1").innerHTML = "Mobile No. format : " + phone_no.replace(/(\d{2})(\d{5})(\d{5})/, "$1-$2-$3") ;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <h2 class="text-center bg-dark text-white mt-1 p-3">Format of Phone Number!!! </h2>
+            <div class="row m-3">
+                <label class="col-sm-2"><b>Enter the Phone Number:</b></label>
+                <div class="col-sm-10">
+                    <input type="text" id="phone" required>
+                </div>
+            </div>
+            <div class="m-4">
+                <div class="m-5">
+                    <button id="arr" onclick="phone_num()" class="btn btn-success p-1 ml-lg-2" style="width: 150px;" type="button">Click Me !!!</button>
+                </div>
+            </div>
+            <p class="m-3 p-2" id="para"></b></p>
+            <p class="m-3 p-2" id="para1"></b></p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

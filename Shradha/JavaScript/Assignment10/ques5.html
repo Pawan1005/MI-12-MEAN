@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Assignment 10</title>
+        <link rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script>
+            function words_count()
+            {
+                let str1 = document.getElementById("txt").value ;
+                document.getElementById("para").innerHTML = "Original string with first and end Whitespaces: " + str1 + " with length of " + str1.length +"<br>" ;
+                let regExp = str1.trim(/^\s$/g) ;
+                document.getElementById("para1").innerHTML += "Excluding first and end Whitespaces: " + regExp + " with length of " + regExp.length ;
+                var total_words, count = 0, tmp ;
+                tmp = str1 ;
+                total_words = tmp.split(" ");
+                for (i = 0; i < total_words.length; i++) 
+                {
+                    // inner loop -- do the count
+                    if (total_words[i] != "") 
+                    {
+                        count += 1;
+                    }
+                    document.getElementById("para2").innerHTML = "Total Words: " + count ;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <h2 class="text-center bg-dark text-white mt-1 p-3">Fetching Number of Words Within String</h2>
+            <div class="row m-3">
+                <label class="col-sm-2"><b>Enter the String :</b></label>
+                <div class="col-sm-10">
+                    <input type="text" id="txt" required>
+                </div>
+            </div>
+            <div class="m-4">
+                <div class="m-5">
+                    <button id="arr" onclick="words_count()" class="btn btn-success p-1 ml-lg-2" style="width: 150px;" type="button">Click Me !!!</button>
+                </div>
+            </div>
+            <p class="m-3 p-2" id="para"></b></p>
+            <p class="m-3 p-2" id="para1"></b></p>
+            <p class="m-3 p-2" id="para2"></b></p>
+            <p class="m-3 p-2" id="para3"></b></p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>
