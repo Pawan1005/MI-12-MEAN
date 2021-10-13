@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>white space</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <style>
+      .jumbotron {
+        min-width: 585px;
+        margin: 10px auto;
+        display: block;
+        justify-content: center;
+        margin: 150px;
+        border: 0.08em solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <label class="lb text-info" for="mn">Type a sentense</label>
+      <input type="text" name="text" id="sen" />
+      <button class="btn bg-success" onclick="changeReg()">click</button><br /><br />
+      <p class="r1 text-info" id="result"></p><br/>
+      <p class="r1 text-info" id="result1"></p><br/>
+      <p class="r1 text-danger" id="result2"></p><br/>
+      <p class="r1 text-danger" id="result3"></p><br/>
+    </div>
+    <script>
+      function changeReg() {
+        let num = document.getElementById("sen").value;
+        debugger;
+        let patt1 = /\w+/gi;
+        var regExp1 = num.match(patt1);
+        let patt2 = /\s/gi;
+        var regExp2 = num.match(patt2);
+        document.getElementById("result").innerHTML = "Number of words in sentense:- "+regExp1.length;
+        document.getElementById("result1").innerHTML ="Number of white spaces in sentense:- "+regExp2.length;
+        
+      }
+    </script>
+  </body>
+</html>
