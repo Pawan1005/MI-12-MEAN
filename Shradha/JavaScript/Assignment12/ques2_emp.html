@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Classes & Objects</title>
+        <script>
+            class Employee
+            {
+                constructor(){
+                    this.empno=101;
+                    this.name = "Ashok Kumar";
+                    this.address = "43, Ramnagar" ;
+                    this.city = "Pune , Maharashtra" ;
+                    this.salary = 80000;
+                }
+                show_init(){
+                    document.getElementById("para").innerHTML += "Employee No. : " + this.empno + "<br>" ;
+                    document.getElementById("para").innerHTML += "Name : " + this.name + "<br>" ;
+                    document.getElementById("para").innerHTML += "Address : " + this.address + "<br>" ;
+                    document.getElementById("para").innerHTML += "City : " + this.city + "<br>" ;
+                    document.getElementById("para").innerHTML += "Basic Salary : " + this.salary + "<br>" ;
+                }
+                calculate(salary){
+                    let da, hra, pf, gross, net ;
+                    da = parseInt((30/100)*this.salary) ;
+                    hra = parseInt((15/100)*this.salary) ;
+                    pf = parseInt((12.5/100)*this.salary) ;
+                    this.gross = parseInt(this.salary + da + hra) ;
+                    this.net = this.gross - pf ;                    
+                }
+                display(){
+                    document.getElementById("para").innerHTML += "<br>Employee No : " +this.empno+ "<br>";
+                    document.getElementById("para").innerHTML += "Name : " +this.name+ "<br>";
+                    document.getElementById("para").innerHTML += "Gross Salary : " +this.gross+ "<br>";
+                    document.getElementById("para").innerHTML += "Net Salary : " +this.net+ "<br>";
+                    if (this.gross > 180000){
+                        document.getElementById("para1").innerHTML = "Employee is an Income Tax Payer"
+                    }
+                    else{
+                        document.getElementById("para1").innerHTML = "Employee is not an Income Tax Payer"
+                    }                  
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h2 style="background-color: thistle; padding: 12px;">Display Employee Details</h2>
+        <hr style="border-width: 4px;"><br>
+        <p id="para"></p>
+        <p id="para1"></p>
+        <script>
+            let emp = new Employee() ;
+            emp.show_init();
+            emp.calculate();
+            emp.display();
+        </script>
+    </body>
+</html>
