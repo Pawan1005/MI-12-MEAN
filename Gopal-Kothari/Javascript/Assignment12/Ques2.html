@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques2</title>
+        <script>
+            class emp{
+                constructor(){
+                    this.empno = 101;
+                    this.name = "Ashok Kumar";
+                    this.add = "43,Ramnagr";
+                    this.city = "Pune, Maharashtra";
+                    this.salary = 80000;
+                }
+                show_init(){
+                    document.getElementById("demo").innerHTML += "<br>Emp No : " +this.empno+ "<br>";
+                    document.getElementById("demo").innerHTML += "Name : " +this.name+ "<br>";
+                    document.getElementById("demo").innerHTML += "Address : " +this.add+ "<br>";
+                    document.getElementById("demo").innerHTML += "City : " +this.city+ "<br>";
+                    document.getElementById("demo").innerHTML += "Salary : " +this.salary+ "<br>";
+                }
+                calculate(){
+                    var da,hra,pf,salary;
+                    salary = parseInt(this.salary);
+                    da = (salary * 30) /100;
+                    hra = (salary * 15) /100;
+                    pf = (salary * 12.5)/100;
+                    this.gross = salary + da + hra;
+                    this.net = this.gross - pf;
+                }
+                dispaly(){
+                    document.getElementById("demo").innerHTML += "<br>Emp No : " +this.empno+ "<br>";
+                    document.getElementById("demo").innerHTML += "Name : " +this.name+ "<br>";
+                    document.getElementById("demo").innerHTML += "Gross Salary : " +this.gross+ "<br>";
+                    document.getElementById("demo").innerHTML += "Net Salary : " +this.net+ "<br>";
+                    if (this.gross > 180000){
+                        document.getElementById("demo1").innerHTML = "Income Tax Payer"
+                    }else{
+                        document.getElementById("demo1").innerHTML = "Not an income Tax Payer"
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h2>Display Employee information</h2><br>
+            <hr><br>
+            <p><b>Employee 1 :- </b><span id="demo"></span></p>
+            <p id="demo1"></p>
+        </center>
+        <script type="text/javascript">
+            // Display Employee information
+            var e1 = new emp();
+            e1.show_init();
+            e1.calculate();
+            e1.dispaly();
+        </script>
+    </body>
+</html>

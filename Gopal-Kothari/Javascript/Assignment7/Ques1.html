@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques1</title>
+    </head>
+    <body>
+        <center>
+            <h2>Reads the marks of students</h2><br>
+            <hr><br>
+            <p>Marks of student in array: <span id="demo"></span></p>
+            <p><span id="demo1"></span></p>
+        </center>
+        <script type="text/javascript">
+            // Reads the marks of students
+            var a = parseInt(prompt("how many students wants to enter mark"));
+            var temp = [];
+            for(var i=0; i<a; i++){
+                var b = parseInt(prompt("Marks of student"));
+                temp.push(b);
+            }
+            document.getElementById("demo").innerHTML = temp;
+            for(var j=0; j<temp.length; j++){
+                document.getElementById("demo1").innerHTML += `Marks ${j + 1} : ${temp[j]}<br><br>`;
+            }
+        </script>
+    </body>
+</html>

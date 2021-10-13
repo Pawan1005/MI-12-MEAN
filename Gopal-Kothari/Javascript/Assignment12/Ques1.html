@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Ques1</title>
+        <script>
+            class student{
+                constructor(){
+                    this.Rollno = 1;
+                    this.name = "aa";
+                }
+                getdata(r,n){
+                    this.Rollno = r;
+                    this.name = n;
+                }
+                display(){
+                    document.getElementById("demo").innerHTML += "<br>Roll No : " +this.Rollno+ "<br>";
+                    document.getElementById("demo").innerHTML += "Name : " +this.name+ "<br>";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h2>Display student information</h2><br>
+            <hr><br>
+            <label>Roll No : </label>
+            <input type="number" id="a"><br><br>
+            <label>Name : </label>
+            <input type="text" id="b"><br><br>
+            <button onclick="getData()">Submit</button>
+            <p><b>Student 1 :- </b><span id="demo"></span></p>
+        </center>
+        <script type="text/javascript">
+            // Display student information
+            var s1 = new student();
+            var s2 = new student();
+            s1.display();
+            function getData(){
+                var a = document.getElementById("a").value;
+                var b = document.getElementById("b").value;
+                s2.getdata(a,b);
+                s2.display();
+            }
+        </script>
+    </body>
+</html>
