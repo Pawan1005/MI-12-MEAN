@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <mate charset="UTF-8">
+        <title>Ques4</title>
+        <style>
+            .main{
+                margin-top: 5%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <center>
+                <ol id="list">
+                    <li>c</li>
+                    <li>c++</li>
+                    <li>javascript</li>
+                </ol>
+                <hr><br><br>
+                <input type="text" id="txt" >
+                <button onclick="add()">Add</button><br>
+            </center>
+        </div>
+        <script>
+            //Add text at bottom
+            function add(){
+                var li = document.createElement("li");
+                li.textContent = document.getElementById("txt").value;
+                var ol = document.getElementById("list");
+                ol.insertBefore(li,ol.lastElementChild.nextSibling);
+            }
+        </script>
+    </body>
+</html>

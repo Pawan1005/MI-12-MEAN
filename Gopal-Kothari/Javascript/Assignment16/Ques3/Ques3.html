@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <mate charset="UTF-8">
+        <title>Ques3</title>
+        <style>
+            .main{
+                margin-top: 5%;
+            }
+            h1{
+                text-align: left;
+            }
+            img{
+                width: 300px;
+                height: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <center>
+                <h1 id="head">Books</h1><br>
+                <img src="img/book.jpeg" id="img" /><br><br>
+                <button onclick="nextPlay()">Next Play</button>
+            </center>
+        </div>
+        <script>
+            //Heading and Image Changes
+            var a = 0;
+            function nextPlay(){
+                if(a == 0){
+                    document.getElementById("head").innerHTML = "Books";
+                    document.getElementById("img").src = "img/book.jpeg";
+                    a = 1;
+                }else if(a == 1){
+                    document.getElementById("head").innerHTML = "Car";
+                    document.getElementById("img").src = "img/car.jpeg";
+                    a = 2;
+                }else {
+                    document.getElementById("head").innerHTML = "Aeroplane";
+                    document.getElementById("img").src = "img/aeroplane.jpeg";
+                    a = 0;
+                }
+            }
+        </script>
+    </body>
+</html>

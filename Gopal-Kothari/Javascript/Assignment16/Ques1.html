@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <mate charset="UTF-8">
+        <title>Ques1</title>
+        <style>
+            .main{
+                text-align: center;
+                margin-top: 15%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <h1 id="head">Heading</h1><br><br>
+            <button onclick="left()">Left</button>
+            <button onclick="center()">Center</button>
+            <button onclick="right()">Right</button>
+        </div>
+        <script>
+            //text align left
+            function left(){
+                document.getElementById("head").style.textAlign = "left";
+                document.getElementById("head").style.color = "green";
+            }
+            //text align center
+            function center(){
+                document.getElementById("head").style.textAlign = "center";
+                document.getElementById("head").style.color = "red";
+            }
+            //text align right
+            function right(){
+                document.getElementById("head").style.textAlign = "right";
+                document.getElementById("head").style.color = "yellow";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <mate charset="UTF-8">
+        <title>Ques7</title>
+        <style>
+            .main{
+                margin-top: 5%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <center>
+                <table id= "tab" border="1" width="50%" height="10px">
+                    <tr>
+                        <td>Row</td>
+                        <td>Col</td>
+                    </tr>
+                    <tr>
+                        <td>Row</td>
+                        <td>Col</td>
+                    </tr>
+                    <tr>
+                        <td>Row</td>
+                        <td>Col</td>
+                    </tr>
+                </table>
+                <button onclick="table()">Create Row</button><br>
+                <hr><br><br>
+            </center>
+        </div>
+        <script>
+            //craete row in table
+            function table(){
+                var x= prompt("Select Row from (0,1,2) : ");
+                var y= prompt("Select column from (0,1) : ");
+                var z = prompt("Enter content");
+                var a = document.getElementById("tab").rows[parseInt(x,10)].cells;
+                a[parseInt(y,10)].innerHTML = z;
+            }
+        </script>
+    </body>
+</html>
