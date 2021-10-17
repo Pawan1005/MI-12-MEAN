@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>java script assignment 5</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">
+      Sum of even and Product of odd numbers in 6 digit number
+    </h1>
+    Enter 6 digit number : <input id="num1" type="number" /><br />
+    <button
+      type="button"
+      style="width: 100px; height: 40px"
+      onclick="Calculate()"
+    >
+      <b>Submit </b>
+    </button>
+    <br />
+    <p id="pid"></p>
+    <br />
+    <script type="text/javascript">
+      var num,
+        rem,
+        sum = 0,
+        Product = 1;
+      function Calculate() {
+        num = parseInt(document.getElementById("num1").value);
+        var len = num.toString().length;
+        var n1 = num;
+        if (len != 6) {
+          document.getElementById("pid").innerHTML =
+            "invalid number  !!! enter 6 digit numbers  ";
+        } else {
+          while (num > 0) {
+            rem = num % 10;
+            if (rem % 2 == 0) {
+              sum = sum + rem;
+              document.getElementById("pid").innerHTML += " even " + rem +" <br>";
+            } else if (rem % 2 != 0) {
+              Product = Product * rem;
+
+              document.getElementById("pid").innerHTML += " <br> odd " + rem+" <br>";
+            }
+            num = parseInt(num / 10);
+          }
+
+          document.getElementById("pid").innerHTML +=
+            " sum of even numbers " + sum +"<br>";
+          document.getElementById("pid").innerHTML +=
+            " product of odd numbers  " + Product;
+        }
+      }
+    </script>
+  </body>
+</html>

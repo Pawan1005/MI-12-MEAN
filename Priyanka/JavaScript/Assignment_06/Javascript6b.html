@@ -1,0 +1,23 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 6 Quesion 2</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Array Assignment 6 Question 2</h1>
+    <script type="text/javascript">
+      let names = [];
+      while (true) {
+        message = prompt("Enter names");
+        if (message == null || message == "X" || message == "x") break;
+        names.push(message);
+      }
+      document.write(" array elements " + names.join(" ~ ") + " <br>");
+      let name2 = names.map((names) => names.toUpperCase());
+      document.write(" array elements Assending " + name2.sort() + " <br>");
+      document.write(" array elements Descending " + name2.reverse() + " <br>");
+    </script>
+  </body>
+</html>

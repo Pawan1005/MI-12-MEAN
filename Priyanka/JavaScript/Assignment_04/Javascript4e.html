@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 4 question 4</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Change of String Case</h1>
+    Enter String : <input id="text1" type="text" /><br />
+    <button type="button" style="width: 100px; height: 40px" onclick="convertlowercase()">
+      <b>Change to lowercase </b>
+    </button>
+    <button type="button" style="width: 100px; height: 40px" onclick="convertuppercase()">
+      <b>change to UPPERCASE </b>
+    </button>
+    <p id="pid"></p>
+    <script>
+      function convertlowercase() {
+        var s = document.getElementById("text1").value;
+        document.getElementById("pid").innerHTML= " string in lower "+s.toLowerCase();        
+      }
+      function convertuppercase() {
+        var s = document.getElementById("text1").value;
+        document.getElementById("pid").innerHTML= " string in Upper "+s.toUpperCase();
+      }
+    </script>
+  </body>
+</html>

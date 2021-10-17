@@ -1,0 +1,46 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>java script krishnamurty number </title>   
+    </head>
+    <body>
+        <h1 style="text-align: center;">Check krishnamurty number</h1>
+        Enter number to check :  <input id="num1"type="text"><br>
+        <button type="button" style="width:100px; height:40px"onclick="krishnamurty()"> <b>Submit </b> </button>
+        <p id="pid"></p>
+    <script type="text/javascript">
+         var temp ,rem ,original ;  
+         function krishnamurty()
+          { var sum=0 ;
+         num=parseInt(document.getElementById("num1").value);
+         temp=num;
+              while (temp>0) {
+            var rem = temp % 10 ;
+           var fact2=Factorial(rem);
+              sum=sum+fact2;
+              temp=parseInt(temp/10);
+           }  
+          if(sum==num)
+          {
+            document.getElementById("pid").innerHTML= " number is krishnamurty ";
+          }
+            else
+          {
+            document.getElementById("pid").innerHTML+=" number is not krishnamurty";
+          }
+        }
+        function Factorial(num2)
+          {
+            var fact=1;
+          for (var i = 1; i <= num2; i++) 
+            {
+                 fact=fact*i;
+            }  
+         return fact;
+            }
+        </script>
+    </body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

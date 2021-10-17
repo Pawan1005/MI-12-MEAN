@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 4 question 4</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Check vowel</h1>
+    Enter alphabet : <input id="text1" type="text" /><br />
+    <button
+      type="button"
+      style="width: 100px; height: 40px"
+      onclick="checkvowel()">
+      <b>Submit </b>
+    </button>
+    <p id="pid"></p>
+    <script>
+      function checkvowel() {
+        var s = document.getElementById("text1").value;
+        switch (s) {
+          case "a":
+          case "e":
+          case "i":
+          case "o":
+          case "u":
+            document.getElementById("pid").innerHTML = "alphabet is vowel";
+            break;
+          case "A":
+          case "E":
+          case "I":
+          case "O":
+          case "U":
+            document.getElementById("pid").innerHTML = "alphabet is vowel";
+            break;
+          default:
+            document.getElementById("pid").innerHTML = "alphabet is consonant";
+        }
+      }
+    </script>
+  </body>
+</html>

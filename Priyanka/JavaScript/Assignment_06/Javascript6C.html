@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 6 Quesion 3</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Array Assignment 6 Question 3</h1>
+    <script type="text/javascript">
+      let arr = [],
+        sum = 0;
+      while (true) {
+        message = prompt("Enter numbers");
+        if (message == null || message == "X" || message == "x") break;
+        arr.push(parseInt(message));
+      }
+      document.write(" Array elements " + arr + " <br>");
+      for (let index = 0; index < arr.length; index++) {
+        sum = sum + arr[index];
+      }
+      document.write(" sum of elements " + sum);
+    </script>
+  </body>
+</html>
