@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <title>assignment-9</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- JavaScript -->
+        <script>
+
+            // -------------------------Question -1--------------------
+            function palindrome() {
+                var a = parseInt(document.getElementById("userinput").value);
+                var b = a;
+                var sum = 0;
+                while (b > 0) {
+                    var rem = b % 10;
+                    sum = sum * 10 + rem;
+                    b = parseInt(b / 10);
+                }
+                if (sum == a) {
+                    document.getElementById("palresult").innerHTML = a + " is palindrome number.";
+                } else {
+                    document.getElementById("palresult").innerHTML = a + " is not palindrome number.";
+                }
+            }
+            // -------------------------Question -2--------------------
+            function primepalindrome() {
+                var a = parseInt(document.getElementById("userinput2").value);
+                var b = a;
+                var sum = 0;
+                prime = 1;
+
+                for (let i = 2; i < b; i++) {
+                    if (b % i == 0) {
+                        prime = 0;
+                        break;
+                    }
+
+                }
+
+                while (b > 0) {
+                    var rem = b % 10;
+                    sum = sum * 10 + rem;
+                    b = parseInt(b / 10);
+                }
+
+                if (sum == a && prime == 1) {
+                    document.getElementById("prpalresult").innerHTML = a + " is prime palindrome number.";
+                } else {
+                    document.getElementById("prpalresult").innerHTML = a + " is not prime palindrome number.";
+                }
+            }
+
+            // -------------------------Question -3--------------------
+            function fivepalindrome() {
+                var a = [];
+                var c = [];
+
+                var num = [];
+
+
+                num[0] = parseInt(document.getElementById("num1").value);
+                num[1] = parseInt(document.getElementById("num2").value);
+                num[2] = parseInt(document.getElementById("num3").value);
+                num[3] = parseInt(document.getElementById("num4").value);
+                num[4] = parseInt(document.getElementById("num5").value);
+                for (let i = 0; i < 5; i++) {
+                    //console.log(num[i])
+                    checker(num[i]);
+
+                }
+
+                // --------------------logic
+                function checker(num) {
+                    var prime = 1;
+                    var sum = 0;
+                    //var temp = num
+                    //console.log(temp)
+
+                    //debugger;                            
+                    var temp = num
+                    //console.log(temp)
+
+                    for (let i = 2; i < temp; i++) {
+                        if (temp % i == 0) {
+                            prime = 0;
+                            break;
+                        }
+                        else { prime = 1 }
+
+                    }
+                    var z = temp;
+                    while (z > 0) {
+                        var rem = z % 10;
+                        sum = sum * 10 + rem;
+                        z = parseInt(z / 10);
+                    }
+
+                    if (sum == temp && prime == 1) {
+                        document.getElementById("r1").innerHTML +=
+                            +temp + " is pirme palindrom number" + "<br><br>";
+                    }
+                    else {
+                        if (sum != temp) {
+                            document.getElementById("r1").innerHTML +=
+                                +temp + " is not palindrome number" + "<br><br>";
+                        }
+                        else if (prime != 1) {
+                            document.getElementById("r1").innerHTML +=
+                                +temp + " is not prime number" + "<br><br>";
+                        }
+                        else {
+                            document.getElementById("r1").innerHTML +=
+                                +temp + " not prime palindrom number" + "<br><br>";
+                        }
+                    }
+
+                }
+
+                // --------------------                
+
+                //document.getElementById("fiveresult2").innerHTML = "These are prime palindrome numbers:" + c;
+            }
+
+            // -------------------------Question -4--------------------
+            function stringpalindrome() {
+
+                var str = document.getElementById("inputstring").value;
+                var splitstring = str.split("");
+                var reversearr = splitstring.reverse();
+                var joinarr = reversearr.join("");
+                if (joinarr == str) {
+                    document.getElementById("stringresult").innerHTML = "yes! " + str + " is a palindrome";
+                }
+                else {
+                    document.getElementById("stringresult").innerHTML = "No! " + str + " is not a palindrome";
+                }
+            }
+
+            // -------------------------Question -6--------------------
+            function words() {
+                var count = 0;
+                var str = document.getElementById("inputwords").value;
+                var count = str.match(/(\w+)/g).length;
+                var space = count - 1;
+                document.getElementById("wordsresult1").innerHTML = "Total Words: " + count;
+                document.getElementById("wordsresult2").innerHTML = "Total Whitespaces: " + space;
+            }
+        </script>
+        <!-- End JavaScript -->
+
+    </head>
+
+    <body>
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Question 1 -->
+                <div class="col-3 border mx-auto">
+                    <h3>check palindrome</h3><br>
+                    <input id="userinput" placeholder="Enter number">
+                    <button onclick="palindrome()" class="btn btn-primary">Check</button><br>
+                    <p id="palresult"></p>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="col-3 border mx-auto">
+                    <h3>check prime palindrome</h3><br>
+                    <input id="userinput2" placeholder="Enter number">
+                    <button onclick="primepalindrome()" class="btn btn-primary">Check</button><br>
+                    <p id="prpalresult"></p>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="col-3 border mx-auto">
+                    <h3>String palindrome</h3><br>
+                    <input id="inputstring" placeholder="Enter any word">
+                    <button onclick="stringpalindrome()" class="btn btn-primary">Check</button><br>
+                    <p id="stringresult"></p>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="col-3 border mx-auto">
+                    <h3>Total words</h3><br>
+                    <input id="inputwords" placeholder="Enter sentence">
+                    <button onclick="words()" class="btn btn-primary">Check</button><br>
+                    <p id="wordsresult1"></p>
+                    <p id="wordsresult2"></p>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="col-6 border mx-auto">
+                    <h3>try with five numbers.</h3><br>
+                    <div class="row">
+                        <div class="col-6">
+                            <input type="text" id="num1" placeholder="Enter Number">
+                            <input type="text" id="num2" placeholder="Enter Number">
+                            <input type="text" id="num3" placeholder="Enter Number">
+                            <input type="text" id="num4" placeholder="Enter Number">
+                            <input type="text" id="num5" placeholder="Enter Number">
+                            <button onclick="fivepalindrome()" class="btn btn-primary">Start</button><br>
+                        </div>
+                        <div class="col-6">
+                            <p id="r1"></p><br>
+                            <p id="r2"></p><br>
+                            <p id="r3"></p><br>
+                            <p id="r5"></p>
+                            <p id="r4"></p><br>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>

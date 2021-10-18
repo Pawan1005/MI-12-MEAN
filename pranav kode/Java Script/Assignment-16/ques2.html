@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <title>ques-2</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    </head>
+
+    <body>
+
+        <p id="pid">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam modi dolores nam in
+            totam ad, magni eius quaerat dolorum ratione repudiandae eligendi culpa, dolorem error
+            expedita ipsa voluptas! Reiciendis ex quia
+            sed. Voluptatum aliquid similique recusandae corporis nostrum, eveniet quos?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam modi dolores nam in
+            totam ad, magni eius quaerat dolorum ratione repudiandae eligendi culpa, dolorem error
+            expedita ipsa voluptas! Reiciendis ex quia
+            sed. Voluptatum aliquid similique recusandae corporis nostrum, eveniet quos?
+        </p>
+
+        <fieldset>
+            <legend>color</legend>
+            <button onclick="redclr()" class="btn">RED</button>
+            <button onclick="blueclr()" class="btn">BLUE</button>
+            <button onclick="greenclr()" class="btn">GREEN</button>
+        </fieldset>
+        <fieldset>
+            <legend>Size</legend>
+            <button onclick="size10()" class="btn">10px</button>
+            <button onclick="size16()" class="btn">16px</button>
+            <button onclick="size24()" class="btn">24px</button>
+        </fieldset>
+        <fieldset>
+            <legend>color</legend>
+            <button onclick="font1()" class="btn">Veranda</button>
+            <button onclick="font2()" class="btn">Cambria</button>
+            <button onclick="font3()" class="btn">Courier</button>
+        </fieldset>
+
+
+
+    </body>
+    <script>
+    // ------------color
+        function redclr() {
+            let a = document.getElementById("pid");        
+            a.style.color = "red";
+        }
+        function blueclr() {
+            let a = document.getElementById("pid");        
+            a.style.color = "blue";
+        }
+        function greenclr() {
+            let a = document.getElementById("pid");        
+            a.style.color = "green";
+        }
+    // --------------size
+        function size10() {
+            let a = document.getElementById("pid");        
+            a.style.fontSize = "10px";
+        }
+        function size16() {
+            let a = document.getElementById("pid");        
+            a.style.fontSize = "16px";
+        }
+        function size24() {
+            let a = document.getElementById("pid");        
+            a.style.fontSize = "24px";
+        }
+    // -----------------font
+        function font1() {
+            let a = document.getElementById("pid");
+            a.style.fontFamily = "font-family:Verdana, Geneva, Tahoma, sans-serif";
+        }
+        function font2() {
+            let a = document.getElementById("pid");        
+            a.style.fontFamily = "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif";
+        }
+        function font3() {
+            let a = document.getElementById("pid");
+            a.style.fontFamily = "'Courier New', Courier, monospace";
+        }
+    </script>
+
+</html>

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <title>Assignment-4</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script>
+            // -----------------ques1--------------------------
+            function email() {
+                var e = document.getElementById("email").value;
+                var regx = /^[A-Za-z0-9._]{1,}@[A-Za-z]{3,8}.[A-Za-z]{2,6}$/gm;
+                if (regx.test(e)) {
+                    document.getElementById("pid1").innerHTML = "Valid";
+                }
+                else { document.getElementById("pid1").innerHTML = "Invalid"; }
+            }
+            // -----------------ques2--------------------------
+            function word() {
+                var w = document.getElementById("word").value;
+                var regx = /^[A-Z]/
+                if (regx.test(w)) {
+                    document.getElementById("pid2").innerHTML = "Valid";
+                }
+                else { document.getElementById("pid2").innerHTML = "Invalid"; }
+            }
+            // -----------------ques3--------------------------
+            function dt() {
+                var d = document.getElementById("dt").value;
+                var regx = /\d{2}:\d{2}:\d{4}/g
+                var dt = d.match(regx);
+                document.getElementById("pid3").innerHTML = "Date = " + dt;
+            }
+            // -----------------ques4--------------------------
+            function total() {
+                var count = 0;
+                var t = document.getElementById("total").value;
+                t = t.replace(/[ ]{2,}/gi, " ")
+                t = t.replace(/(^\s*)|(\s*$)/gi, "");
+                t = t.replace(/\n/, "/n")
+                var regx = /(\w+)/g;
+                var dt = t.match(regx);
+                var count = dt.length;
+                document.getElementById("pid41").innerHTML = "String is : " + t;
+                document.getElementById("pid42").innerHTML = "Total words are " + count;
+            }
+            // -----------------ques5--------------------------
+            function alphanum() {
+                var a = document.getElementById("alphanum").value;
+                var regx = /^(?=.*[A-Za-z])(?=.*[0-9])[a-zA-Z0-9]+$/;
+                if (regx.test(a)) {
+                    document.getElementById("ans5").innerHTML = "Yes It's Valid";
+                }
+                else {
+                    document.getElementById("ans5").innerHTML = "Sorry It's Invalid";
+                }
+            }
+            // -----------------ques6--------------------------
+            function q6() {
+                var a = document.getElementById("q6").value;
+                var regx = /^www.[A-Za-z0-9@#$%&*]{1,}.[A-Za-z]{2,4}$/gm;
+                if (regx.test(a)) {
+                    document.getElementById("ans6").innerHTML = "Yes It's Valid URL";
+                }
+                else {
+                    document.getElementById("ans6").innerHTML = "Sorry It's Invalid URL";
+                }
+            }
+            // -----------------ques7--------------------------
+            function q7() {
+                var a = document.getElementById("q7").value;
+                var regx = /^(?=.*[a-zA-Z])(?=.*[_])(?=.*[-])[a-zA-Z0-9_-]+$/;
+                if (regx.test(a)) {
+                    document.getElementById("ans7").innerHTML = "Yes It's Valid";
+                }
+                else {
+                    document.getElementById("ans7").innerHTML = "Sorry It's Invalid";
+                }
+
+            }
+            // -----------------ques8--------------------------
+            function credit() {
+                var c = document.getElementById("credit").value;
+                var regex = /^[\d]{16}$/g;
+                if (regex.test(c)) {
+                    document.getElementById("creditans").innerHTML = "Valid credit card";
+                }
+                else
+                    document.getElementById("creditans").innerHTML = "Invalid credit card";
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <div class="container mt-5 border">
+            <h2 class="text-center">Assignment-10</h2>
+            <div class="row">
+                <!-- --------------------Ques 1-------------------- -->
+                <div class="col-4 border mx-auto mt-3">
+                    <input class="mt-3" type="email" id="email" placeholder="Enter Email">
+                    <p class="mt-2 text-success" id="pid1"></p>
+                    <button onclick="email()" id="result1" class="btn btn-primary mt-2">Check</button>
+                </div>
+                `
+                <!-- --------------------Ques 2-------------------- -->
+                <div class="col-4 border mx-auto mt-3">
+                    <input class="mt-3" type="text" id="word" placeholder="Enter Word">
+                    <p class="mt-2 text-success" id="pid2"></p>
+                    <button onclick="word()" id="result2" class="btn btn-primary mt-2">Check</button>
+                </div>
+                <!-- --------------------Ques 3-------------------- -->
+                <div class="col-4 border mx-auto mt-3">
+                    <input class="mt-3" type="text" id="dt" placeholder="Enter sentence">
+                    <p class="mt-2 text-success" id="pid3"></p>
+                    <button onclick="dt()" id="result3" class="btn btn-primary mt-2">Check</button>
+                </div>
+                <!-- --------------------Ques 4-------------------- -->
+                <div class="col-4 border mx-auto mt-3">
+                    <input class="mt-3" id="total" placeholder="Enter sentence">
+                    <p class="mt-2 text-success" id="pid41"></p>
+                    <p class="mt-2 text-success" id="pid42"></p>
+                    <button onclick="total()" id="result4" class="btn btn-primary mt-2">Check</button>
+                </div>
+                <!-- --------------------Ques 5-------------------- -->
+                <div class="col-4 border mx-auto mt-3">
+                    <input class="mt-3" id="alphanum" placeholder="Enter alphanumeric">
+                    <p class="mt-2 text-success" id="ans5"></p>
+                    <button onclick="alphanum()" id="result5" class="btn btn-primary mt-2">Check</button>
+                </div>
+
+                <!-- --------------------Ques 6-------------------- -->
+                <div class="col-4 border mx-auto mt-3">
+                    <input class="mt-3" id="q6" placeholder="Enter url">
+                    <p class="mt-2 text-success" id="ans6"></p>
+                    <button onclick="q6()" id="result6" class="btn btn-primary mt-2">Check</button>
+                </div>
+
+                <!-- --------------------Ques 7-------------------- -->
+                <div class="col-4 border mx-auto mt-3">
+                    <input class="mt-3" id="q7" placeholder="Enter values">
+                    <p class="mt-2 text-success" id="ans7">q7</p>
+                    <button onclick="q7()" id="result6" class="btn btn-primary mt-2">Check</button>
+                </div>
+
+                <!-- --------------------Ques 8-------------------- -->
+                <div class="col-4 border mx-auto mt-3">
+                    <input class="mt-3" id="credit" placeholder="Credit card number">
+                    <p class="mt-2 text-success" id="creditans"></p>
+                    <button onclick="credit()" id="result7" class="btn btn-primary mt-2">Check</button>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>

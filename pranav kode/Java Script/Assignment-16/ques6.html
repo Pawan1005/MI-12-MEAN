@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ques-6</title>
+        <style>
+            table,tr{
+                border: 1px solid black;
+            }
+            td{
+                padding: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <table id="mytable">
+            <tr >
+                <td>row</td>            
+            </tr>
+            <tr>
+                <td>row</td>            
+            </tr>
+        </table>
+        <button onclick="Addrow()">Add Row</button>
+    </body>
+    <script>
+        function Addrow() {
+            var t = document.getElementById("mytable");
+            var r = t.insertRow(0);
+            r.innerHTML = "New ROW";
+            // var c1 = r.insertCell(0);
+            // var c2 = r.insertCell(1);
+        }
+    </script>
+</html>

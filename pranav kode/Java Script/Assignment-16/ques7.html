@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ques-7</title>
+        <style>
+            table,th,td,tr{
+                border: 1px solid black;
+            }
+            td{
+                padding: 5px;
+            }
+            button{
+                margin-top: 50px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <table id="mytable">
+            <tr >
+                <th>Id</th>
+                <th>Name</th>
+                <th>City</th>
+            </tr>
+            <tr >
+                <td>1</td>
+                <td>pranav</td>
+                <td>mumbai</td>
+            </tr>
+            <tr >
+                <td>2</td>
+                <td>Khushal</td>
+                <td>Bangalore</td>
+            </tr>
+        </table>    
+        <input id="id1" type="text" placeholder="Enter Id">
+        <input id="id2" type="text" placeholder="Enter Name">
+        <input id="id3" type="text" placeholder="Enter City">
+        <button onclick="Addrow()">Add Row</button>
+    </body>
+    <script>
+        function Addrow() {
+            var id = document.getElementById("id1").value;
+            var name = document.getElementById("id2").value;
+            var city = document.getElementById("id3").value;
+            var t = document.getElementById("mytable");
+            var r = t.insertRow(-1);
+            var c1 = r.insertCell(0);
+            var c2 = r.insertCell(1);
+            var c3 = r.insertCell(2);
+            
+            c1.innerHTML = id;
+            c2.innerHTML = name;
+            c3.innerHTML = city;
+
+
+        }
+    </script>
+</html>
