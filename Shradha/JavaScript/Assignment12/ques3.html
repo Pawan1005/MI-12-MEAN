@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Classes & Objects</title>
+        <script>
+            class Employee{
+                constructor(){
+                    this.empno = 0 ;
+                    this.name = "" ;
+                    this.address = "" ;
+                    this.city = "" ;
+                    this.salary = 0 ;
+                }
+                init(){
+                    document.write("<br>Employee No. : " + this.empno) ;
+                    document.write("<br>Name : " + this.name) ;
+                    document.write("<br>Address : " + this.address) ;
+                    document.write("<br>City : " + this.city) ;
+                    document.write("<br>Basic Salary : " + this.salary + "<br>") ;
+                }
+                getdata(){
+                    this.empno = prompt("Enter Employee Number: ")
+                    this.name = prompt("Enter Name : ") ;
+                    this.address = prompt("Enter Address : ") ;
+                    this.city = prompt("Enter City : ") ;
+                    this.salary = parseInt(prompt("Enter Salary : ")) ;           
+                }
+                calculate(salary)
+                {
+                    let da, hra, pf, gross, net ;
+                    da = parseInt((30/100)*this.salary) ;
+                    hra = parseInt((15/100)*this.salary) ;
+                    pf = parseInt((12.5/100)*this.salary) ;
+                    this.gross = parseInt(this.salary + da + hra) ;
+                    this.net = this.gross - pf ;
+                }
+                display(){
+                    document.write("<br><br>Employee No. : " + this.empno) ;
+                    document.write("<br>Name : " + this.name) ;                    
+                    document.write("<br>Gross Salary : " + this.gross) ; 
+                    document.write("<br>Net Salary : " +  this.net) ; 
+                    if(this.gross > 180000){
+                        document.write("<br>The Employee is an Income Tax Payer.")
+                    }
+                    else{
+                        document.write("<br>The Employee is not an Income Tax Payer.")
+                    }                  
+                }
+            }
+            let emp1 = new Employee() ;
+            let emp2 = new Employee() ;
+            emp1.getdata() ;
+            emp2.getdata() ;
+            emp1.init() ;
+            emp2.init() ;
+            emp1.calculate() ;
+            emp2.calculate() ;
+            emp1.display() ;
+            emp2.display() ;
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
