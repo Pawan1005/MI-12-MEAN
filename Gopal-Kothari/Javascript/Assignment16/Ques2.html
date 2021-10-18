@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <mate charset="UTF-8">
+        <title>Ques2</title>
+        <style>
+            .main{
+                margin-top: 15%;
+                width: 50%;
+            }
+            p{
+                text-align: justify;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <div class="main">
+                <p id="para">JavaScript is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive. Where HTML and CSS are languages that give structure and style to web pages, JavaScript gives web pages interactive elements that engage a user. Common examples of JavaScript that you might use every day include the search box on Amazon, a news recap video embedded on The New York Times, or refreshing your Twitter feed. Incorporating JavaScript improves the user experience of the web page by converting it from a static page into an interactive one. To recap, JavaScript adds behavior to web pages.</p>
+                <fieldset>
+                    <legend>Color</legend>
+                    <button onclick="green()">Green</button>
+                    <button onclick="red()">Red</button>
+                    <button onclick="yellow()">yellow</button>
+                </fieldset><br><br>
+                <fieldset>
+                    <legend>Size</legend>
+                    <button onclick="sm()">10px</button>
+                    <button onclick="lg()">15ps</button>
+                    <button onclick="xl()">20px</button>
+                </fieldset><br><br>
+                <fieldset>
+                    <legend>Font</legend>
+                    <button onclick="cursive()">Cursive</button>
+                    <button onclick="arial()">Arial</button>
+                    <button onclick="courier()">Courier</button>
+                </fieldset>
+            </div>
+        </center>
+
+        <script>
+            //text color green
+            function green(){
+                document.getElementById("para").style.color = "green";
+            }
+            //text color red
+            function red(){
+                document.getElementById("para").style.color = "red";
+            }
+            //text color yellow
+            function yellow(){
+                document.getElementById("para").style.color = "yellow";
+            }
+            //text fontsize sm
+            function sm(){
+                document.getElementById("para").style.fontSize = "10px";
+            }
+            //text fontsize lg
+            function lg(){
+                document.getElementById("para").style.fontSize = "15px";
+            }
+            //text fontsize xl
+            function xl(){
+                document.getElementById("para").style.fontSize = "20px";
+            }
+            //text font family cursive
+            function cursive(){
+                document.getElementById("para").style.fontFamily = "cursive";
+            }
+            //text font family arial
+            function arial(){
+                document.getElementById("para").style.fontFamily = "Arial";
+            }
+            //text font family courier
+            function courier(){
+                document.getElementById("para").style.fontFamily = "Courier";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <mate charset="UTF-8">
+        <title>Ques6</title>
+        <style>
+            .main{
+                margin-top: 5%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <center>
+                <table id= "tab" border="1" width="50%" height="10px">
+                    <tr>
+                        <td>Row</td>
+                    </tr>
+                    <tr>
+                        <td>Row</td>
+                    </tr>
+                </table>
+                <button onclick="table()">Create Row</button><br>
+                <hr><br><br>
+            </center>
+        </div>
+        <script>
+            //craete row in table
+            function table(){
+                var a = document.getElementById("tab").insertRow(2);
+                var b = a.insertCell(0);
+                b.innerHTML = "New cell"
+            }
+        </script>
+    </body>
+</html>

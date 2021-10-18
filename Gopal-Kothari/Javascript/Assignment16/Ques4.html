@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <mate charset="UTF-8">
+        <title>Ques4</title>
+        <style>
+            .main{
+                margin-top: 5%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <center>
+                <input type="number" id="num" >
+                <button onclick="create()">Create</button><br>
+                <hr><br><br>
+            </center>
+            <p><b>Table : </b><br><br><span id="tab"></span></p>
+        </div>
+        <script>
+            //craete table
+            function create(){
+                var a = parseInt(document.getElementById("num").value)
+                document.getElementById("tab").innerHTML += "2 X " +a+ " = " +(2*a)+"<br>";
+            }
+        </script>
+    </body>
+</html>
