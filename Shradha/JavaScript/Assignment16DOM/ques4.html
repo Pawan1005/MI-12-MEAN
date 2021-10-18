@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>QUES 4</title>
+        <style>
+            h1{
+                background-color: rgb(121, 188, 190);
+                padding: 24px;
+            }
+        </style>
+        <script type="text/javascript">
+            function get_table(){
+                let num = document.getElementById("tab1").value ;
+                for(let i = 1; i <= 10; i++){
+                    document.getElementById("para").innerHTML += "<div>" ;
+                    document.getElementById("para").innerHTML += (num + " x " + i + " = " + num * i) ;
+                    document.getElementById("para").innerHTML += "</div>" ;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Display a Table</h1>
+        <hr style="border-width: 4px;">
+        <br><br>
+        <div>
+            <label for="table">Enter any number to generate table :</label>
+            <input type="number" id="tab1" style="height: 28px;">
+        </div>
+        <br>
+        <div>
+            <button onclick="get_table()" id="table_n" style="padding: 12px; width: 120px; background-color: green; 
+            color: white;">Display</button>
+        </div>
+        <p id="para"></p>
+    </body>
+</html>

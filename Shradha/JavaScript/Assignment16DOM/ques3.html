@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ques 3</title>
+        <style>
+            h1{
+                background-color: rgb(121, 188, 190);
+                padding: 24px;
+            }
+        </style>
+        <script>
+            function change_img(){
+                if(flag == 0){
+                    document.getElementById("img1").src = "css.jpeg" ;
+                    flag = 1 ;
+                    document.getElementById("hid").innerHTML = "Book of CSS" ;
+                }else if(flag == 1){
+                    document.getElementById("img1").src = "js.jpg" ;
+                    flag = 2 ;
+                    document.getElementById("hid").innerHTML = "Book of JavaScript" ;
+                }else{
+                    document.getElementById("img1").src = "book.jpeg" ;
+                    flag = 0 ;
+                    document.getElementById("hid").innerHTML = "Images of Books" ;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Change Images with their Heading</h1>
+        <hr style="border-width: 4px;">
+        <br><br>
+        <h2 id="hid">Images of Books</h2>
+        <div>
+            <img src="book.jpeg" alt="book" id="img1" style="height: 300px; width: 300px;" onload="load_img()">
+        </div>
+        <br>
+        <div>
+            <button onclick="change_img()" style="padding: 12px; width: 120px; background-color: green; 
+            color: white;">Text Play</button>
+        </div>
+        <script>
+            let flag = 0 ;
+        </script>
+    </body>
+</html>

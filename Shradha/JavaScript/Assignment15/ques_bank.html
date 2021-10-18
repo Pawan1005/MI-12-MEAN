@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>JS 15 Ques1</title>
+        <script>
+            class BankDet {
+                constructor() {
+                    this.acc_no = 0;
+                    this.acc_name = "";
+                    this.acc_bal = 0;
+                }
+                getdata() {
+                    this.acc_no = parseInt(prompt("Enter your account number : "));
+                    this.acc_name = prompt("Enter your Name : ");
+                    this.acc_bal = parseInt(prompt("Enter your account balance : "));
+                }
+                deposit() {
+                    let dpst = parseInt(prompt("Enter your amount to be deposit"));
+                    this.acc_bal += dpst ;
+                }
+                withdrawl() {
+                    let wthdrw = parseInt(prompt("Enter your amount to be withdrawl"));
+                    try {
+                        if (wthdrw > this.acc_bal) throw "Error : Your Account balance is Insufficient!!!" ;
+                        try {
+                            if (this.acc_bal - wthdrw < 1000) throw "Warning : Your Account Balance is below 1000!!!" ;
+                            this.acc_bal -= wthdrw ;
+                        } catch (err) {
+                            this.acc_bal -= wthdrw ;
+                            alert(err);
+                        }
+                    } catch (err) {
+                        alert(err);
+                    }
+                }
+                display() {
+                    let row = table.insertRow(cnt) ;
+                    let cell1 = row.insertCell(0) ;
+                    let cell2 = row.insertCell(1) ;
+                    let cell3 = row.insertCell(2) ;
+                    let cell4 = row.insertCell(3) ;
+                    cell1.innerHTML = cnt ;
+                    cell2.innerHTML = this.acc_no ;
+                    cell3.innerHTML = this.acc_name ;
+                    cell4.innerHTML = this.acc_bal ;
+                    cnt++;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h2>Display Bank Account Holder's Details</h2><br>
+            <hr><br>
+            <table width="50%" style="text-align: justify;" id="para">
+                <tr>
+                    <th>Sr No.</th>
+                    <th>Account Number</th>
+                    <th>Account Name</th>
+                    <th>Account Balance</th>
+                </tr>
+            </table>
+        </div>
+        <script type="text/javascript">
+            //Display Bank details
+            let cnt = 1;
+            let table = document.getElementById("para");
+            let row = table.insertRow(1);
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            let cell3 = row.insertCell(2);
+            let cell4 = row.insertCell(3);
+            let holder1 = new BankDet();
+            let holder2 = new BankDet();
+            holder1.getdata();
+            holder1.deposit();
+            holder1.withdrawl();
+            holder1.display();
+            row = table.insertRow(2);
+            cell1 = row.insertCell(0);
+            cell2 = row.insertCell(1);
+            cell3 = row.insertCell(2);
+            cell4 = row.insertCell(3);
+            holder2.getdata();
+            holder2.deposit();
+            holder2.withdrawl();
+            holder2.display();
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

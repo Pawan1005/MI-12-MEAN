@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ques 2</title>
+        <style>
+            h1{
+                text-align: center; 
+                background-color: rgb(121, 188, 190);
+                padding: 24px;
+            }
+        </style>
+        <script>
+            function col1(){
+                document.getElementById("para").style.backgroundColor = "rgb(250, 208, 250)" ;
+            }
+            function col2(){
+                document.getElementById("para").style.backgroundColor = "rgb(247, 222, 222)" ;
+            }
+            function col3(){
+                document.getElementById("para").style.backgroundColor = "rgb(195, 248, 195)" ;
+            }
+            function sz1(){
+                document.getElementById("para").style.fontSize = "12px" ;
+            }
+            function sz2(){
+                document.getElementById("para").style.fontSize = "24px" ;
+            }
+            function sz3(){
+                document.getElementById("para").style.fontSize = "30px" ;
+            }
+            function font1(){
+                document.getElementById("para").style.fontFamily = "Comic Sans MS" ;
+            }
+            function font2(){
+                document.getElementById("para").style.fontFamily = "Arial" ;
+            }
+            function font3(){
+                document.getElementById("para").style.fontFamily = "Liberation Serif" ;
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="button_align">Change paragraph Color, text-size and Font-family</h1>
+        <hr style="border-width: 4px;">
+        <br>
+        <div>
+            <p id="para">
+                Hello everyone, Myself Shradha Ashima Singh. I have completed my post-graduation 
+                (M.Tech) from Computer Science & Enggineering in 2018, from Infinity Management 
+                & Engg. College with 76%. I belongs to Nagpur, Maharashtra. My hobbies are 
+                playing bad-minton, explore new things, cooking, listening music etc. 
+                                                                                    ThankYou
+            </p>
+        </div>
+        <div>
+            <fieldset>
+                <legend><b>Colors</b></legend>
+                <div>
+                    <button onclick="col1()" style="padding: 12px; width: 120px; background-color: rgb(250, 208, 250);">Purple</button>
+                    <button onclick="col2()" style="padding: 12px; width: 120px; background-color:rgb(247, 222, 222) ;">Snow</button>
+                    <button onclick="col3()" style="padding: 12px; width: 120px; background-color: rgb(195, 248, 195);">Light Green</button>
+                </div>
+            </fieldset>
+        </div>
+        <br>
+        <div>
+            <fieldset>
+                <legend><b>Size</b></legend>
+                <div>
+                    <button onclick="sz1()" style="padding: 12px; width: 120px; background-color: rgb(250, 208, 250);">Size 1</button>
+                    <button onclick="sz2()" style="padding: 12px; width: 120px; background-color:rgb(247, 222, 222) ;">Size 2</button>
+                    <button onclick="sz3()" style="padding: 12px; width: 120px; background-color: rgb(195, 248, 195);">Size 3</button>
+                </div>
+            </fieldset>
+        </div>
+        <br>
+        <div>
+            <fieldset>
+                <legend><b>Font-Family</b></legend>
+                <div>
+                    <button onclick="font1()" style="padding: 12px; width: 120px; background-color: rgb(250, 208, 250);">Font 1</button>
+                    <button onclick="font2()" style="padding: 12px; width: 120px; background-color:rgb(247, 222, 222) ;">Font 2</button>
+                    <button onclick="font3()" style="padding: 12px; width: 120px; background-color: rgb(195, 248, 195);">Font 3</button>
+                </div>
+            </fieldset>
+        </div>
+    </body>
+</html>

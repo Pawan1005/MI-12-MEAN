@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ques 1</title>
+        <style>
+            h1{
+                text-align: center ;
+                background-color: rgb(121, 188, 190);
+                padding: 24px;
+            }
+        </style>
+        <script>
+            function left(){
+                document.getElementById("button_align").style.textAlign = "left" ;
+            }
+            function Center(){
+                document.getElementById("button_align").style.textAlign = "center" ;
+            }
+            function Right(){
+                document.getElementById("button_align").style.textAlign = "right" ;
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="button_align">This is my DOM first Assignment.</h1>
+        <hr style="border-width: 4px;">
+        <br><br>
+        <div>
+            <button onclick="left()" style="padding: 12px; width: 120px; background-color: rgb(176, 222, 240);">Left Align</button>
+            <button onclick="Center()" style="padding: 12px; width: 120px; background-color:snow ;">Center Align</button>
+            <button onclick="Right()" style="padding: 12px; width: 120px; background-color: rgb(247, 224, 195);">Right Align</button>
+        </div>
+    </body>
+</html>
