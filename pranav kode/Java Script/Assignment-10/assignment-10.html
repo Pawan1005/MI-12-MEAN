@@ -10,6 +10,82 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div class="container mt-5 border">
+            <h2 class="text-center">Assignment-10</h2>
+            <div class="row">
+                <!-- --------------------Ques 1-------------------- -->
+                <div class="col-4 border mx-auto mt-3">
+                    <input class="mt-3" type="email" id="email" placeholder="Enter Email">
+                    <p class="mt-2 text-success" id="pid1"></p>
+                    <button onclick="email()" id="result1" class="btn btn-primary mt-2">Check</button>
+                </div>
+                `
+                <!-- --------------------Ques 2-------------------- -->
+                <div class="col-4 border mx-auto mt-3">
+                    <input class="mt-3" type="text" id="word" placeholder="Enter Word">
+                    <p class="mt-2 text-success" id="pid2"></p>
+                    <button onclick="word()" id="result2" class="btn btn-primary mt-2">Check</button>
+                </div>
+                <!-- --------------------Ques 3-------------------- -->
+                <div class="col-4 border mx-auto mt-3">
+                    <input class="mt-3" type="text" id="dt" placeholder="Enter sentence">
+                    <p class="mt-2 text-success" id="pid3"></p>
+                    <button onclick="dt()" id="result3" class="btn btn-primary mt-2">Check</button>
+                </div>
+                <!-- --------------------Ques 4-------------------- -->
+                <div class="col-4 border mx-auto mt-3">
+                    <input class="mt-3" id="total" placeholder="Enter sentence">
+                    <p class="mt-2 text-success" id="pid41"></p>
+                    <p class="mt-2 text-success" id="pid42"></p>
+                    <button onclick="total()" id="result4" class="btn btn-primary mt-2">Check</button>
+                </div>
+                <!-- --------------------Ques 5-------------------- -->
+                <div class="col-4 border mx-auto mt-3">
+                    <input class="mt-3" id="alphanum" placeholder="Enter alphanumeric">
+                    <p class="mt-2 text-success" id="ans5"></p>
+                    <button onclick="alphanum()" id="result5" class="btn btn-primary mt-2">Check</button>
+                </div>
+
+                <!-- --------------------Ques 6-------------------- -->
+                <div class="col-4 border mx-auto mt-3">
+                    <input class="mt-3" id="q6" placeholder="Enter url">
+                    <p class="mt-2 text-success" id="ans6"></p>
+                    <button onclick="q6()" id="result6" class="btn btn-primary mt-2">Check</button>
+                </div>
+
+                <!-- --------------------Ques 7-------------------- -->
+                <div class="col-4 border mx-auto mt-3">
+                    <input class="mt-3" id="q7" placeholder="Enter values">
+                    <p class="mt-2 text-success" id="ans7">q7</p>
+                    <button onclick="q7()" id="result6" class="btn btn-primary mt-2">Check</button>
+                </div>
+
+                <!-- --------------------Ques 8-------------------- -->
+                <div class="col-4 border mx-auto mt-3">
+                    <input class="mt-3" id="credit" placeholder="Credit card number">
+                    <p class="mt-2 text-success" id="creditans"></p>
+                    <button onclick="credit()" id="result7" class="btn btn-primary mt-2">Check</button>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous">
+        </script>
+
         <script>
             // -----------------ques1--------------------------
             function email() {
@@ -95,80 +171,7 @@
             }
 
         </script>
-    </head>
 
-    <body>
-        <div class="container mt-5 border">
-            <h2 class="text-center">Assignment-10</h2>
-            <div class="row">
-                <!-- --------------------Ques 1-------------------- -->
-                <div class="col-4 border mx-auto mt-3">
-                    <input class="mt-3" type="email" id="email" placeholder="Enter Email">
-                    <p class="mt-2 text-success" id="pid1"></p>
-                    <button onclick="email()" id="result1" class="btn btn-primary mt-2">Check</button>
-                </div>
-                `
-                <!-- --------------------Ques 2-------------------- -->
-                <div class="col-4 border mx-auto mt-3">
-                    <input class="mt-3" type="text" id="word" placeholder="Enter Word">
-                    <p class="mt-2 text-success" id="pid2"></p>
-                    <button onclick="word()" id="result2" class="btn btn-primary mt-2">Check</button>
-                </div>
-                <!-- --------------------Ques 3-------------------- -->
-                <div class="col-4 border mx-auto mt-3">
-                    <input class="mt-3" type="text" id="dt" placeholder="Enter sentence">
-                    <p class="mt-2 text-success" id="pid3"></p>
-                    <button onclick="dt()" id="result3" class="btn btn-primary mt-2">Check</button>
-                </div>
-                <!-- --------------------Ques 4-------------------- -->
-                <div class="col-4 border mx-auto mt-3">
-                    <input class="mt-3" id="total" placeholder="Enter sentence">
-                    <p class="mt-2 text-success" id="pid41"></p>
-                    <p class="mt-2 text-success" id="pid42"></p>
-                    <button onclick="total()" id="result4" class="btn btn-primary mt-2">Check</button>
-                </div>
-                <!-- --------------------Ques 5-------------------- -->
-                <div class="col-4 border mx-auto mt-3">
-                    <input class="mt-3" id="alphanum" placeholder="Enter alphanumeric">
-                    <p class="mt-2 text-success" id="ans5"></p>
-                    <button onclick="alphanum()" id="result5" class="btn btn-primary mt-2">Check</button>
-                </div>
-
-                <!-- --------------------Ques 6-------------------- -->
-                <div class="col-4 border mx-auto mt-3">
-                    <input class="mt-3" id="q6" placeholder="Enter url">
-                    <p class="mt-2 text-success" id="ans6"></p>
-                    <button onclick="q6()" id="result6" class="btn btn-primary mt-2">Check</button>
-                </div>
-
-                <!-- --------------------Ques 7-------------------- -->
-                <div class="col-4 border mx-auto mt-3">
-                    <input class="mt-3" id="q7" placeholder="Enter values">
-                    <p class="mt-2 text-success" id="ans7">q7</p>
-                    <button onclick="q7()" id="result6" class="btn btn-primary mt-2">Check</button>
-                </div>
-
-                <!-- --------------------Ques 8-------------------- -->
-                <div class="col-4 border mx-auto mt-3">
-                    <input class="mt-3" id="credit" placeholder="Credit card number">
-                    <p class="mt-2 text-success" id="creditans"></p>
-                    <button onclick="credit()" id="result7" class="btn btn-primary mt-2">Check</button>
-                </div>
-
-
-            </div>
-        </div>
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
     </body>
 
 </html>

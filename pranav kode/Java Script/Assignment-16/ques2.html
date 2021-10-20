@@ -41,50 +41,51 @@
             <button onclick="font2()" class="btn">Cambria</button>
             <button onclick="font3()" class="btn">Courier</button>
         </fieldset>
-
+        
+        <script>
+            // ------------color
+                function redclr() {
+                    let a = document.getElementById("pid");        
+                    a.style.color = "red";
+                }
+                function blueclr() {
+                    let a = document.getElementById("pid");        
+                    a.style.color = "blue";
+                }
+                function greenclr() {
+                    let a = document.getElementById("pid");        
+                    a.style.color = "green";
+                }
+            // --------------size
+                function size10() {
+                    let a = document.getElementById("pid");        
+                    a.style.fontSize = "10px";
+                }
+                function size16() {
+                    let a = document.getElementById("pid");        
+                    a.style.fontSize = "16px";
+                }
+                function size24() {
+                    let a = document.getElementById("pid");        
+                    a.style.fontSize = "24px";
+                }
+            // -----------------font
+                function font1() {
+                    let a = document.getElementById("pid");
+                    a.style.fontFamily = "font-family:Verdana, Geneva, Tahoma, sans-serif";
+                }
+                function font2() {
+                    let a = document.getElementById("pid");        
+                    a.style.fontFamily = "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif";
+                }
+                function font3() {
+                    let a = document.getElementById("pid");
+                    a.style.fontFamily = "'Courier New', Courier, monospace";
+                }
+            </script>
 
 
     </body>
-    <script>
-    // ------------color
-        function redclr() {
-            let a = document.getElementById("pid");        
-            a.style.color = "red";
-        }
-        function blueclr() {
-            let a = document.getElementById("pid");        
-            a.style.color = "blue";
-        }
-        function greenclr() {
-            let a = document.getElementById("pid");        
-            a.style.color = "green";
-        }
-    // --------------size
-        function size10() {
-            let a = document.getElementById("pid");        
-            a.style.fontSize = "10px";
-        }
-        function size16() {
-            let a = document.getElementById("pid");        
-            a.style.fontSize = "16px";
-        }
-        function size24() {
-            let a = document.getElementById("pid");        
-            a.style.fontSize = "24px";
-        }
-    // -----------------font
-        function font1() {
-            let a = document.getElementById("pid");
-            a.style.fontFamily = "font-family:Verdana, Geneva, Tahoma, sans-serif";
-        }
-        function font2() {
-            let a = document.getElementById("pid");        
-            a.style.fontFamily = "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif";
-        }
-        function font3() {
-            let a = document.getElementById("pid");
-            a.style.fontFamily = "'Courier New', Courier, monospace";
-        }
-    </script>
+
 
 </html>

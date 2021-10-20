@@ -12,17 +12,19 @@
         <input id="ip" placeholder="Enter number">
         <button onclick="show()">show</button>
         <p id="pid"></p>
-    </body>
-    <script>
-        function show() {
-            var a = parseInt(document.getElementById("ip").value);
-            for (let i = 1; i <= 10; i++) {
-                var b = i * a;
-                document.getElementById("pid").innerHTML += a + " X " + i + " = " + b + "<br>";
-                b = 1;
-            }
 
-        }
-</script>
+        <script>
+            function show() {
+                var a = parseInt(document.getElementById("ip").value);
+                for (let i = 1; i <= 10; i++) {
+                    var b = i * a;
+                    document.getElementById("pid").innerHTML += a + " X " + i + " = " + b + "<br>";
+                    b = 1;
+                }
+    
+            }
+        </script>
+    </body>
+
 
 </html>

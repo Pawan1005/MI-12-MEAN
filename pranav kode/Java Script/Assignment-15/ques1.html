@@ -52,67 +52,68 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"></script>
-  </body>
-  <script>
-    class BankDet {
-      constructor() {
-        this.acc_no = 0;
-        this.acc_name = "";
-        this.bal = 0;
-      }
-      get_data(acc_no, acc_name, bal) {
-        this.acc_no = parseInt(acc_no);
-        this.acc_name = acc_name;
-        this.bal = parseInt(bal);
-      }
-      deposite(dep) {
-        this.dep = parseInt(dep);
-        this.bal = this.bal + this.dep;
-      }
-      display() {
-        document.getElementById("pid1").innerHTML += this.acc_no + "<br>";
-        document.getElementById("pid2").innerHTML += this.bal + "<br>";
-        document.getElementById("pid3").innerHTML += this.wit + "<br>";
-      }
 
-
-      withdraw(wit) {
-        this.wit = wit;
-        try {
-          if (wit > this.bal) {
-            throw "Insufficient Balance"
+    <script>
+        class BankDet {
+          constructor() {
+            this.acc_no = 0;
+            this.acc_name = "";
+            this.bal = 0;
           }
-          else {
-            throw "You can withdraw"
+          get_data(acc_no, acc_name, bal) {
+            this.acc_no = parseInt(acc_no);
+            this.acc_name = acc_name;
+            this.bal = parseInt(bal);
           }
-        } catch (error) {
-          alert(error);
+          deposite(dep) {
+            this.dep = parseInt(dep);
+            this.bal = this.bal + this.dep;
+          }
+          display() {
+            document.getElementById("pid1").innerHTML += this.acc_no + "<br>";
+            document.getElementById("pid2").innerHTML += this.bal + "<br>";
+            document.getElementById("pid3").innerHTML += this.wit + "<br>";
+          }
+    
+    
+          withdraw(wit) {
+            this.wit = wit;
+            try {
+              if (wit > this.bal) {
+                throw "Insufficient Balance"
+              }
+              else {
+                throw "You can withdraw"
+              }
+            } catch (error) {
+              alert(error);
+            }
+    
+          }
         }
-
-      }
-    }
-    let b = new BankDet()
-    let no, name, bal, wit, dep;
-    no = prompt("Enter Ac No.:");
-    name = prompt("Enter Name:");
-    bal = prompt("Enter Ac bal:");
-    dep = prompt("How much want to deposite ?");
-    wit = prompt("Withdrwa amt")
-    b.get_data(no, name, bal, wit);
-    b.deposite(dep);
-    b.withdraw(wit);
-    b.display();
-
-    let b2 = new BankDet()
-    no = prompt("Enter Ac No.:");
-    name = prompt("Enter Name:");
-    bal = prompt("Enter Ac bal:");
-    dep = prompt("How much want to deposite ?");
-    wit = prompt("Withdrwa amt")
-    b2.get_data(no, name, bal, wit);
-    b2.deposite(dep);
-    b2.withdraw(wit);
-    b2.display();
-  </script>
+        let b = new BankDet()
+        let no, name, bal, wit, dep;
+        no = prompt("Enter Ac No.:");
+        name = prompt("Enter Name:");
+        bal = prompt("Enter Ac bal:");
+        dep = prompt("How much want to deposite ?");
+        wit = prompt("Withdrwa amt")
+        b.get_data(no, name, bal, wit);
+        b.deposite(dep);
+        b.withdraw(wit);
+        b.display();
+    
+        let b2 = new BankDet()
+        no = prompt("Enter Ac No.:");
+        name = prompt("Enter Name:");
+        bal = prompt("Enter Ac bal:");
+        dep = prompt("How much want to deposite ?");
+        wit = prompt("Withdrwa amt")
+        b2.get_data(no, name, bal, wit);
+        b2.deposite(dep);
+        b2.withdraw(wit);
+        b2.display();
+    </script>
+  </body>
 
 </html>
