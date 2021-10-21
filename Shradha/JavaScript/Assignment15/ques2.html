@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS 15 Ques2</title>
+        <script>
+            class Salesman{
+                constructor(n, id){
+                    this.s_name = n ;
+                    this.id = id ;
+                }
+            }
+            class total_sales extends Salesman
+            {
+                constructor(n, id) 
+                {
+                    super(n, id);
+                    let s_no = parseInt(prompt("Enter the sales done by " + this.s_name));
+                    this.commission = 0;
+                    try {
+                        if (isNaN(s_no)) throw "Error : Empty input is invalid";
+                        try {
+                            let s_txt = parseInt(s_no) ;
+                            if (isNaN(s_txt)) throw "Error : String value will not be accepted!!!";
+                            try {
+                                if (s_txt < 0) throw "Error : Negative values are not allowed";
+                                this.sales = s_txt ;
+                            } catch (err) {
+                                alert(err);
+                            }
+                        } catch (err) {
+                            alert(err);
+                        }
+                    } catch (err) {
+                        alert(err);
+                    }
+                }
+                calculation(){
+                    if(this.sales <= 5000){
+                        this.commission = ((this.sales) * (2/100)) ;
+                    }
+                    else if(this.sales <= 12000){
+                        this.commission = ((this.sales) * (5/100)) ;
+                    }
+                    else if(this.sales <= 50000){
+                        this.commission = ((this.sales) * (1/10)) ;
+                    }
+                    else if(this.sales > 50000){
+                        this.commission = ((this.sales) * (15/100)) ;
+                    }
+                    else{
+                        this.commission = "No Commission!!!" ;
+                    }
+                }
+                display() {
+                    document.getElementById("para").innerHTML = "Salesman ID : " + this.id + "<br>Salesman name : " + this.s_name ;
+                    document.getElementById("para").innerHTML += "<br>Total Sales : " + this.sales + "<br>Total Commission : " + this.commission ;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h3><b>Salesman Details : </b></h3>
+            <br>
+            <p id="para"></p>
+        </div>
+        <script>
+            let sman_name = prompt("Enter your Full Name : ") ;
+            let sman_id = prompt("Enter your Salesman ID : ") ;
+            let sman = new total_sales(sman_name, sman_id) ;
+            sman.calculation() ;
+            sman.display() ;
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>
