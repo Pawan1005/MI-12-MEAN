@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title>date</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <button onclick="ques1()" class="btn btn-primary">ques1</button><br>
+    <button onclick="ques2()" class="btn btn-primary">ques2</button><br>
+    <input type="date" id="q4">
+    <button onclick="q4()">calculate</button> <br>
+
+    <div style="margin-left: 500px;">
+      <button onclick="ques3()">Ques3</button><br>
+      <p id="ans1"></p>
+      <p id="ans2"></p>
+      <p id="ans3"></p>
+      <p id="ans4"></p>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+
+    <script>
+        function ques1() {
+          const d = new Date(2012, 02, 12, 03, 12, 00, 0);
+          alert(d);
+        }
+    
+        function ques2() {
+          var dt = new Date();
+          // var dt = new Date("December 25, 1995 23:15:00");
+          var day = ["MON", "Tue", "WED", "THU", "FRI", "SAT", "SUN"]
+          var d = dt.getDay();
+          alert("Today is " + day[d - 1]);
+        }
+    
+        function q4() {
+          var bd = new Date(document.getElementById("q4").value);
+          var td = new Date();
+          var ty = td.getFullYear();
+          var by = bd.getFullYear();
+          var age = by - ty;
+          alert("Age is:" + age + "yrs");
+        }
+    
+        function ques3() {
+          function fundate(date, day) {
+            var dt = new Date;
+            dt.setDate(date.getDate() - day)
+            return dt.toLocaleDateString();
+          }
+          var date = new Date()
+          document.getElementById("ans1").innerHTML = "Date: " + date.toDateString();
+          document.getElementById("ans2").innerHTML = "Date 1 day ago : " + fundate(date, 1);
+          document.getElementById("ans3").innerHTML = "Date 1 day ago : " + fundate(date, 2);
+          document.getElementById("ans4").innerHTML = "Date 1 day ago : " + fundate(date, 365);
+        }
+    </script>  
+  </body>
+
+</html>

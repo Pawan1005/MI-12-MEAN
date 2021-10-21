@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>ques2</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <p id="id1"></p>
+    <p id="id2"></p>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+      class Employee{
+        constructor(Empno){
+        this.Empno = Empno;
+        this.Name = "";
+        this.add = "";
+        this.city = "";
+        this.salary = 0;
+      }
+      get_data(Name,Add,City,Salary){
+          this.Name = Name;
+          this.add = Add;
+          this.city = City;
+          this.salary = Salary;
+      }
+      show_init(){
+        document.getElementById("id1").innerHTML += "Employee No. : " + this.Empno + "<br>";
+        document.getElementById("id1").innerHTML += "Employee Name. : " + this.Name + "<br>";
+        document.getElementById("id1").innerHTML += "Employee Add. : " + this.add + "<br>";
+        document.getElementById("id1").innerHTML += "Employee City. : " + this.city + "<br>";
+        document.getElementById("id1").innerHTML += "Employee Salary. : " + this.salary + "<br>";
+      }
+      calculate(){
+        let da,hra,pf,gross,net,tax=0;
+        let salary = parseInt(this.salary);
+        da = (salary*30)/100;
+        hra = (salary*15)/10;
+        pf = (salary*12.5)/10;
+        gross = salary + da + hra;
+        net = gross - pf;
+        this.gross = parseInt(gross);
+        this.net = parseInt(net);
+        if (this.gross > 180000) {
+          tax = 1;
+        }
+      }
+      display(){
+        document.getElementById("id2").innerHTML += "Employee No. : " + this.Empno + "<br>";
+        document.getElementById("id2").innerHTML += "Employee Name. : " + this.Name + "<br>";       
+        document.getElementById("id2").innerHTML += "Gross Salary : " + this.gross + "<br>";
+        document.getElementById("id2").innerHTML += "Net Salary : " + this.net + "<br>";
+        if (this.gross > 180000) {
+          document.getElementById("id2").innerHTML += "IncomeTax payer " + "<br>";
+        }
+        else
+        document.getElementById("id2").innerHTML += "Not IncomeTax payer " + "<br>";
+      }
+      }      
+      var a = prompt("Employee Number");
+      var b = prompt("Employee Name");
+      var c = prompt("Employee Add");
+      var d = prompt("Employee City");
+      var e = prompt("Employee Salary");
+  
+      let emp = new Employee(a);
+      emp.get_data(b,c,d,e);
+      emp.show_init();
+      emp.calculate();
+      emp.display();
+  
+      a = prompt("Employee Number");
+      b = prompt("Employee Name");
+      c = prompt("Employee Add");
+      d = prompt("Employee City");
+      e = prompt("Employee Salary");
+  
+      let emp1 = new Employee(a);
+      emp1.get_data(b,c,d,e);
+      emp1.show_init();
+      emp1.calculate();
+      emp1.display();
+  
+    </script>
+  </body>
+
+</html>

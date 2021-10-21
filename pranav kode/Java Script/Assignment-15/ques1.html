@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title>ques1</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div class="container d-flex mt-5">
+      <div class="row">
+        <div class="col-4">
+          <p class="mx-3"><b>Acc. No</b></p>
+        </div>
+        <div class="col-4">
+          <p class="mx-3"><b>Balance</b></p>
+        </div>
+        <div class="col-4">
+          <p class="mx-3"><b>withdrwa</b></p>
+        </div>
+      </div>>
+    </div>
+
+    </div>
+    <div class="container d-flex ">
+      <div class="row">
+        <div class="col-4">
+          <p class="mx-3" id="pid1"></p>
+        </div>
+        <div class="col-4">
+          <p class="mx-3" id="pid2"></p>
+        </div>
+        <div class="col-4">
+          <p class="mx-3" id="pid3"></p>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+
+    <script>
+        class BankDet {
+          constructor() {
+            this.acc_no = 0;
+            this.acc_name = "";
+            this.bal = 0;
+          }
+          get_data(acc_no, acc_name, bal) {
+            this.acc_no = parseInt(acc_no);
+            this.acc_name = acc_name;
+            this.bal = parseInt(bal);
+          }
+          deposite(dep) {
+            this.dep = parseInt(dep);
+            this.bal = this.bal + this.dep;
+          }
+          display() {
+            document.getElementById("pid1").innerHTML += this.acc_no + "<br>";
+            document.getElementById("pid2").innerHTML += this.bal + "<br>";
+            document.getElementById("pid3").innerHTML += this.wit + "<br>";
+          }
+    
+    
+          withdraw(wit) {
+            this.wit = wit;
+            try {
+              if (wit > this.bal) {
+                throw "Insufficient Balance"
+              }
+              else {
+                throw "You can withdraw"
+              }
+            } catch (error) {
+              alert(error);
+            }
+    
+          }
+        }
+        let b = new BankDet()
+        let no, name, bal, wit, dep;
+        no = prompt("Enter Ac No.:");
+        name = prompt("Enter Name:");
+        bal = prompt("Enter Ac bal:");
+        dep = prompt("How much want to deposite ?");
+        wit = prompt("Withdrwa amt")
+        b.get_data(no, name, bal, wit);
+        b.deposite(dep);
+        b.withdraw(wit);
+        b.display();
+    
+        let b2 = new BankDet()
+        no = prompt("Enter Ac No.:");
+        name = prompt("Enter Name:");
+        bal = prompt("Enter Ac bal:");
+        dep = prompt("How much want to deposite ?");
+        wit = prompt("Withdrwa amt")
+        b2.get_data(no, name, bal, wit);
+        b2.deposite(dep);
+        b2.withdraw(wit);
+        b2.display();
+    </script>
+  </body>
+
+</html>
