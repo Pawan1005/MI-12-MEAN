@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>que 3</title>
+</head>
+<body>
+    <h1 id="name"> JS TOPIC</h1>
+    <img src="dom topic.png" alt="DOM TOPIC" id="image"
+        style="height: 300px; width: 300px;">
+    <br>
+    <button onclick="changeImage()">Play</button>
+    <script>
+        var flag = 0;
+        function changeImage() {
+            if (flag == 0) {
+                document.getElementById("name").innerText = "DOM TOPIC";
+                document.getElementById("image").src = "dom topic.png";
+                flag = 1;
+            }
+            else if (flag == 1) {
+                document.getElementById("name").innerText = "domadd";
+                document.getElementById("image").src = "domadd.png";
+                flag = 2;
+            }
+            else {
+                document.getElementById("name").innerText = "syllabus";
+                document.getElementById("image").src = "syllabus.png";
+                flag = 0;
+            }
+        }
+    </script>
+</body>
+</html>
