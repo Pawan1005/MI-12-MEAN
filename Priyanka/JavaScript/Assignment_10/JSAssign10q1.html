@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Check Uppercase Letter in given string.</title>
+    
+        <script>
+            function check() {
+                var str;
+                str = document.getElementById("string").value;
+                regexp = /^[A-Z]/;
+                if (regexp.test(str)) {
+                    document.getElementById("answer").value = "Uppercase";
+                } 
+                else {
+                    document.getElementById("answer").value = "is not Uppercase";   
+                }
+            }
+        </script>
+    </head>
+    <body >
+        <h1>Check first character is Uppercase or not</h1>
+       
+            <hr style="color: white">
+            <br>
+            Enter the string: <input type="text" id="string"></br></br>
+            <button onclick="check()" style="padding: 6px; background-color: rgb(117, 177, 5);">Check</button><br>
+            First character of given string is: <input type="text" id="answer"></br></br>
+           
+        
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Finding Double letters in Stirng</title>
+      
+    </head>
+    <body>
+      
+            <h2>Finding double letters of String</h2>
+            <div>
+                <label for="">Enter the word</label>
+                <input type="text" id="first">
+            </div>  
+            <div class="resultText">
+                <p>Repeated letter &nbsp; : &nbsp;<span id="num1"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="findRepeat()" style="background-color: rgb(35, 12, 165); height: 30px; color: white">Find</button>
+            </div>
+       
+        <script>
+            function findRepeat() {  
+                var str = [];
+                var i,j,char1, char2, len, count=0;
+                str = document.getElementById("first").value;
+                len = str.length;
+                for(i=0; i<=len-2; i++) {
+                    for(j=i+1;j < str.length-1; j++)
+                    char1 = str.charAt(i);
+                    char2 = str.charAt(i+1);
+                    if(char1 == char2) {
+                        count=count+1;
+                        document.getElementById("num1").innerHTML += "&nbsp;" +char1+ "&ensp;";
+                    } 
+                }
+                if(count == 0) {
+                    document.getElementById("num1").innerHTML += "&nbsp; No double letter &ensp;";
+                }                                    
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      JavaScript program to count the number of words and whitespaces in the
+      sentence
+    </title>
+    <script>
+      function countWords() {
+        var text = document.getElementById("first").value;
+        var numWords = 0,
+          space = 0;
+        for (var i = 0; i < text.length; i++) {
+          var currentCharacter = text[i];
+          if (currentCharacter == " ") {
+            numWords += 1;
+            space++;
+          }
+        }
+        numWords += 1;
+        document.getElementById("show").innerHTML =
+          "<br>Words of Given string: " + numWords;
+        if (space >= 2) {
+          document.getElementById("show1").innerHTML =
+            "<br>After removed White Spaces: <br><br> " +
+            text.split(" ").join(" ");
+        } else {
+          document.getElementById("show1").innerHTML =
+            "<br>After removed White Spaces:<br><br>" +
+            text.split(" ").join("");
+        }
+      }
+    </script>
+  </head>
+  <body style="background-color: rgb(99, 95, 95)">
+    <h1>Count words of String</h1>
+    Enter the String:
+    <input type="text" id="first" placeholder="Enter string" />
+    <button
+      type="button"
+      onclick="countWords()"
+      style="background-color: rgb(7, 5, 129); height: 30px; color: white"
+    >
+      Check</button
+    ><br />
+    <div id="show"></div>
+    <div id="show1"></div>
+  </body>
+</html>

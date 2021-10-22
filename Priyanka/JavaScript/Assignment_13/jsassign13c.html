@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <h1>Display Date Ago</h1>
+
+    Current Date is:
+    <p id="num"></p>
+    Date 2 day Ago
+    <p id="num1"></p>
+    <hr />
+    Date 1 day Ago
+    <p id="num2"></p>
+    <hr />
+    Date 1 Year Ago
+    <p id="num3"></p>
+
+    <script type="text/javascript">
+      function getDateAgo(date, day) {
+        let d1 = new Date(date);
+        d1.setDate(date.getDate() - day);
+        return d1.toLocaleDateString();
+      }
+      let date = new Date();
+      let month = date.getMonth() + 1;
+      let year = date.getFullYear();
+      let year2 = date.getFullYear() - 1;
+      alert("Date 2 day Ago  :   " + getDateAgo(date, 2));
+      alert("Date 1 day Ago  :   " + getDateAgo(date, 1));
+      alert("Date 1 Year Ago  :   " + getDateAgo(date, 365));
+      document.getElementById("num").innerHTML = date.toDateString();
+      document.getElementById("num1").innerHTML = getDateAgo(date, 2);
+      document.getElementById("num2").innerHTML = getDateAgo(date, 1);
+      document.getElementById("num3").innerHTML = getDateAgo(date, 365);
+    </script>
+  </body>
+</html>

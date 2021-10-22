@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cheking credit card number</title>
+    <script>
+      function check() {
+        var type = parseInt(document.getElementById("type").value);
+        var cardno = parseInt(document.getElementById("num").value);
+        if (type == 1) {
+          var regex =
+            /^5[1-5]{1}[0-9]{2}[\s]?[0-9]{4}[\s]?[0-9]{4}[\s]?[0-9]{4}$/;
+          if (regex.test(cardno)) {
+            document.getElementById("res").innerHTML = "Valid Master-Card";
+          } else {
+            document.getElementById("res").innerHTML = "Invalid card!";
+          }
+        } else if (type == 2) {
+          var regex = /^4{1}[0-9]{3}[\s]?[0-9]{4}[\s]?[0-9]{4}[\s]?[0-9]{1}$/;
+          if (regex.test(cardno) || regex1.test(cardno)) {
+            document.getElementById("res").innerHTML = "Valid Visa Card";
+          } else {
+            document.getElementById("res").innerHTML = "Invalid card!";
+          }
+        } else {
+          var regex =
+            /^3[4|7]{1}[0-9]{2}[\s]?[0-9]{4}[\s]?[0-9]{4}[\s]?[0-9]{3}$/;
+          if (regex.test(cardno)) {
+            document.getElementById("res").innerHTML =
+              "Valid American Express Card";
+          } else {
+            document.getElementById("res").innerHTML = "Invalid card!";
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Checking Credit Card Number</h1>
+    <p>
+      Enter the type of card:
+      <input type="text" input id="type" placeholder="Enter a type" />
+    </p>
+    <p>
+      Enter the card number:
+      <input type="text" input id="num" placeholder="Enter a card number" />
+    </p>
+    <button
+      onclick="check()"
+      style="background-color: rgb(105, 160, 4); height: 30px; color: white"
+    >
+      Check
+    </button>
+  </body>
+</html>

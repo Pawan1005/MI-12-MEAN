@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Quest-2 Assignment no 12</title>
+  </head>
+  <body>
+    <script>
+      class Employee {
+        constructor(name, address, city, salary) {
+          this.empno = 0;
+          this.name = name;
+          this.address = address;
+          this.city = city;
+          this.salary = salary;
+        }
+        show_init() {
+          document.write("Emp no:" + this.empno + "<br>");
+          document.write("Name is:" + this.name + "<br>");
+          document.write("Address is :" + this.address + "<br>");
+          document.write("city is :" + this.city + "<br>");
+          document.write("Salary is :" + this.salary + "<br>");
+        }
+        get_data() {
+          this.name = prompt("Enter your name.");
+          this.address = prompt("Enter your Address.");
+          this.city = prompt("Enter your city.");
+          this.salary = Number(prompt("Enter your salary."));
+        }
+        calculate() {
+          document.write("   After Calculate <br>  ");
+          document.write("da is :" + (30 / 100) * this.salary + "<br>");
+          document.write("hra is :" + (15 / 100) * this.salary + "<br>");
+          document.write("pf is :" + (12.5 / 100) * this.salary + "<br>");
+          document.write(
+            "gross is :" +
+              Number(
+                this.salary +
+                  (30 / 100) * this.salary +
+                  (15 / 100) * this.salary
+              ) +
+              "<br>"
+          );
+          document.write(
+            "net is :" +
+              Number(
+                this.salary +
+                  (30 / 100) * this.salary +
+                  (15 / 100) * this.salary -
+                  (12.5 / 100) * this.salary
+              ) +
+              "<br>"
+          );
+        }
+        display() {
+          document.write("  After Display <br>");
+          document.write("<br><br>Name is :" + this.name + "<br>");
+          document.write("Emp no is :" + this.empno + "<br>");
+          document.write(
+            "Gross salary :" +
+              Number(
+                this.salary +
+                  (30 / 100) * this.salary +
+                  (15 / 100) * this.salary
+              ) +
+              "<br>"
+          );
+          document.write(
+            "Net salary :" +
+              Number(
+                this.salary +
+                  (30 / 100) * this.salary +
+                  (15 / 100) * this.salary -
+                  (12.5 / 100) * this.salary
+              )
+          );
+        }
+      }
+      let empobj1 = new Employee();
+      let empobj2 = new Employee();
+      empobj2.get_data();
+      empobj2.show_init();
+      empobj2.calculate();
+      empobj2.display();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quest-2</title>
+        <style>
+            *{
+                margin: 0px;
+            }
+            body{
+                background-color: rgb(171, 224, 233);
+            }
+         
+            div{
+                width:950px;
+                margin-top: 50px;
+                margin-left: 260px;
+            }
+            button{
+                width:100px;
+                height:30px;
+            }
+            h1{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p id="para">Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware. It is considered one of the Big Five companies in the American information technology industry, along with Amazon, Facebook, Apple, and Microsoft.</p>
+            <fieldset>
+                <legend>color</legend>
+                <button onclick="red()">red</button>
+                <button onclick="blue()">blue</button>
+                <button onclick="green()">green</button>
+            </fieldset>
+            <fieldset>
+                <legend>size</legend>
+                <button onclick="sizesm()">10px</button>
+                <button onclick="sizemd()">15px</button>
+                <button onclick="sizelg()">20px</button>
+            </fieldset>
+            <fieldset>
+                <legend>font-family</legend>
+                <button onclick="monospace()">Monospace</button>
+                <button onclick="cursive()">Cursive</button>
+                <button onclick="sans()">Sans-serif</button>
+            </fieldset>
+        </div>
+        <script>
+            function red(){
+                document.getElementById('para').style.color="red";
+            }
+            function blue(){
+                document.getElementById('para').style.color="blue";
+            }
+            function green(){
+                document.getElementById('para').style.color="green";
+            }
+            function sizesm(){
+                document.getElementById('para').style.fontSize="10px";
+            }
+            function sizemd(){
+                document.getElementById('para').style.fontSize="15px";
+            }
+            function sizelg(){
+                document.getElementById('para').style.fontSize="20px";
+            }
+            function monospace(){
+                document.getElementById('para').style.fontFamily="Monospace";
+            }
+            function cursive(){
+                document.getElementById('para').style.fontFamily="Cursive";
+            }
+            function sans(){
+                document.getElementById('para').style.fontFamily="Sans-serif";
+            }
+        </script>
+    </body>
+</html> 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Assignment 16 Ques1</title>
+    <style>
+      button {
+        background-color: rgb(238, 223, 22);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="ids1">heading</h1>
+    <button onclick="left()">left</button>
+    <button onclick="center()">center</button>
+    <button onclick="right()">right</button>
+    <script>
+      function left() {
+        document.getElementById("ids1").style.textAlign = "left";
+      }
+      function center() {
+        document.getElementById("ids1").style.textAlign = "center";
+      }
+      function right() {
+        document.getElementById("ids1").style.textAlign = "right";
+      }
+    </script>
+  </body>
+</html>

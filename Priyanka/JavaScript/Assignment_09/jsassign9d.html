@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript program to check given string is palindrome or not</title>
+        <script>
+            function str_palindrome() {
+                var string,
+                    len,
+                    reverse = "";
+                string = document.getElementById("first").value;
+                len = string.length;
+                for (var i = len - 1; i >= 0; i--) {
+                    reverse = reverse + string.charAt(i);
+                }
+                document.getElementById("num").innerHTML = "<br>Reverse of the string : " + reverse;
+                if (string == reverse) {
+                    document.getElementById("num1").innerHTML = "<br> string is palindrome";
+                } else {
+                    document.getElementById("num1").innerHTML = "<br>string is not an palindrome";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Checking Palindrome String</h3>
+        Enter the String: <input type="text" id="first" placeholder="Enter string" />
+        <button type="button" onclick="str_palindrome()"
+            style="background-color: rgb(35, 12, 165); height: 30px; color: white">Check</button>
+        <div id="num"></div>
+        <div id="num1"></div>
+    </body>
+</html>

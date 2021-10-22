@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset=utf-8 />
+    <title>Display The Marks Of Students</title>
+    </head>
+    <body>
+        <h1>Marks of Students</h1>
+        <div class="name">
+            Enter no.of student:
+            <input type="text" id="text1"></input>
+            Enter Marks of Students:
+            <input type="text" id="text2"></input>
+            <input type="button" value="Add" onclick="add()"></input>
+            <input type="button" value="Display" onclick="display()"></input>
+            Before Sorting:
+            <div id="Result"></div>
+            <input type="button" value="sort" onclick="sort()"></input>
+            After Sorting:***Insertion Sort***
+            <div id="Result1"></div>
+        </div>
+        <script>
+        var size, x = 1;
+        var array = Array();
+        function add() {
+            size = document.getElementById("text1").value;
+            array[x] = parseInt(document.getElementById("text2").value);
+            x++;
+            document.getElementById("text2").value = "";
+        }
+        function display() {
+            var e = "";
+            for (var y = 1; y <= size; y++) {
+                e += "Marks " + y + " = " + array[y] + "<br/>";
+            }
+            document.getElementById("Result").innerHTML = e;
+        } function sort() {
+            size = document.getElementById("text1").value;
+            array[x] = parseInt(document.getElementById("text2").value);
+            var ee = "",y=1,j;
+            for (var i = 1; i <= size; i++) {
+                var temp = array[i];
+                j=i-1;
+                while(j >= 0 && array[j]>temp) {
+                    array[j+1] = array[j];
+                    j--;
+                    array[j+1] = temp;
+                }
+            }
+            for (let k = 1; k <= size; k++) {
+                document.getElementById("Result1").innerHTML += "Marks " + y++ + " = " + array[k] + "<br>";
+            }
+        }
+        </script>
+    </body>
+</html>

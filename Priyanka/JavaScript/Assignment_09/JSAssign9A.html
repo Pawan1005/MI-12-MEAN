@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Palindrome Number in JavaScript</title>
+    <script>
+      function Palindrome() {
+        var rem,
+          temp,
+          final = 0;
+        var number = parseInt(document.getElementById("N").value);
+        temp = number;
+        while (number > 0) {
+          rem = number % 10;
+          number = parseInt(number / 10);
+          final = final * 10 + rem;
+        }
+        if (final == temp) {
+          document.getElementById("result").innerHTML =
+            "The given number: " + final + " is palindrome Number";
+        } else {
+          document.getElementById("result").innerHTML =
+            "The given number: " + final + " is not Palindrome Number";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1 style="text-align: center">Checking Palindrome Number</h1>
+    Enter the Number: <input type="number" name="number" required id="N" />
+    <button
+      type="button"
+      onclick="Palindrome()"
+      style="background-color: rgb(7, 5, 129); height: 30px; color: white"
+    >
+      Check
+    </button>
+    <p id="result"></p>
+  </body>
+</html>

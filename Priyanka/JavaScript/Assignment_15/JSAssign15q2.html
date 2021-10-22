@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Question 2 Assignment 15</title>
+    <style>
+      th {
+        padding: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      class Sales {
+        constructor(name, id) {
+          this.name = name;
+          this.id = id;
+        }
+      }
+      class Salesman extends Sales {
+        getsales() {
+          let bal = Number(prompt("Enter Your sales Amount "));
+          document.write("<br>You have putted :" + bal + "<br>");
+          if (bal <= 5000) {
+            document.write("The commission is :" + Number((2 / 100) * bal));
+          } else if (bal > 5000 && bal < 12000) {
+            document.write("The commission is :" + Number((5 / 100) * bal));
+          } else if (bal > 12000 && bal < 50000) {
+            document.write("The commission is :" + Number((10 / 100) * bal));
+          } else if (bal > 50000) {
+            document.write("The commission is :" + Number((15 / 100) * bal));
+          } else {
+            document.write("Invalid input");
+          }
+        }
+      }
+      let sale = new Salesman("Priyanka", 1823);
+      document.write("The name is :" + sale.name + "<br>");
+      document.write("The id is :" + sale.id + "<br>");
+      sale.getsales();
+    </script>
+  </body>
+</html>
