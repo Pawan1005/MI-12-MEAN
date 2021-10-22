@@ -1,0 +1,40 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>java script Armstrong number </title>    
+    </head>
+    <body>
+        <h1 style="text-align: center;">Check Armstrong number</h1>
+        Enter number to check :  <input id="num1"type="text"><br>
+        <button type="button" style="width:100px; height:40px"onclick="armstrong()"> <b>Submit </b> </button>
+        <p id="pid"></p>
+    <script type="text/javascript">
+        "use strict"
+         var num ,orignal ,sum=0;
+         function armstrong()
+          {
+         num=parseInt(document.getElementById("num1").value);
+          orignal=num;
+           while (orignal>0) {
+            var rem=orignal%10;
+             var  cube=Math.pow(rem,3);
+              sum=sum+cube;
+              orignal=parseInt(orignal/10);
+           }  
+              
+          if(sum==num)
+          {
+            document.getElementById("pid").innerHTML= " number is armstrong ";
+          }
+          else
+          {
+            document.getElementById("pid").innerHTML= " number is not armstrong ";
+          }
+          
+        
+          }
+    </script>
+    </body>
+</html>
