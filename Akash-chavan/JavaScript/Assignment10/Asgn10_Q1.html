@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First character of string</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <style>
+      .jumbotron {
+        min-width: 585px;
+        margin: 10px auto;
+        display: block;
+        justify-content: center;
+        margin: 150px;
+        border: 0.08em solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="jumbotron">
+      <h2 class="h text-info">Check first character of a string</h2>
+      <div class="main">
+        <div>
+          <br />
+          <label for="">Enter a string</label>
+          <input type="text" id="str" />
+        </div>
+        <div>
+          <button class="btn1" onclick="strFirst()">Check</button>
+        </div>
+        <div>
+          <br />
+          <p id="result"></p>
+          <p class="res text-success" id="result1"></p>
+          <p class="res text-success" id="result2"></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function strFirst() {
+        s = document.getElementById("str").value;
+        let str = s.split("");
+        //document.getElementById("result").innerHTML = typeof str;
+        debugger;
+        for (let i = 0; i < str.length; i++) {
+          let res = str[0];
+          document.getElementById("result1").innerHTML =
+            "First char of string:- " + res;
+          if (res == res.toUpperCase()) {
+            document.getElementById("result2").innerHTML =
+              "First char of string:- " + res + " is uppercase";
+          }
+          if (res == res.toLowerCase()) {
+            document.getElementById("result2").innerHTML =
+              "First char of string:- " + res + " is lowercase";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

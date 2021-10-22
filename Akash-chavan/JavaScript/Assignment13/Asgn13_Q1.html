@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date with local timezone</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <style>
+      .jumbotron {
+        min-width: 585px;
+        margin: 10px auto;
+        display: block;
+        justify-content: center;
+        margin: 150px;
+        border: 0.08em solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="jumbotron">
+      <h2 class="h text-info">Date with local timezone</h2>
+      <div class="main">
+        <div>
+          <br />
+          <label for="">Enter a date</label>
+          <input type="datetime-local" step="1" id="str1" />
+        </div>
+        <div>
+          <button class="btn1" onclick="dateToLocal()">Check</button>
+        </div>
+        <div>
+          <br />
+          <p class="res text-success" id="result"></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function dateToLocal() {
+        let d = document.getElementById("str1").value;
+        d = new Date(d);
+        debugger;
+        document.getElementById("result").innerHTML = d;
+      }
+    </script>
+  </body>
+</html>

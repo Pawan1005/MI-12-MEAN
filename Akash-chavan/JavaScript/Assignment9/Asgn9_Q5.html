@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>double letter</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"/>
+      <style>
+        .jumbotron {
+  min-width: 585px;
+  margin: 10px auto;
+  display: block;
+  justify-content: center;
+  margin: 150px;
+  border: 0.08em solid black;
+}
+      </style>
+  </head>
+  <body>
+    <div class="jumbotron">
+            <h2 class="h text-info"> Double Letter in entered Word</h2>
+            <div class="main">
+                <div>
+                    <br>
+                    <label for="">Enter the word</label>
+                    <input type="text" id="firstnumber" />
+                </div>
+                <div>
+                    <br>
+                    <p>Double letter =<span id="num1" class="sp text-success"></span></p>
+                </div>
+                <div>
+                    <button class="btn1" onclick="double_letter()">Check</button>
+                </div>
+            </div>
+    </div>
+            <script>
+                function double_letter() {
+                    debugger;
+                    var str = [];
+                    var i,
+                        letter1,
+                        letter2,
+                        len,
+                        count = 0;
+                    str = document.getElementById("firstnumber").value;
+                    len = str.length;
+                    for (i = 0; i <= len; i++) {
+                        letter1 = str.charAt(i);
+                        letter2 = str.charAt(i + 1);
+                        if (letter1 == letter2) {
+                            count = count + 1;
+                            document.getElementById("num1").innerHTML += " " + letter1 + " ";
+                        }
+                    }
+                    if (count == 0) {
+                        document.getElementById("num1").innerHTML += "  No double letter ";
+                    }
+                }
+            </script>
+        </body>
+    </html>
+</html>

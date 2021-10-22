@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age of person</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <style>
+      .jumbotron {
+        min-width: 585px;
+        margin: 10px auto;
+        display: block;
+        justify-content: center;
+        margin: 150px;
+        border: 0.08em solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="jumbotron">
+      <h2 class="h text-info">Age of person</h2>
+      <div class="main">
+        <label for="">Enter a date</label>
+        <input type="date" step="1" id="dat" />
+        <div>
+          <button class="btn1" onclick="CalculateAge()">Check</button>
+        </div>
+        <div>
+          <br />
+          <p id="result" class="res text-success"></p>
+          <p class="res text-success" id="result1"></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function CalculateAge() {
+        var dob = document.getElementById("dat").value;
+        // convert user input value into date object
+        var birthDate = new Date(dob);
+        // get difference from current date;
+        var difference = Date.now() - birthDate.getTime();
+        var ageDate = new Date(difference);
+        var calculatedAge = Math.abs(ageDate.getUTCFullYear() - 1970);
+        alert("age of person :- " + calculatedAge);
+      }
+    </script>
+  </body>
+</html>
