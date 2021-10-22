@@ -1,0 +1,10 @@
+body{
+    background-color: cadetblue;
+} 
+#bol{ 
+    text-align: center; 
+    color: rgb(131, 233, 122);
+    background-color: rgb(184, 11, 175);
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
