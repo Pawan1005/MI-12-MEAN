@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date Ago function</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+    <style>
+        .jumbotron {
+            min-width: 585px;
+            margin: 10px auto;
+            display: block;
+            justify-content: center;
+            margin: 150px;
+            border: 0.08em solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h2 class="h text-info">Date Ago function</h2>
+        <div class="main">
+            <div>
+                <button class="btn1" onclick="dateToLocal()">Check</button>
+            </div>
+            <div>
+                <br>
+                <p id="result"></p>
+                <p class="res text-success" id="result1"></p>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        function dateToLocal() {
+            let date = new Date();
+            const date1 = new Date();
+            date1.setDate(date1.getDate() - 1);
+            const date2 = new Date();
+            date2.setDate(date2.getDate() - 2)
+            confirm("todays date:- " + date + "\r\n" + "1 day ago " + date1 + "\r\n" + "2 day ago " + date2);
+        }
+    </script>
+</body>
+</html>

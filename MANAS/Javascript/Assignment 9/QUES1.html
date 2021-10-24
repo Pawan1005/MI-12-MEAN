@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>palindrom</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <style>
+      .jumbotron {
+        min-width: 585px;
+        margin: 10px auto;
+        display: block;
+        justify-content: center;
+        margin: 150px;
+        border: 0.08em solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <label class="lb text-info" for="mn">Enter number</label>
+      <input type="text" name="text" id="num" />
+      <button class="btn bg-success" onclick="changeReg()">click</button
+      ><br /><br />
+      <p class="r1 text-info" id="result"></p>
+      <br />
+      <p class="r1 text-info" id="result1"></p>
+      <br />
+      <p class="r1 text-danger" id="result2"></p>
+      <br />
+      <p class="r1 text-danger" id="result3"></p>
+      <br />
+    </div>
+    <script>
+      function changeReg() {
+        let num = document.getElementById("num").value;
+        debugger;
+        if (num == parseInt(num)) {
+          let patt1 = /\d/gi;
+          var regExp = num.match(patt1);
+          var numz = regExp.toString();
+          //document.getElementById("result").innerHTML = regExp;
+          var num2 = regExp.reverse();
+          var numx = num2.toString();
+          //document.getElementById("result1").innerHTML = num2;
+        } else {
+          let patt1 = /\w/gi;
+          var regExp = num.match(patt1);
+         // document.getElementById("result").innerHTML = regExp;
+          var num2 = regExp.reverse();
+         // document.getElementById("result1").innerHTML = num2;
+        }
+        if (numx == numz) {
+          document.getElementById("result2").innerHTML =
+            num + " is  palindrom number";
+          var i;
+          var show = true;
+          if (num == 1) {
+            show = false;
+          } else {
+            i = 2;
+            while (i < num / 2) {
+              if (num % i == 0) {
+                show = false;
+                break;
+              }
+              i++;
+            }
+          }
+          if (show == true) {
+            document.getElementById("result3").innerHTML =
+              "The number: " + num + " is a Prime palidrom Number";
+          } else {
+            document.getElementById("result3").innerHTML =
+              "The number: " + num + " is NOT a Prime palindrom Number";
+          }
+        } else {
+          document.getElementById("result2").innerHTML =
+            num + " is not palindrom number";
+        }
+      }
+    </script>
+  </body>
+</html>

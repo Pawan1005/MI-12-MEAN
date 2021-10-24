@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Assignment 7</title>
+        <link rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script>
+            let arr = [], tmp ;
+            let n = parseInt(prompt("Enter number of Students : ")) ;
+            document.write("User entered number of Students are : " + n) ;
+            for(let i = 0; i < n; i++)
+            {
+                arr[i] = parseInt(prompt("Enter total marks of each Student : ")) ;
+                document.write("<br>&nbsp&nbsp(Unsorted Array) Marks" + (i+1) + " is : " + (arr[i])) ;
+            }
+            for(let j = 0; j<arr.length-1; j++)
+            {
+                for(let i = 0; i < arr.length; i++)
+                {
+                    if(arr[i] > arr[i+1])
+                    {
+                        tmp = arr[i] ;
+                        arr[i] = arr[i+1] ;
+                        arr[i+1] = tmp ;
+                    }
+                    document.write("<br>&nbsp---------Marks in Inner(i) Loop is : " + (arr[i])) ;   
+                }
+                document.write("<br>&nbsp---Marks in Outer(j) Loop is : " + (arr[j] + "<br>")) ;   
+            }
+            for(i=0; i<arr.length; i++)
+            {
+                document.write("<br>&nbspSorted Marks " + (i+1) + " is : " + (arr[i])) ;
+            }
+        </script>
+    </head>
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number is prime palindrome or not</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <style>
+      .jumbotron {
+        min-width: 585px;
+        margin: 10px auto;
+        display: block;
+        justify-content: center;
+        margin: 150px;
+        border: 0.08em solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h2 class="h text-info">Number is Prime Palindrome or Not</h2>
+      <label for="">Number 1 </label>
+      <input type="text" id="n1" /><br />
+      <label for="">Number 2 </label>
+      <input type="text" id="n2" /><br />
+      <label for="">Number 3 </label>
+      <input type="text" id="n3" /><br />
+​
+      <label for="">Number 4 </label>
+      <input type="text" id="n4" /><br />
+      <label for="">Number 5 </label>
+      <input type="text" id="n5" /><br />
+      <br />
+      <p id="num1" class="res text-success"></p>
+      <p id="num2" class="res text-info"></p>
+      <p id="num3" class="res text-danger"></p>
+​
+      <button class="btn1" onclick="palindm()">Check</button>
+    </div>
+    <script>
+      function palindm() {
+        function str_palindm(num) {
+          
+          var pal = 0,
+            count = 0,
+            rem,
+            j;
+          var temp = parseInt(num);
+          while (temp > 0) {
+            rem = temp % 10;
+            temp = parseInt(temp / 10);
+            pal = pal * 10 + rem;
+          }
+          //for prime number j==number between 1 to num
+          for (j = 1; j <= num; j++) {
+            if (num % j == 0) {
+              count++;
+            }
+          }
+          if (pal == num && count == 2) {
+            document.getElementById("num1").innerHTML +=
+              +num + " is pirme palindrom number" + "<br><br>";
+          } else {
+            if (pal != num) {
+              document.getElementById("num3").innerHTML +=
+                "entered number " +
+                num +
+                " is not palindrom number" +
+                "<br><br>";
+            } else {
+              document.getElementById("num2").innerHTML +=
+                +num + " not prime palindrom number" + "<br><br>";
+            }
+          }
+        }
+        var string = [],
+        
+          i;
+        string[0] = document.getElementById("n1").value;
+        string[1] = document.getElementById("n2").value;
+        string[2] = document.getElementById("n3").value;
+        string[3] = document.getElementById("n4").value;
+        string[4] = document.getElementById("n5").value;
+        for (i = 0; i < 5; i++) {
+          str_palindm(string[i]);
+          debugger;
+        }
+      }
+    </script>
+  </body>
+</html>
