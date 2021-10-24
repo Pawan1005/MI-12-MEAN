@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fm.css">
+</head>
+<body>
+    <h2>
+        <p id="firstpara"> MI-12 Intern HTML Assignment </p>
+    </h2>
+    <hr>
+    <form action="backend.php">
+        <h3>
+            <p id="secondpara"> Personal Details </p>
+        </h3>
+        <div>
+            First Name: <input type="text">
+        </div>
+        <br>
+        <div>
+            Last Name: <input type="text">
+        </div>
+        <br>
+        <div>
+            Gender: Male <input type="radio" name="mygender">
+            Female<input type="radio" name="mygender">
+            Other<input type="radio" name="mygender">
+        </div>
+        <br>
+        <div>
+            Age: less than 18 <input type="radio" name="myage">
+            18-25 <input type="radio" name="myage">
+            26-40 <input type="radio" name="myage">
+        </div>
+        <h3>
+            <p id="thirdpara"> Academic Details </p>
+        </h3>
+        <div>
+            Skill Set: HTML<input type="checkbox">
+            Java Script<input type="checkbox">
+            Java<input type="checkbox">
+            Oracle<input type="checkbox">
+        </div>
+        <h3>
+            <p id="forthpara"> Professional Details </p>
+        </h3>
+        <form>
+            <fieldset>
+                <legend>Academic Details</legend>
+                <p>
+                    Skill Set: &nbsp; &nbsp;&nbsp; &nbsp; HTML<input type="checkbox">
+                    &nbsp; &nbsp; &nbsp; &nbsp; Java Script<input type="checkbox">
+                    &nbsp; &nbsp; &nbsp; &nbsp; Java<input type="checkbox">
+                    &nbsp; &nbsp; &nbsp; &nbsp; Oracle<input type="checkbox">
+                </p>
+                <div>
+                    <label for="Higest Qualification">Higest Qualification</label>
+                    <select name="My Higest Qualification" id="Higest Qualification">
+                        <option value="DcS">Diploma in Computer Science</option>
+                        <option value="SG">Science Graduate</option>
+                        <option value="BE">Bachelor in Engg</option>
+                        <option value="MCS">Master in Computer Science</option>
+                        <option value="ME">Master in Engg</option>
+                        <option value="Oth">Other</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="University">University</label>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <select name="My My University"
+                        id="University">
+                        <option value="RTMNU">Nagpur University</option>
+                        <option value="PU">Pune University</option>
+                        <option value="MU">Mumbai University</option>
+                        <option value="AU">Amravati University</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="Area of Expertise">Area of Expertise</label>
+                    &nbsp; &nbsp; <select name="My Higest Qualification" id="Higest Qualification">
+                        <option value="Swre">Software</option>
+                        <option value="Tra">Training</option>
+                        <option value="Net">Network</option>
+                        <option value="Mng">Management</option>
+                        <option value="Oth">Other</option>
+                    </select>
+                </div>
+            </fieldset>
+        </form>
+        <br>
+        <form>
+            <fieldset>
+                <legend>Resume:-</legend>
+                <div>
+                    <label for="UP">Uploading Resume</label>
+                    &nbsp; <input type="file">
+                </div>
+                <br>
+                <div>
+                    Comments &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <textarea name="my comment" id=""
+                        cols="30" rows="5"></textarea>
+                </div>
+            </fieldset>
+        </form>
+        <br>
+        <form>
+            <p id="fifthpara"><input type="Submit" value="Submit Now">
+                <input type="Reset" value="Reset Now">
+            </p>
+        </form>
+</body>
+</html>
