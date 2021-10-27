@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>search a url within a string.</title>
+        <script>
+            function checkurl() {
+            var regExp, str;
+                str = document.getElementById("string").value;
+                regExp = /^(https:\/\/www\.|http:\/\/www\.|www\.)[a-zA-Z0-9\-_$]+\.[a-zA-Z]{2,3}$/;
+                if (regExp.test(str)) {
+                    document.getElementById("Result").innerHTML = "This is valid URL";
+                } 
+                else {
+                    document.getElementById("Result").innerHTML = "This is URL";
+                }
+            }
+        </script>
+    </head>
+    <body style="background-color: rgb(99, 95, 95);">
+        <h1>Search a url in a string</h1>
+            Enter the string: <input type="text" id="string"></br></br>
+            <button onclick="checkurl()" style="padding: 6px; background-color: rgb(117, 177, 5);">Check</button></br></br>
+            <div id="Result"></div>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Quest0</title>
+  </head>
+  <body>
+    <script>
+      class Student {
+        constructor(roll, name) {
+          this.roll = roll;
+          this.name = name;
+        }
+        display() {
+          return "The Roll is :" + this.roll + " The Name is :" + this.name;
+        }
+      }
+      let s1 = new Student(1, "Priyanka");
+      let s2 = new Student(2, "Vishakha");
+      document.write("Student-01<br>");
+      document.write("Roll :" + s1.roll + "<br>");
+      document.write("Name :" + s1.name + "<br>");
+      document.write("Display Details with method :" + s1.display() + "<br>");
+      document.write("<br>");
+      document.write("Student-02<br>");
+      document.write("Roll :" + s2.roll + "<br>");
+      document.write("Name :" + s2.name + "<br>");
+      document.write("Display Details with method :" + s2.display() + "<br>");
+    </script>
+  </body>
+</html>

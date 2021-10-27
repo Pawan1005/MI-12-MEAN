@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Assignment 15 Quest1</title>
+    <style>
+      th,
+      td {
+        padding-left: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>SrNo</th>
+        <th>AccNo</th>
+        <th>Name</th>
+        <th>Balance</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td id="ids0"></td>
+        <td id="ids1"></td>
+        <td id="ids2"></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td id="ids3"></td>
+        <td id="ids4"></td>
+        <td id="ids5"></td>
+      </tr>
+    </table>
+    <script>
+      class BankInfo {
+        constructor(accno, accname, bal) {
+          this.accno = accno;
+          this.accname = accname;
+          this.bal = bal;
+        }
+        getData() {
+          this.accno = Number(prompt("enter account number"));
+          this.accname = prompt("enter the accountholder name");
+          this.bal = Number(prompt("enter your amount"));
+        }
+        deposit() {
+          let deposite = Number(prompt("What amount you want to deposite?"));
+          document.write("Your diposite ammount is :" + deposit);
+          document.write("Balance is :" + this.bal + deposit);
+        }
+        withdrawn() {
+          try {
+            let withdrawn = Number(
+              prompt("Enter the amount you want to withdrawn?")
+            );
+            if (this.bal < withdrawn) throw new Error("insufficient balance");
+            else if (this.bal > withdrawn) {
+              document.write(
+                "Your Available Balance is :" + Number(this.bal - withdrawn)
+              );
+            }
+          } catch (err) {
+            console.log(err.message);
+          }
+        }
+        display() {
+          document.getElementById("ids0").innerHTML = this.accno;
+          document.getElementById("ids1").innerHTML = this.accname;
+          document.getElementById("ids2").innerHTML = this.bal;
+        }
+        display1() {
+          document.getElementById("ids3").innerHTML = this.accno;
+          document.getElementById("ids4").innerHTML = this.accname;
+          document.getElementById("ids5").innerHTML = this.bal;
+        }
+      }
+      let bankobj = new BankInfo();
+      let bankobj1 = new BankInfo();
+      bankobj.getData();
+      bankobj1.getData();
+      bankobj.display();
+      bankobj1.display1();
+    </script>
+  </body>
+</html>

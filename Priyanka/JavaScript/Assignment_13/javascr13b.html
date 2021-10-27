@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function getWeekDay(d1) {
+        const days = ["SU", "MO", "TU", "WE", "TH", "FR", "SA"];
+        return days[d1.getDay()];
+      }
+      const d1 = new Date(2021, 0, 21);
+      alert(" " + getWeekDay(d1) + " date " + d1);
+    </script>
+  </body>
+</html>

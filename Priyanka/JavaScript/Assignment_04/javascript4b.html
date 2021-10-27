@@ -11,24 +11,20 @@
         <button type="button" style="width:100px; height:40px"onclick="automorphic()"> <b>Submit </b> </button>
         <p id="pid"></p>
     <script type="text/javascript">
-        
          var num ,rem ,original ,sqr;
          function automorphic()
           {
             num=original;
          num=parseInt(document.getElementById("num1").value);
-                
                 if(num>10)
                 {
                     document.getElementById("pid").innerHTML= "enter single digit numbers  ";
                 }
               sqr=num*num;
              rem=sqr%10;   
-          
           if(num==rem)
           {
             document.getElementById("pid").innerHTML+= " number is automorphic ";
-
           }
             else
           {

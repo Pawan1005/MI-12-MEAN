@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Assignment non 12 Quest1</title>
+  </head>
+  <body>
+    <script>
+      class Employee {
+        constructor() {
+          this.empno = 101;
+          this.name = "Ashok kumar";
+          this.address = "43,Ramnager";
+          this.city = "pune,maharastra";
+          this.salary = 80000;
+        }
+        calculate() {
+          document.write("   After Calculate   <br>");
+          document.write("da is :" + (30 / 100) * this.salary + "<br>");
+          document.write("hra is :" + (15 / 100) * this.salary + "<br>");
+          document.write("pf is :" + (12.5 / 100) * this.salary + "<br>");
+          document.write(
+            "gross is :" +
+              Number(
+                this.salary +
+                  (30 / 100) * this.salary +
+                  (15 / 100) * this.salary
+              ) +
+              "<br>"
+          );
+          document.write(
+            "net is :" +
+              Number(
+                this.salary +
+                  (30 / 100) * this.salary +
+                  (15 / 100) * this.salary -
+                  (12.5 / 100) * this.salary
+              ) +
+              "<br>"
+          );
+          if (
+            Number(
+              this.salary + (30 / 100) * this.salary + (15 / 100) * this.salary
+            ) *
+              12 >=
+            180000
+          ) {
+            document.write("income tax payer");
+          } else {
+            document.write("income tax not payer");
+          }
+        }
+        display() {
+          document.write("<br><br>Display Details");
+          document.write("<br><br>Name is :" + this.name + "<br>");
+          document.write("Emp no is :" + this.empno + "<br>");
+          document.write(
+            "Gross salary :" +
+              Number(
+                this.salary +
+                  (30 / 100) * this.salary +
+                  (15 / 100) * this.salary
+              ) +
+              "<br>"
+          );
+          document.write(
+            "Net salary :" +
+              Number(
+                this.salary +
+                  (30 / 100) * this.salary +
+                  (15 / 100) * this.salary -
+                  (12.5 / 100) * this.salary
+              )
+          );
+        }
+      }
+      let empobj = new Employee();
+      empobj.calculate();
+      empobj.display();
+    </script>
+  </body>
+</html>

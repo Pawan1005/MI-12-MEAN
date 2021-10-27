@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>search alpha numeric string.</title>
+    </head>
+    <body>
+        <script>
+            function checkalpha() {
+                var regExp, str;
+                str = document.getElementById("string").value;
+                regExp = /^[A-Za-z0-9]+$/;
+                if (regExp.test(str)) {
+                    document.getElementById("Result").innerHTML = "Given string is Alpha Numeric";
+                } 
+                else {
+                    document.getElementById("Result").innerHTML = "Given string is not Alpha Numeric";
+                }
+            }
+        </script>
+        <h1>Check AlphaNumeric String.</h1>
+            Enter String:
+            <input type="text" id="string"></input>
+            <input type="button" value="check" onclick="checkalpha()"style="padding: 6px; background-color: rgb(117, 177, 5);"></input>
+            <div id="Result"></div>
+        </div>
+    </body>
+</html>

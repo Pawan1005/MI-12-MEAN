@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>search alpha dash underscore string.</title>
+    </head>
+    <body>
+        <script>
+            function alphadash() {
+                var regExp, str;
+                str = document.getElementById("string").value;
+                regExp = /^[a-zA-Z0-9/\-\_]+$/;
+                if (regExp.test(str)) {
+                    document.getElementById("Result").innerHTML = "Given string is Alpha Dash Uderscore";
+                } 
+                else {
+                    document.getElementById("Result").innerHTML = "Given string is not Alpha Dash Uderscore";
+                }
+            }
+        </script>
+        <h1>Check Alpha dash underscore String.</h1>
+  
+            Enter Strring:
+            <input type="text" id="string"></input>
+            <input type="button" value="check" onclick="alphadash()"style="padding: 6px; background-color: rgb(117, 177, 5);"></input>
+            <div id="Result"></div>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Prime Palindrome 5 numbers</title>
+  </head>
+  <body>
+    <h2>Check Prime Palindrome or Not for 5 numbers</h2>
+    <div>
+      <label for="">Number 1 </label>
+      <input type="text" id="firstnumber" />
+    </div>
+    <div>
+      <label for="">Number 2 </label>
+      <input type="text" id="secondnumber" />
+    </div>
+    <div>
+      <label for="">Number 3 </label>
+      <input type="text" id="thirdnumber" />
+    </div>
+    <div>
+      <label for="">Number 4 </label>
+      <input type="text" id="fourthnumber" />
+    </div>
+    <div>
+      <label for="">Number 5 </label>
+      <input type="text" id="fifthnumber" />
+    </div>
+    <button class="btn1" onclick="palindrome()">Check</button>
+    <p><span id="num1"></span><span id="num2"></span><span id="num3"></span></p>
+    <script>
+      function palindrome() {
+        function str_palindrome(str) {
+          var sum = 0,
+            count = 0,
+            temp,
+            rem,
+            j;
+          temp = parseInt(str);
+          while (temp > 0) {
+            rem = temp % 10;
+            temp = parseInt(temp / 10);
+            sum = sum * 10 + rem;
+          }
+          for (j = 1; j <= str; j++) {
+            if (str % j == 0) {
+              count++;
+            }
+          }
+          if (sum == str && count == 2) {
+            document.getElementById("num1").innerHTML +=
+              +str + " is Prime Palindrome<br>";
+          } else {
+            document.getElementById("num1").innerHTML +=
+              +str + " is not  Prime Palindrome<br>";
+          }
+        }
+        var string = [],
+          i;
+        string[0] = document.getElementById("firstnumber").value;
+        string[1] = document.getElementById("secondnumber").value;
+        string[2] = document.getElementById("thirdnumber").value;
+        string[3] = document.getElementById("fourthnumber").value;
+        string[4] = document.getElementById("fifthnumber").value;
+        for (i = 0; i < 5; i++) {
+          str_palindrome(string[i]);
+        }
+      }
+    </script>
+  </body>
+</html>
