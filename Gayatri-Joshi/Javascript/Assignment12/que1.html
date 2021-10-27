@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <title>Question 1</title>
+    </head>
+    <body>
+            <h1 class="text-center">  Student Class</h1>
+        <script>
+           class Student{
+               constructor(RNo,SName){
+                    this.RNo=RNo;
+                    this.SName=SName;
+                }
+                output(){
+                    return "The RollNo is :"+this.RNo+" The Name is :"+this.SName;
+                }
+           }
+           let sd1=new Student(01,'aaaa');
+           let sd2=new Student(02,'bbbbb');
+           let sd3=new Student(03,'cccc');
+
+           document.write("Student-First<br>")
+           document.write("RollNo :"+sd1.RNo+"<br>");
+           document.write("Name :"+sd1.SName+"<br>");
+           document.write("Display with method :"+sd1.output()+"<br>");
+
+           document.write("<hr>")
+
+           document.write("Student-Second<br>")
+           document.write("RollNo :"+sd2.RNo+"<br>");
+           document.write("Name :"+sd2.SName+"<br>");
+           document.write("Display with method :"+sd2.output()+"<br>");
+
+           document.write("<hr>")
+
+           document.write("Student-Third<br>")
+           document.write("RollNo :"+sd3.RNo+"<br>");
+           document.write("Name :"+sd3.SName+"<br>");
+           document.write("Display with method :"+sd3.output()+"<br>");
+        </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    </body>
+</html>

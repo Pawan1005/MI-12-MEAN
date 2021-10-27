@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change case</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style type="text/css">
+        .h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: blueviolet;
+        }
+        .container{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="h1">ChangeCase </h1>
+    <div class="container">
+       <label><b>Enter String:</b></label> <input type="text" id="text">
+        <br><br>
+        <button type="button" value="UpperCase" onClick="convertToUppercase();">To Uppercase</button>&nbsp;&nbsp;
+        <input id="output1">
+        <br><br>
+        <button class="button" value="Lowercase" onClick="convertToLowercase();">To Lowercase</button>&nbsp;&nbsp;
+        <input type="text" id="output">
+        <script>
+                function convertToUppercase() {
+                 var str,lowercase,uppercase;
+                 str = document.getElementById("text").value;
+                 upperCase = str.toUpperCase();
+                document.getElementById("output1").value = upperCase;
+            }
+            function convertToLowercase() {
+                var str,lowercase,uppercase;
+                 str = document.getElementById("text").value;
+                 lowerCase = str.toLowerCase();
+                document.getElementById("output").value = lowerCase;
+            }
+        </script>
+</body>
+</html>
