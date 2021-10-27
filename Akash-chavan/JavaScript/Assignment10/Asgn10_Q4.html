@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search date in string</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <style>
+      .jumbotron {
+        min-width: 585px;
+        margin: 10px auto;
+        display: block;
+        justify-content: center;
+        margin: 150px;
+        border: 0.08em solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="jumbotron">
+      <h2 class="h text-info">Search date in string</h2>
+      <div class="main">
+        <div>
+          <br />
+          <label for="">Enter a string</label>
+          <input type="text" id="dt" />
+        </div>
+        <div>
+          <button class="btn1" onclick="valid_date()">Check</button>
+        </div>
+        <div>
+          <br />
+          <p id="result" class="res text-success"></p>
+          <p id="result1" class="res text-danger"></p>
+          <p id="result2" class="res text-danger"></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function valid_date() {
+        const str = document.getElementById("dt").value;
+        debugger;
+        // Regular expression to check if string is valid date
+        const patt = /\d{2}\/\d{2}\/\d{4}/g;
+        // String with valid date separated by dash
+        var regExp = str.match(patt);
+        document.getElementById("result2").innerHTML = regExp;
+      }
+    </script>
+  </body>
+</html>

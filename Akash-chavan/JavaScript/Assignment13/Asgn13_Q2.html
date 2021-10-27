@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day short</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <style>
+      .jumbotron {
+        min-width: 585px;
+        margin: 10px auto;
+        display: block;
+        justify-content: center;
+        margin: 150px;
+        border: 0.08em solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="jumbotron">
+      <h5 class="par text-info">
+        Click the below button to get the name of the Day in shortform.
+      </h5>
+      <button class="btn bg-success" onclick="myDate()">click</button>
+      <p id="myId"></p>
+    </div>
+    <script>
+      function myDate() {
+        var day = new Date(2021, 0, 31);
+        var getWeekDays = new Array(7);
+        getWeekDays[0] = "SU";
+        getWeekDays[1] = "MO";
+        getWeekDays[2] = "TU";
+        getWeekDays[3] = "WE";
+        getWeekDays[4] = "TH";
+        getWeekDays[5] = "FR";
+        getWeekDays[6] = "SA";
+        var day1 = getWeekDays[day.getDay()];
+        alert(day + "\r\n" + "  Day:-" + day1);
+      }
+    </script>
+  </body>
+</html>
