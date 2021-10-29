@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Que2-Array</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"/>
+  </head>
+  <body>
+      <h3 style="text-align: center;">Join ,Ascending ,Descending names in Array list</h3>
+    <form class="" action="index.html" method="post">
+        <button type="button" name="button" onclick="Array()">Click </button><br><br>
+        <p>Use X i/p or Cancle button to stop input</p>
+    </form>
+    <br>
+    <p id="pid"> </p>
+    <p id="pid1"></p>
+    <p id="pid2"></p>
+    <p id="pid3"></p>
+    <p id="pid4"></p>
+    <script>
+        function Array() {
+            let names=[];
+          while (true) {                                           
+            temp = prompt("Enter Name:");  
+          if (temp == "X" || temp == "x" || temp == null) break; {          
+            names.push(temp);        
+            document.getElementById("pid").innerHTML= "Input Array:- "+names; 
+            document.getElementById("pid1").innerHTML ="Join Method (~):- "+ names.join(" ~ ");
+            let uppercased=names.map(name => name.toUpperCase());
+            document.getElementById("pid2").innerHTML  = "To UpperCase Letters:- "+uppercased;
+            document.getElementById("pid3").innerHTML ="Sort Ascending:- "+ uppercased.sort();
+            document.getElementById("pid4").innerHTML ="Sort Descending:- "+ uppercased.reverse();
+        
+          }
+          }
+          }
+      </script>
+  </body>
+</html>

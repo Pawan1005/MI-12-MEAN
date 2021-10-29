@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Que5</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"/>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h3 class="h text-info">Factorial in Ascending order for number in Array list</h3>
+    <form class="" action="index.html" method="post">
+        <button class="btm bg-success" type="button" name="button" onclick="Array()">
+            Submit
+        </button><br><br>
+        <p >Use X i/p or Cancle buttom to stop input</p>
+    </form>
+    <br>
+    <p id="pid"> </p>
+    <p id="pid1"></p>
+    <p id="pid2"></p>
+    <p id="pid3"></p>
+    <script>
+        function Array() {
+          debugger;
+          let num=[];
+        while (true) {                                           
+          temp = prompt("Enter number:");  
+        if (temp == "X" || temp == "x" || temp == null) break; {          
+          num.push(temp);        
+          document.getElementById("pid").innerHTML= "Input Array:- "+num; 
+          let  numArray = num.map(Number);
+          document.getElementById("pid1).innerHTML= "num Array:- "+numArray; 
+        for (let i = 0; i < numArray.length; i++) {                    
+        function factorial(vod) {
+          debugger;          
+          var fact = 1;
+        for (var i = vod; i >= 1; i--) {
+          fact = fact * i;
+        }   
+        return fact;     
+        }   
+          vod = numArray[i];
+          let z=factorial(vod);
+          numArray[i] = z;  
+          document.getElementById("demo2").innerHTML= "factorial Array:- "+ numArray;  
+        function nonMutatingSort(arr) {
+          let copy = [...arr];
+          copy.sort((a, b) => {
+        return a - b;
+        })
+        return copy;
+        }
+          document.getElementById("pid3").innerHTML= "factorial Array:- "+ nonMutatingSort(numArray);     
+        }
+        }
+        }
+        } 
+    </script>
+  </body>
+</html>
+

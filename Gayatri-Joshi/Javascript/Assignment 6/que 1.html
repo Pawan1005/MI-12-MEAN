@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Que1-Array</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+</head>
+
+<body>
+    <h3 style="text-align: center;">Adding Name in list</h3>
+    <form class="" action="index.html" method="post">
+        <button type="button" name="Click" onclick="Array()">Click </button>
+    </form>
+    <br>
+    <p id="pid"></p>
+    <script>
+        let input = [];
+        function Array() {
+            cnt = 6;
+            debugger;
+            for (var i = 1; i < cnt; i++) {
+                var a = input[i] = prompt("Enter a name");
+                document.getElementById("pid").innerHTML += "Name " + i + ":" + a;
+                document.getElementById("pid").innerHTML += "<br>";
+            }
+        }
+    </script>
+</body>
+</html>
