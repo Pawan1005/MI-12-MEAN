@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ques 5</title>
+        <style>
+            h1{
+                background-color: rgb(121, 188, 190);
+                padding: 24px;
+            }
+        </style>
+        <script>
+            function add_lang(){
+                let li, ol ;
+                li = document.createElement("li") ;
+                li.textContent = document.getElementById("lang1").value ;
+                ol = document.getElementById("lang_list") ;
+                ol.insertBefore(li,ol.lastElementChild.nextSibling) ;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Adding Programming language into a List</h1>
+        <hr style="border-width: 4px;">
+        <ol id="lang_list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ol>
+        <div>
+            <label for="language">Enter text to add in a list :</label>
+            <input type="text" id="lang1" style="height: 28px;">
+        </div>
+        <br>
+        <div>
+            <button onclick="add_lang()" id="table_n" style="padding: 12px; width: 120px; background-color: green; 
+            color: white;">Add</button>
+        </div>
+        <p id="para"></p>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Asign12 -Q1</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <script>
+      class student {
+        constructor() {
+          this.Rollno = 1;
+          this.name = "manas";
+        }
+        getdata(r, n) {
+          this.Rollno = r;
+          this.name = n;
+        }
+        display() {
+          document.getElementById("para").innerHTML +=
+            "<br>Roll No : " + this.Rollno + "<br>";
+          document.getElementById("para").innerHTML +=
+            "Name : " + this.name + "<br>";
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="junmbotron text-center p-5">
+      <h2><b>Adding Student Details:</b></h2>
+
+      <label>Roll No : </label>
+      <input type="number" id="r1" /><br /><br />
+      <label>Name : </label>
+      <input type="text" id="n1" /><br /><br />
+      <button class="btn bg-success" onclick="stud_details()">Add</button>
+      <p id="para"></p>
+    </div>
+    <script type="text/javascript">
+      // Display student info
+      let stud1 = new student();
+      let stud2 = new student();
+      stud1.display();
+      function stud_details() {
+        let r1 = document.getElementById("r1").value;
+        let n1 = document.getElementById("n1").value;
+        stud2.getdata(r1, n1);
+        stud2.display();
+      }
+    </script>
+  </body>
+</html>

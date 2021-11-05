@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ques6</title>
+        <style>
+            table{
+                width: 50%;
+            }
+            table, th, td {
+                text-align: center;
+                border : 2px solid black ;
+                border-collapse: collapse ;
+            }
+            button{
+                padding: 12px ;
+                width: 120px ;
+            }
+            h1{
+                background-color: rgb(121, 188, 190);
+                padding: 24px;
+            }
+        </style>
+        <script>
+            function add_row(){
+                let tab_row = document.getElementById("new_row") ;
+                let row = tab_row.insertRow(-1) ;
+                let col1 = row.insertCell() ;
+                let col2 = row.insertCell() ;
+                let col3 = row.insertCell() ;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Adding Row into a Table</h1>
+        <hr style="border-width: 4px;">
+        <br><br>
+        <table id="new_row" style="margin-top: 12px;">
+            <tr>
+                <th>S No.</th>
+                <th>Roll No.</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>100</td>
+                <td>Shradha</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>101</td>
+                <td>Priyanka</td>
+            </tr>
+        </table>
+        <br><br>
+        <button onclick = "add_row()">Add Row</button>
+    </body>
+</html>

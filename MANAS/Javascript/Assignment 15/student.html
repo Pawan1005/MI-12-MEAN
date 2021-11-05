@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function submit() {
+        let rno, fName;
+        rno = document.getElementById("rnoId").value;
+        fName = document.getElementById("studnId").value;
+        sessionStorage.setItem("local_Rno", rno);
+        sessionStorage.setItem("local_Name", fName);
+      }
+    </script>
+  </head>
+
+  <body>
+    <form action="studentData.html" method="POST">
+      RolNo : <input type="text" name="rnoName" id="rnoId" /> <br /><br />
+      Student Name : <input type="text" name="studName " id="studnId" />
+      <br /><br />
+      <input type="submit" name="submit" id="submitId" value="submit" />
+    </form>
+    <script>
+      document.addEventListener("click", submit);
+    </script>
+  </body>
+</html>
