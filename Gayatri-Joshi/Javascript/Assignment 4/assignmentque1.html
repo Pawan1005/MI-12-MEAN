@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>As1_Ques1</title>
+    </head>
+    <body>
+        <fieldset>
+            <h2 style="background-color: cyan;">Swap Two Numbers</h2><br>
+            <hr><br>
+            <label>Enter x value :</label>
+            <input type="number" id="x" /><br><br>
+            <label>Enter y value :</label>
+            <input type="number" id="y" /><br><br>
+            <button onclick="method1()">Method 1</button>
+            <button onclick="swa()">Method 2</button>
+            <h2 style="background-color: darkcyan;">Method 1 : With Temporary variable</h2>
+            <label>After swaping method2 : </label>
+            <label id="pid1"></label>
+            <h2 style="background-color: blueviolet;">Method 2 : Without Temporary variable</h2>
+            <label>After swaping method2 : </label>
+            <label id="pid2"></label>
+        </fieldset>
+        <script>
+            function temp(){
+                var x = document.getElementById('x').value;
+                var y = document.getElementById('y').value;
+                var temp = x;
+                x = y;
+                y = temp;
+                document.getElementById("pid1").innerHTML = "<b> x = " + x +"<b>, y = " +y;
+            }
+            function swap(){
+                var x = document.getElementById('x').value;
+                var y = document.getElementById('y').value;
+                x = x * y;
+                y = x / y;
+                x = x / y;
+                document.getElementById('pid2').innerHTML = "<b> x = "+ x + "<b>, y = " +y;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>palindrome</h1>
+        <br>
+        <br>
+        <br>
+    Enter the Number:
+    <input type="text" ID="palindrome" style="width: 150px;">
+    <button type="button" onclick="palindrome()">check</button>
+    <p id="hid"></p>
+</div>
+    <script>
+    function palindrome() {
+    var a,b,no,temp=0;
+    no=Number(document.getElementById("palindrome").value);
+    b=no;
+    while(no>0){
+        a=no%10;
+        no=parseInt(no/10);
+        temp=temp*10+a;
+
+    }
+    if(temp ==b){
+        alert ("number is palidrome");
+    }
+    else{
+        alert ("number is not palidrome");
+    }
+    }
+</script>
+</body>
+</html>

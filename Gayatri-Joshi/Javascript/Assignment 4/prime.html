@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prime</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style type="text/css">
+        .h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <h3> Check Prime Number </h3><br>
+    <button class="btn bg-success" type="button" onclick="Prime()"> Check </button>
+    <h2 id="result"> </h2>
+    </div>
+    <script>
+        function Prime() {
+            var num, prime = false;
+            num = parseInt(prompt("enter  any number"));
+            for (var i = 2; i < num; i++) {
+                if (num % 1 == 0) {
+                    prime = true;
+                    break;
+                }
+            }
+            if (prime) {
+                document.write("Number is prime number");
+            }
+            else {
+                document.write("Number is not prime number");
+
+            }
+            if (show == true) {
+                document.getElementById("result").innerHTML = "The number: " + num + " is a Prime Number";
+            } else {
+                document.getElementById("result").innerHTML = "The number: " + num + " is NOT a Prime Number";
+            }
+        }
+    </script>
+</body>
+</html>

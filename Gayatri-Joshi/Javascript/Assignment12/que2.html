@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <title>Question  2</title>
+    </head>
+    <body>
+            <h1 class="text-center"> Employee Description</h1>
+        <script>
+            class Employee{
+                constructor(){
+                    this.Empno=502;
+                    this.EmpName="VIKAS";
+                    this.Address="43,RAVIVAR PETH";
+                    this.City="Pune,Maharastra";
+                    this.profile="Lead"
+                    this.salary=100000;
+                }
+                cal(){
+                    document.write("<h3>Per Day is :"+30/100*this.salary+'<br></h3>');
+                    document.write("<h3>Half is :"+15/100*this.salary+'<br></h3>');
+                    document.write("<h3>Pf is :"+12.5/100*this.salary+'<br></h3>');
+                    document.write("<h3>Salary is :"+Number(this.salary+30/100*this.salary+15/100*this.salary)+'<br></h3>');
+                    document.write("<h3>Total salary is:"+Number((this.salary+30/100*this.salary+15/100*this.salary)-(12.5/100*this.salary))+'<br></h3>');
+                    if(Number(this.salary+30/100*this.salary+15/100*this.salary)*12 >= 200000){
+                        document.write("<h3>income tax pay</h3>");
+                    }else{
+                        document.write("<h3>income tax not pay</h3>");
+                    }
+                }
+
+                output(){
+                    document.write("<hr>")
+
+                    document.write("<h3>Name is :"+this.EmpName+'<br></h3>');
+                    document.write("<h3>Emp No is :"+this.Empno+'<br></h3>');
+                    document.write("<h3>Profile is :"+this.profile+'<br></h3>');
+                    document.write("<h3>salary :"+Number(this.salary+30/100*this.salary+15/100*this.salary)+'<br></h3>');
+                    document.write("<h3>Total salary :"+Number((this.salary+30/100*this.salary+15/100*this.salary)-(12.5/100*this.salary)))
+                }
+            }
+            let emp=new Employee();
+            emp.calcu()
+            emp.output();
+        </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+      
+    </body>
+</html>

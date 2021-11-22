@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <title>Question 3</title>
+    </head>
+    <body>
+            <h1 class="text-center"> Details of the Employee</h1>
+        <script>
+            class Employee{
+                constructor(name,address,city,salary,Profile){
+                    this.EmpNo=0;
+                    this.EName=name;
+                    this.Address=address;
+                    this.City=city;
+                    this.profile=Profile;
+
+                    this.Salary=salary;
+                }
+                display(){
+                    document.write("Emp no:"+this.empNo+'<br>');
+                    document.write("Name is:"+this.Name+'<br>');
+                    document.write("Address is :"+this.Address+'<br>');
+                    document.write("City is :"+this.city+'<br>');
+                    document.write("Profile is :"+this.Profile+'<br>');
+                    document.write("Salary is :"+this.salary+'<br>');
+                }
+                data(){
+                    this.name=prompt("Enter your Name.");
+                    this.address=prompt("Enter your Address.");
+                    this.city=prompt("Enter your city.");
+                    this.Profile=prompt("Enter your Profile.");
+                    this.salary=Number(prompt("Enter your salary."));
+                }
+                cal(){
+                    document.write("<hr>")
+                    document.write("<h3>Per Day is :"+30/100*this.salary+'<br></h3>');
+                    document.write("<h3>Pf is  :"+12.5/100*this.salary+'<br></h3>');
+
+                    document.write("<h3>Half is :"+15/100*this.salary+'<br></h3>');
+                    document.write("<h3>Salary is :"+Number(this.salary+30/100*this.salary+15/100*this.salary)+'<br></h3>');
+                    document.write("<h3>Total salary :"+Number((this.salary+30/100*this.salary+15/100*this.salary)-(12.5/100*this.salary))+'<br></h3>');
+                }
+                output(){
+                    document.write("<hr>")
+                    document.write("<h3>Name is :"+this.name+'<br></h3>');
+                    document.write("<h3>Emp no is :"+this.empno+'<br></h3>');
+                    document.write("<h3> salary :"+Number(this.salary+30/100*this.salary+15/100*this.salary)+'<br></h3>');
+                    document.write("<h3>Total salary :"+Number((this.salary+30/100*this.salary+15/100*this.salary)-(12.5/100*this.salary)))
+                }
+            }
+            let emp1=new Employee();
+            let emp2=new Employee();
+            
+            emp2.data();
+            emp2.display();
+            emp2.cal();
+            emp2.output();
+        </script>
+       
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        
+    </body>
+</html>
