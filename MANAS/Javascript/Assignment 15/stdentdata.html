@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function getData() {
+        let rno, fName;
+        rno = sessionStorage.getItem("local_Rno");
+        fName = sessionStorage.getItem("local_Name");
+        document.getElementById("rno_spanId").innerHTML = rno;
+        document.getElementById("name_spanId").innerHTML = fName;
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>student details</h1>
+    <div>
+      Rolll No: <span id="rno_spanId"></span> Full Name :
+      <span id="name_spanId"></span>
+    </div>
+    <script>
+      window.addEventListener("load");
+    </script>
+  </body>
+</html>
